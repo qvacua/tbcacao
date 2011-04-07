@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3C31491134E543D003869FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C31490134E543D003869FC /* Cocoa.framework */; };
+		F3C3149B134E543D003869FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3C31499134E543D003869FC /* InfoPlist.strings */; };
+		F3C314A3134E543D003869FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C31490134E543D003869FC /* Cocoa.framework */; };
+		F3C314A6134E543D003869FC /* TBCacao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C3148D134E543D003869FC /* TBCacao.framework */; };
+		F3C314AC134E543D003869FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3C314AA134E543D003869FC /* InfoPlist.strings */; };
+		F3C314AF134E543D003869FC /* TBCacaoTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F3C314AE134E543D003869FC /* TBCacaoTests.h */; };
+		F3C314B1134E543D003869FC /* TBCacaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C314B0134E543D003869FC /* TBCacaoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3C314A4134E543D003869FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3C31483134E543C003869FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3C3148C134E543C003869FC;
+			remoteInfo = TBCacao;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F3C3148D134E543D003869FC /* TBCacao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBCacao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C31490134E543D003869FC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F3C31493134E543D003869FC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F3C31494134E543D003869FC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F3C31495134E543D003869FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F3C31498134E543D003869FC /* TBCacao-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacao-Info.plist"; sourceTree = "<group>"; };
+		F3C3149A134E543D003869FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3C3149C134E543D003869FC /* TBCacao-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBCacao-Prefix.pch"; sourceTree = "<group>"; };
+		F3C314A2134E543D003869FC /* TBCacaoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBCacaoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3C314A9134E543D003869FC /* TBCacaoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacaoTests-Info.plist"; sourceTree = "<group>"; };
+		F3C314AB134E543D003869FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3C314AD134E543D003869FC /* TBCacaoTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBCacaoTests-Prefix.pch"; sourceTree = "<group>"; };
+		F3C314AE134E543D003869FC /* TBCacaoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBCacaoTests.h; sourceTree = "<group>"; };
+		F3C314B0134E543D003869FC /* TBCacaoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBCacaoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3C31489134E543C003869FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C31491134E543D003869FC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C3149E134E543D003869FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C314A3134E543D003869FC /* Cocoa.framework in Frameworks */,
+				F3C314A6134E543D003869FC /* TBCacao.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3C31481134E543C003869FC = {
+			isa = PBXGroup;
+			children = (
+				F3C31496134E543D003869FC /* TBCacao */,
+				F3C314A7134E543D003869FC /* TBCacaoTests */,
+				F3C3148F134E543D003869FC /* Frameworks */,
+				F3C3148E134E543D003869FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3C3148E134E543D003869FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3C3148D134E543D003869FC /* TBCacao.framework */,
+				F3C314A2134E543D003869FC /* TBCacaoTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3C3148F134E543D003869FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3C31490134E543D003869FC /* Cocoa.framework */,
+				F3C31492134E543D003869FC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3C31492134E543D003869FC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3C31493134E543D003869FC /* AppKit.framework */,
+				F3C31494134E543D003869FC /* CoreData.framework */,
+				F3C31495134E543D003869FC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		F3C31496134E543D003869FC /* TBCacao */ = {
+			isa = PBXGroup;
+			children = (
+				F3C31497134E543D003869FC /* Supporting Files */,
+			);
+			path = TBCacao;
+			sourceTree = "<group>";
+		};
+		F3C31497134E543D003869FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3C31498134E543D003869FC /* TBCacao-Info.plist */,
+				F3C31499134E543D003869FC /* InfoPlist.strings */,
+				F3C3149C134E543D003869FC /* TBCacao-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F3C314A7134E543D003869FC /* TBCacaoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3C314AE134E543D003869FC /* TBCacaoTests.h */,
+				F3C314B0134E543D003869FC /* TBCacaoTests.m */,
+				F3C314A8134E543D003869FC /* Supporting Files */,
+			);
+			path = TBCacaoTests;
+			sourceTree = "<group>";
+		};
+		F3C314A8134E543D003869FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3C314A9134E543D003869FC /* TBCacaoTests-Info.plist */,
+				F3C314AA134E543D003869FC /* InfoPlist.strings */,
+				F3C314AD134E543D003869FC /* TBCacaoTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F3C3148A134E543C003869FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F3C3148C134E543C003869FC /* TBCacao */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C314B4134E543D003869FC /* Build configuration list for PBXNativeTarget "TBCacao" */;
+			buildPhases = (
+				F3C31488134E543C003869FC /* Sources */,
+				F3C31489134E543C003869FC /* Frameworks */,
+				F3C3148A134E543C003869FC /* Headers */,
+				F3C3148B134E543C003869FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TBCacao;
+			productName = TBCacao;
+			productReference = F3C3148D134E543D003869FC /* TBCacao.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3C314A1134E543D003869FC /* TBCacaoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3C314B7134E543D003869FC /* Build configuration list for PBXNativeTarget "TBCacaoTests" */;
+			buildPhases = (
+				F3C3149D134E543D003869FC /* Sources */,
+				F3C3149E134E543D003869FC /* Frameworks */,
+				F3C3149F134E543D003869FC /* Resources */,
+				F3C314A0134E543D003869FC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3C314A5134E543D003869FC /* PBXTargetDependency */,
+			);
+			name = TBCacaoTests;
+			productName = TBCacaoTests;
+			productReference = F3C314A2134E543D003869FC /* TBCacaoTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3C31483134E543C003869FC /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = F3C31486134E543C003869FC /* Build configuration list for PBXProject "TBCacao" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F3C31481134E543C003869FC;
+			productRefGroup = F3C3148E134E543D003869FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3C3148C134E543C003869FC /* TBCacao */,
+				F3C314A1134E543D003869FC /* TBCacaoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3C3148B134E543C003869FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C3149B134E543D003869FC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C3149F134E543D003869FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C314AC134E543D003869FC /* InfoPlist.strings in Resources */,
+				F3C314AF134E543D003869FC /* TBCacaoTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F3C314A0134E543D003869FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3C31488134E543C003869FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3C3149D134E543D003869FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3C314B1134E543D003869FC /* TBCacaoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3C314A5134E543D003869FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3C3148C134E543C003869FC /* TBCacao */;
+			targetProxy = F3C314A4134E543D003869FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3C31499134E543D003869FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3C3149A134E543D003869FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F3C314AA134E543D003869FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3C314AB134E543D003869FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3C314B2134E543D003869FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F3C314B3134E543D003869FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F3C314B5134E543D003869FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
+				INFOPLIST_FILE = "TBCacao/TBCacao-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		F3C314B6134E543D003869FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
+				INFOPLIST_FILE = "TBCacao/TBCacao-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		F3C314B8134E543D003869FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TBCacaoTests/TBCacaoTests-Prefix.pch";
+				INFOPLIST_FILE = "TBCacaoTests/TBCacaoTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		F3C314B9134E543D003869FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TBCacaoTests/TBCacaoTests-Prefix.pch";
+				INFOPLIST_FILE = "TBCacaoTests/TBCacaoTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3C31486134E543C003869FC /* Build configuration list for PBXProject "TBCacao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C314B2134E543D003869FC /* Debug */,
+				F3C314B3134E543D003869FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3C314B4134E543D003869FC /* Build configuration list for PBXNativeTarget "TBCacao" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C314B5134E543D003869FC /* Debug */,
+				F3C314B6134E543D003869FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F3C314B7134E543D003869FC /* Build configuration list for PBXNativeTarget "TBCacaoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3C314B8134E543D003869FC /* Debug */,
+				F3C314B9134E543D003869FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3C31483134E543C003869FC /* Project object */;
+}
