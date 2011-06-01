@@ -7,160 +7,325 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F3C31491134E543D003869FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C31490134E543D003869FC /* Cocoa.framework */; };
-		F3C3149B134E543D003869FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3C31499134E543D003869FC /* InfoPlist.strings */; };
-		F3C314A3134E543D003869FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C31490134E543D003869FC /* Cocoa.framework */; };
-		F3C314A6134E543D003869FC /* TBCacao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C3148D134E543D003869FC /* TBCacao.framework */; };
-		F3C314AC134E543D003869FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3C314AA134E543D003869FC /* InfoPlist.strings */; };
-		F3C314AF134E543D003869FC /* TBCacaoTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F3C314AE134E543D003869FC /* TBCacaoTests.h */; };
-		F3C314B1134E543D003869FC /* TBCacaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3C314B0134E543D003869FC /* TBCacaoTests.m */; };
+		335532F01396D42800399789 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 335532EE1396D42800399789 /* InfoPlist.strings */; };
+		335533021396D48500399789 /* TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 335532FA1396D48500399789 /* TBCacao.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		335533031396D48500399789 /* TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 335532FB1396D48500399789 /* TBCacao.m */; };
+		335533041396D48500399789 /* TBConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 335532FC1396D48500399789 /* TBConfigManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		335533051396D48500399789 /* TBConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 335532FD1396D48500399789 /* TBConfigManager.m */; };
+		335533061396D48500399789 /* TBManualCacaoProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 335532FE1396D48500399789 /* TBManualCacaoProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		335533071396D48500399789 /* TBManualCacaoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 335532FF1396D48500399789 /* TBManualCacaoProvider.m */; };
+		335533081396D48500399789 /* TBObjcProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 335533001396D48500399789 /* TBObjcProperty.h */; };
+		335533091396D48500399789 /* TBObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533011396D48500399789 /* TBObjcProperty.m */; };
+		335533151396D48F00399789 /* NSObject+TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 3355330C1396D48F00399789 /* NSObject+TBCacao.h */; };
+		335533161396D48F00399789 /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355330D1396D48F00399789 /* NSObject+TBCacao.m */; };
+		335533171396D48F00399789 /* NSString+TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 3355330E1396D48F00399789 /* NSString+TBCacao.h */; };
+		335533181396D48F00399789 /* NSString+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355330F1396D48F00399789 /* NSString+TBCacao.m */; };
+		335533191396D48F00399789 /* TBError.h in Headers */ = {isa = PBXBuildFile; fileRef = 335533111396D48F00399789 /* TBError.h */; };
+		3355331A1396D48F00399789 /* TBError.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533121396D48F00399789 /* TBError.m */; };
+		3355331B1396D48F00399789 /* TBLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 335533141396D48F00399789 /* TBLog.h */; };
+		3355331E1396D5BC00399789 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335532EA1396D42800399789 /* Foundation.framework */; };
+		335533261396D5FF00399789 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335533251396D5FF00399789 /* Cocoa.framework */; };
+		335533301396D5FF00399789 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3355332E1396D5FF00399789 /* InfoPlist.strings */; };
+		335533331396D5FF00399789 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533321396D5FF00399789 /* main.m */; };
+		335533361396D5FF00399789 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 335533341396D5FF00399789 /* Credits.rtf */; };
+		335533451396D65A00399789 /* TBBaseUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533411396D65A00399789 /* TBBaseUnitTest.m */; };
+		335533461396D65A00399789 /* TBCacaoTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533421396D65A00399789 /* TBCacaoTest.m */; };
+		335533471396D65A00399789 /* TBConfigManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533431396D65A00399789 /* TBConfigManagerTest.m */; };
+		335533481396D65A00399789 /* TBObjcPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533441396D65A00399789 /* TBObjcPropertyTest.m */; };
+		3355335F1396D66600399789 /* NSObjectCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355334A1396D66600399789 /* NSObjectCategoryTest.m */; };
+		335533601396D66600399789 /* NSStringCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355334B1396D66600399789 /* NSStringCategoryTest.m */; };
+		335533611396D66600399789 /* DummyCityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355334E1396D66600399789 /* DummyCityManager.m */; };
+		335533621396D66600399789 /* DummyFinanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533501396D66600399789 /* DummyFinanceManager.m */; };
+		335533631396D66600399789 /* DummyInhabitantManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533521396D66600399789 /* DummyInhabitantManager.m */; };
+		335533641396D66600399789 /* DummyManualCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533541396D66600399789 /* DummyManualCacao.m */; };
+		335533651396D66600399789 /* DummyManualCacaoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533561396D66600399789 /* DummyManualCacaoProvider.m */; };
+		335533661396D66600399789 /* DummyPlainObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533581396D66600399789 /* DummyPlainObject.m */; };
+		335533671396D66600399789 /* DummyPlainSubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355335A1396D66600399789 /* DummyPlainSubObject.m */; };
+		335533681396D66600399789 /* DummyStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355335C1396D66600399789 /* DummyStateManager.m */; };
+		335533691396D66600399789 /* TBErrorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355335E1396D66600399789 /* TBErrorTest.m */; };
+		3355336D1396D68900399789 /* GHUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3355336C1396D68900399789 /* GHUnit.framework */; };
+		3355336E1396D6B800399789 /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355330D1396D48F00399789 /* NSObject+TBCacao.m */; };
+		3355336F1396D6B800399789 /* NSString+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355330F1396D48F00399789 /* NSString+TBCacao.m */; };
+		335533701396D6B800399789 /* TBError.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533121396D48F00399789 /* TBError.m */; };
+		335533711396D6B800399789 /* TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 335532FB1396D48500399789 /* TBCacao.m */; };
+		335533721396D6B800399789 /* TBConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 335532FD1396D48500399789 /* TBConfigManager.m */; };
+		335533731396D6B800399789 /* TBManualCacaoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 335532FF1396D48500399789 /* TBManualCacaoProvider.m */; };
+		335533741396D6B800399789 /* TBObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533011396D48500399789 /* TBObjcProperty.m */; };
+		3355337D1396D6E300399789 /* cacao-dummy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3355337B1396D6E300399789 /* cacao-dummy.plist */; };
+		3355337E1396D6E300399789 /* cacao-wrong-version.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3355337C1396D6E300399789 /* cacao-wrong-version.plist */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F3C314A4134E543D003869FC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F3C31483134E543C003869FC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F3C3148C134E543C003869FC;
-			remoteInfo = TBCacao;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		F3C3148D134E543D003869FC /* TBCacao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBCacao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3C31490134E543D003869FC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		F3C31493134E543D003869FC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		F3C31494134E543D003869FC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		F3C31495134E543D003869FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F3C31498134E543D003869FC /* TBCacao-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacao-Info.plist"; sourceTree = "<group>"; };
-		F3C3149A134E543D003869FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F3C3149C134E543D003869FC /* TBCacao-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBCacao-Prefix.pch"; sourceTree = "<group>"; };
-		F3C314A2134E543D003869FC /* TBCacaoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBCacaoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3C314A9134E543D003869FC /* TBCacaoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacaoTests-Info.plist"; sourceTree = "<group>"; };
-		F3C314AB134E543D003869FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F3C314AD134E543D003869FC /* TBCacaoTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBCacaoTests-Prefix.pch"; sourceTree = "<group>"; };
-		F3C314AE134E543D003869FC /* TBCacaoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBCacaoTests.h; sourceTree = "<group>"; };
-		F3C314B0134E543D003869FC /* TBCacaoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBCacaoTests.m; sourceTree = "<group>"; };
+		335532E21396D42800399789 /* TBCacao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBCacao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		335532EA1396D42800399789 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		335532ED1396D42800399789 /* TBCacao-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacao-Info.plist"; sourceTree = "<group>"; };
+		335532EF1396D42800399789 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		335532F11396D42800399789 /* TBCacao-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBCacao-Prefix.pch"; sourceTree = "<group>"; };
+		335532FA1396D48500399789 /* TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCacao.h; sourceTree = "<group>"; };
+		335532FB1396D48500399789 /* TBCacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCacao.m; sourceTree = "<group>"; };
+		335532FC1396D48500399789 /* TBConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBConfigManager.h; sourceTree = "<group>"; };
+		335532FD1396D48500399789 /* TBConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBConfigManager.m; sourceTree = "<group>"; };
+		335532FE1396D48500399789 /* TBManualCacaoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBManualCacaoProvider.h; sourceTree = "<group>"; };
+		335532FF1396D48500399789 /* TBManualCacaoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBManualCacaoProvider.m; sourceTree = "<group>"; };
+		335533001396D48500399789 /* TBObjcProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBObjcProperty.h; sourceTree = "<group>"; };
+		335533011396D48500399789 /* TBObjcProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBObjcProperty.m; sourceTree = "<group>"; };
+		3355330C1396D48F00399789 /* NSObject+TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TBCacao.h"; sourceTree = "<group>"; };
+		3355330D1396D48F00399789 /* NSObject+TBCacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TBCacao.m"; sourceTree = "<group>"; };
+		3355330E1396D48F00399789 /* NSString+TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBCacao.h"; sourceTree = "<group>"; };
+		3355330F1396D48F00399789 /* NSString+TBCacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TBCacao.m"; sourceTree = "<group>"; };
+		335533111396D48F00399789 /* TBError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBError.h; sourceTree = "<group>"; };
+		335533121396D48F00399789 /* TBError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBError.m; sourceTree = "<group>"; };
+		335533141396D48F00399789 /* TBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLog.h; sourceTree = "<group>"; };
+		335533231396D5FF00399789 /* TBCacaoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBCacaoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		335533251396D5FF00399789 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3355332D1396D5FF00399789 /* TBCacaoTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacaoTest-Info.plist"; sourceTree = "<group>"; };
+		3355332F1396D5FF00399789 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		335533311396D5FF00399789 /* TBCacaoTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBCacaoTest-Prefix.pch"; sourceTree = "<group>"; };
+		335533321396D5FF00399789 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		335533351396D5FF00399789 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		335533401396D65A00399789 /* TBBaseUnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBaseUnitTest.h; sourceTree = "<group>"; };
+		335533411396D65A00399789 /* TBBaseUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBaseUnitTest.m; sourceTree = "<group>"; };
+		335533421396D65A00399789 /* TBCacaoTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCacaoTest.m; sourceTree = "<group>"; };
+		335533431396D65A00399789 /* TBConfigManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBConfigManagerTest.m; sourceTree = "<group>"; };
+		335533441396D65A00399789 /* TBObjcPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBObjcPropertyTest.m; sourceTree = "<group>"; };
+		3355334A1396D66600399789 /* NSObjectCategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectCategoryTest.m; sourceTree = "<group>"; };
+		3355334B1396D66600399789 /* NSStringCategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringCategoryTest.m; sourceTree = "<group>"; };
+		3355334D1396D66600399789 /* DummyCityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyCityManager.h; sourceTree = "<group>"; };
+		3355334E1396D66600399789 /* DummyCityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyCityManager.m; sourceTree = "<group>"; };
+		3355334F1396D66600399789 /* DummyFinanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyFinanceManager.h; sourceTree = "<group>"; };
+		335533501396D66600399789 /* DummyFinanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyFinanceManager.m; sourceTree = "<group>"; };
+		335533511396D66600399789 /* DummyInhabitantManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyInhabitantManager.h; sourceTree = "<group>"; };
+		335533521396D66600399789 /* DummyInhabitantManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyInhabitantManager.m; sourceTree = "<group>"; };
+		335533531396D66600399789 /* DummyManualCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyManualCacao.h; sourceTree = "<group>"; };
+		335533541396D66600399789 /* DummyManualCacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyManualCacao.m; sourceTree = "<group>"; };
+		335533551396D66600399789 /* DummyManualCacaoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyManualCacaoProvider.h; sourceTree = "<group>"; };
+		335533561396D66600399789 /* DummyManualCacaoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyManualCacaoProvider.m; sourceTree = "<group>"; };
+		335533571396D66600399789 /* DummyPlainObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyPlainObject.h; sourceTree = "<group>"; };
+		335533581396D66600399789 /* DummyPlainObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyPlainObject.m; sourceTree = "<group>"; };
+		335533591396D66600399789 /* DummyPlainSubObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyPlainSubObject.h; sourceTree = "<group>"; };
+		3355335A1396D66600399789 /* DummyPlainSubObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyPlainSubObject.m; sourceTree = "<group>"; };
+		3355335B1396D66600399789 /* DummyStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyStateManager.h; sourceTree = "<group>"; };
+		3355335C1396D66600399789 /* DummyStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyStateManager.m; sourceTree = "<group>"; };
+		3355335E1396D66600399789 /* TBErrorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBErrorTest.m; sourceTree = "<group>"; };
+		3355336C1396D68900399789 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = ../../../../Library/Frameworks/GHUnit.framework; sourceTree = "<group>"; };
+		3355337B1396D6E300399789 /* cacao-dummy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cacao-dummy.plist"; sourceTree = "<group>"; };
+		3355337C1396D6E300399789 /* cacao-wrong-version.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cacao-wrong-version.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F3C31489134E543C003869FC /* Frameworks */ = {
+		335532DE1396D42800399789 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C31491134E543D003869FC /* Cocoa.framework in Frameworks */,
+				3355331E1396D5BC00399789 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3C3149E134E543D003869FC /* Frameworks */ = {
+		335533201396D5FF00399789 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C314A3134E543D003869FC /* Cocoa.framework in Frameworks */,
-				F3C314A6134E543D003869FC /* TBCacao.framework in Frameworks */,
+				335533261396D5FF00399789 /* Cocoa.framework in Frameworks */,
+				3355336D1396D68900399789 /* GHUnit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F3C31481134E543C003869FC = {
+		335532D61396D42800399789 = {
 			isa = PBXGroup;
 			children = (
-				F3C31496134E543D003869FC /* TBCacao */,
-				F3C314A7134E543D003869FC /* TBCacaoTests */,
-				F3C3148F134E543D003869FC /* Frameworks */,
-				F3C3148E134E543D003869FC /* Products */,
+				335532EB1396D42800399789 /* TBCacao */,
+				3355332B1396D5FF00399789 /* TBCacaoTest */,
+				335532E41396D42800399789 /* Frameworks */,
+				335532E31396D42800399789 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F3C3148E134E543D003869FC /* Products */ = {
+		335532E31396D42800399789 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3C3148D134E543D003869FC /* TBCacao.framework */,
-				F3C314A2134E543D003869FC /* TBCacaoTests.octest */,
+				335532E21396D42800399789 /* TBCacao.framework */,
+				335533231396D5FF00399789 /* TBCacaoTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F3C3148F134E543D003869FC /* Frameworks */ = {
+		335532E41396D42800399789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3C31490134E543D003869FC /* Cocoa.framework */,
-				F3C31492134E543D003869FC /* Other Frameworks */,
+				3355336C1396D68900399789 /* GHUnit.framework */,
+				335532EA1396D42800399789 /* Foundation.framework */,
+				335533251396D5FF00399789 /* Cocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F3C31492134E543D003869FC /* Other Frameworks */ = {
+		335532EB1396D42800399789 /* TBCacao */ = {
 			isa = PBXGroup;
 			children = (
-				F3C31493134E543D003869FC /* AppKit.framework */,
-				F3C31494134E543D003869FC /* CoreData.framework */,
-				F3C31495134E543D003869FC /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		F3C31496134E543D003869FC /* TBCacao */ = {
-			isa = PBXGroup;
-			children = (
-				F3C31497134E543D003869FC /* Supporting Files */,
+				3355330B1396D48F00399789 /* Categories */,
+				335533131396D48F00399789 /* Global */,
+				335533101396D48F00399789 /* Errors */,
+				335532FA1396D48500399789 /* TBCacao.h */,
+				335532FB1396D48500399789 /* TBCacao.m */,
+				335532FC1396D48500399789 /* TBConfigManager.h */,
+				335532FD1396D48500399789 /* TBConfigManager.m */,
+				335532FE1396D48500399789 /* TBManualCacaoProvider.h */,
+				335532FF1396D48500399789 /* TBManualCacaoProvider.m */,
+				335533001396D48500399789 /* TBObjcProperty.h */,
+				335533011396D48500399789 /* TBObjcProperty.m */,
+				335532EC1396D42800399789 /* Supporting Files */,
 			);
 			path = TBCacao;
 			sourceTree = "<group>";
 		};
-		F3C31497134E543D003869FC /* Supporting Files */ = {
+		335532EC1396D42800399789 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F3C31498134E543D003869FC /* TBCacao-Info.plist */,
-				F3C31499134E543D003869FC /* InfoPlist.strings */,
-				F3C3149C134E543D003869FC /* TBCacao-Prefix.pch */,
+				335532ED1396D42800399789 /* TBCacao-Info.plist */,
+				335532EE1396D42800399789 /* InfoPlist.strings */,
+				335532F11396D42800399789 /* TBCacao-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F3C314A7134E543D003869FC /* TBCacaoTests */ = {
+		3355330B1396D48F00399789 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				F3C314AE134E543D003869FC /* TBCacaoTests.h */,
-				F3C314B0134E543D003869FC /* TBCacaoTests.m */,
-				F3C314A8134E543D003869FC /* Supporting Files */,
+				3355330C1396D48F00399789 /* NSObject+TBCacao.h */,
+				3355330D1396D48F00399789 /* NSObject+TBCacao.m */,
+				3355330E1396D48F00399789 /* NSString+TBCacao.h */,
+				3355330F1396D48F00399789 /* NSString+TBCacao.m */,
 			);
-			path = TBCacaoTests;
+			path = Categories;
 			sourceTree = "<group>";
 		};
-		F3C314A8134E543D003869FC /* Supporting Files */ = {
+		335533101396D48F00399789 /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				F3C314A9134E543D003869FC /* TBCacaoTests-Info.plist */,
-				F3C314AA134E543D003869FC /* InfoPlist.strings */,
-				F3C314AD134E543D003869FC /* TBCacaoTests-Prefix.pch */,
+				335533111396D48F00399789 /* TBError.h */,
+				335533121396D48F00399789 /* TBError.m */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		335533131396D48F00399789 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				335533141396D48F00399789 /* TBLog.h */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		3355332B1396D5FF00399789 /* TBCacaoTest */ = {
+			isa = PBXGroup;
+			children = (
+				335533491396D66600399789 /* Categories */,
+				3355334C1396D66600399789 /* DummyObjects */,
+				3355335D1396D66600399789 /* Errors */,
+				335533401396D65A00399789 /* TBBaseUnitTest.h */,
+				335533411396D65A00399789 /* TBBaseUnitTest.m */,
+				335533421396D65A00399789 /* TBCacaoTest.m */,
+				335533431396D65A00399789 /* TBConfigManagerTest.m */,
+				335533441396D65A00399789 /* TBObjcPropertyTest.m */,
+				3355337A1396D6E300399789 /* Resources */,
+				3355332C1396D5FF00399789 /* Supporting Files */,
+			);
+			path = TBCacaoTest;
+			sourceTree = "<group>";
+		};
+		3355332C1396D5FF00399789 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3355332D1396D5FF00399789 /* TBCacaoTest-Info.plist */,
+				3355332E1396D5FF00399789 /* InfoPlist.strings */,
+				335533311396D5FF00399789 /* TBCacaoTest-Prefix.pch */,
+				335533321396D5FF00399789 /* main.m */,
+				335533341396D5FF00399789 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		335533491396D66600399789 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				3355334A1396D66600399789 /* NSObjectCategoryTest.m */,
+				3355334B1396D66600399789 /* NSStringCategoryTest.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		3355334C1396D66600399789 /* DummyObjects */ = {
+			isa = PBXGroup;
+			children = (
+				3355334D1396D66600399789 /* DummyCityManager.h */,
+				3355334E1396D66600399789 /* DummyCityManager.m */,
+				3355334F1396D66600399789 /* DummyFinanceManager.h */,
+				335533501396D66600399789 /* DummyFinanceManager.m */,
+				335533511396D66600399789 /* DummyInhabitantManager.h */,
+				335533521396D66600399789 /* DummyInhabitantManager.m */,
+				335533531396D66600399789 /* DummyManualCacao.h */,
+				335533541396D66600399789 /* DummyManualCacao.m */,
+				335533551396D66600399789 /* DummyManualCacaoProvider.h */,
+				335533561396D66600399789 /* DummyManualCacaoProvider.m */,
+				335533571396D66600399789 /* DummyPlainObject.h */,
+				335533581396D66600399789 /* DummyPlainObject.m */,
+				335533591396D66600399789 /* DummyPlainSubObject.h */,
+				3355335A1396D66600399789 /* DummyPlainSubObject.m */,
+				3355335B1396D66600399789 /* DummyStateManager.h */,
+				3355335C1396D66600399789 /* DummyStateManager.m */,
+			);
+			path = DummyObjects;
+			sourceTree = "<group>";
+		};
+		3355335D1396D66600399789 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				3355335E1396D66600399789 /* TBErrorTest.m */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		3355337A1396D6E300399789 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3355337B1396D6E300399789 /* cacao-dummy.plist */,
+				3355337C1396D6E300399789 /* cacao-wrong-version.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F3C3148A134E543C003869FC /* Headers */ = {
+		335532DF1396D42800399789 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335533021396D48500399789 /* TBCacao.h in Headers */,
+				335533041396D48500399789 /* TBConfigManager.h in Headers */,
+				335533061396D48500399789 /* TBManualCacaoProvider.h in Headers */,
+				335533081396D48500399789 /* TBObjcProperty.h in Headers */,
+				335533151396D48F00399789 /* NSObject+TBCacao.h in Headers */,
+				335533171396D48F00399789 /* NSString+TBCacao.h in Headers */,
+				335533191396D48F00399789 /* TBError.h in Headers */,
+				3355331B1396D48F00399789 /* TBLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F3C3148C134E543C003869FC /* TBCacao */ = {
+		335532E11396D42800399789 /* TBCacao */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3C314B4134E543D003869FC /* Build configuration list for PBXNativeTarget "TBCacao" */;
+			buildConfigurationList = 335532F41396D42800399789 /* Build configuration list for PBXNativeTarget "TBCacao" */;
 			buildPhases = (
-				F3C31488134E543C003869FC /* Sources */,
-				F3C31489134E543C003869FC /* Frameworks */,
-				F3C3148A134E543C003869FC /* Headers */,
-				F3C3148B134E543C003869FC /* Resources */,
+				335532DD1396D42800399789 /* Sources */,
+				335532DE1396D42800399789 /* Frameworks */,
+				335532DF1396D42800399789 /* Headers */,
+				335532E01396D42800399789 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -168,134 +333,150 @@
 			);
 			name = TBCacao;
 			productName = TBCacao;
-			productReference = F3C3148D134E543D003869FC /* TBCacao.framework */;
+			productReference = 335532E21396D42800399789 /* TBCacao.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F3C314A1134E543D003869FC /* TBCacaoTests */ = {
+		335533221396D5FF00399789 /* TBCacaoTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3C314B7134E543D003869FC /* Build configuration list for PBXNativeTarget "TBCacaoTests" */;
+			buildConfigurationList = 3355333D1396D5FF00399789 /* Build configuration list for PBXNativeTarget "TBCacaoTest" */;
 			buildPhases = (
-				F3C3149D134E543D003869FC /* Sources */,
-				F3C3149E134E543D003869FC /* Frameworks */,
-				F3C3149F134E543D003869FC /* Resources */,
-				F3C314A0134E543D003869FC /* ShellScript */,
+				3355331F1396D5FF00399789 /* Sources */,
+				335533201396D5FF00399789 /* Frameworks */,
+				335533211396D5FF00399789 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F3C314A5134E543D003869FC /* PBXTargetDependency */,
 			);
-			name = TBCacaoTests;
-			productName = TBCacaoTests;
-			productReference = F3C314A2134E543D003869FC /* TBCacaoTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			name = TBCacaoTest;
+			productName = TBCacaoTest;
+			productReference = 335533231396D5FF00399789 /* TBCacaoTest.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F3C31483134E543C003869FC /* Project object */ = {
+		335532D81396D42800399789 /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = F3C31486134E543C003869FC /* Build configuration list for PBXProject "TBCacao" */;
+			attributes = {
+				ORGANIZATIONNAME = "TNG Technology Consulting GmbH";
+			};
+			buildConfigurationList = 335532DB1396D42800399789 /* Build configuration list for PBXProject "TBCacao" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F3C31481134E543C003869FC;
-			productRefGroup = F3C3148E134E543D003869FC /* Products */;
+			mainGroup = 335532D61396D42800399789;
+			productRefGroup = 335532E31396D42800399789 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3C3148C134E543C003869FC /* TBCacao */,
-				F3C314A1134E543D003869FC /* TBCacaoTests */,
+				335532E11396D42800399789 /* TBCacao */,
+				335533221396D5FF00399789 /* TBCacaoTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F3C3148B134E543C003869FC /* Resources */ = {
+		335532E01396D42800399789 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C3149B134E543D003869FC /* InfoPlist.strings in Resources */,
+				335532F01396D42800399789 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3C3149F134E543D003869FC /* Resources */ = {
+		335533211396D5FF00399789 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C314AC134E543D003869FC /* InfoPlist.strings in Resources */,
-				F3C314AF134E543D003869FC /* TBCacaoTests.h in Resources */,
+				335533301396D5FF00399789 /* InfoPlist.strings in Resources */,
+				335533361396D5FF00399789 /* Credits.rtf in Resources */,
+				3355337D1396D6E300399789 /* cacao-dummy.plist in Resources */,
+				3355337E1396D6E300399789 /* cacao-wrong-version.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		F3C314A0134E543D003869FC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		F3C31488134E543C003869FC /* Sources */ = {
+		335532DD1396D42800399789 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335533031396D48500399789 /* TBCacao.m in Sources */,
+				335533051396D48500399789 /* TBConfigManager.m in Sources */,
+				335533071396D48500399789 /* TBManualCacaoProvider.m in Sources */,
+				335533091396D48500399789 /* TBObjcProperty.m in Sources */,
+				335533161396D48F00399789 /* NSObject+TBCacao.m in Sources */,
+				335533181396D48F00399789 /* NSString+TBCacao.m in Sources */,
+				3355331A1396D48F00399789 /* TBError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3C3149D134E543D003869FC /* Sources */ = {
+		3355331F1396D5FF00399789 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3C314B1134E543D003869FC /* TBCacaoTests.m in Sources */,
+				3355336E1396D6B800399789 /* NSObject+TBCacao.m in Sources */,
+				3355336F1396D6B800399789 /* NSString+TBCacao.m in Sources */,
+				335533701396D6B800399789 /* TBError.m in Sources */,
+				335533711396D6B800399789 /* TBCacao.m in Sources */,
+				335533721396D6B800399789 /* TBConfigManager.m in Sources */,
+				335533731396D6B800399789 /* TBManualCacaoProvider.m in Sources */,
+				335533741396D6B800399789 /* TBObjcProperty.m in Sources */,
+				335533331396D5FF00399789 /* main.m in Sources */,
+				335533451396D65A00399789 /* TBBaseUnitTest.m in Sources */,
+				335533461396D65A00399789 /* TBCacaoTest.m in Sources */,
+				335533471396D65A00399789 /* TBConfigManagerTest.m in Sources */,
+				335533481396D65A00399789 /* TBObjcPropertyTest.m in Sources */,
+				3355335F1396D66600399789 /* NSObjectCategoryTest.m in Sources */,
+				335533601396D66600399789 /* NSStringCategoryTest.m in Sources */,
+				335533611396D66600399789 /* DummyCityManager.m in Sources */,
+				335533621396D66600399789 /* DummyFinanceManager.m in Sources */,
+				335533631396D66600399789 /* DummyInhabitantManager.m in Sources */,
+				335533641396D66600399789 /* DummyManualCacao.m in Sources */,
+				335533651396D66600399789 /* DummyManualCacaoProvider.m in Sources */,
+				335533661396D66600399789 /* DummyPlainObject.m in Sources */,
+				335533671396D66600399789 /* DummyPlainSubObject.m in Sources */,
+				335533681396D66600399789 /* DummyStateManager.m in Sources */,
+				335533691396D66600399789 /* TBErrorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		F3C314A5134E543D003869FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F3C3148C134E543C003869FC /* TBCacao */;
-			targetProxy = F3C314A4134E543D003869FC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		F3C31499134E543D003869FC /* InfoPlist.strings */ = {
+		335532EE1396D42800399789 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F3C3149A134E543D003869FC /* en */,
+				335532EF1396D42800399789 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		F3C314AA134E543D003869FC /* InfoPlist.strings */ = {
+		3355332E1396D5FF00399789 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F3C314AB134E543D003869FC /* en */,
+				3355332F1396D5FF00399789 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		335533341396D5FF00399789 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				335533351396D5FF00399789 /* en */,
+			);
+			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F3C314B2134E543D003869FC /* Debug */ = {
+		335532F21396D42800399789 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -313,7 +494,7 @@
 			};
 			name = Debug;
 		};
-		F3C314B3134E543D003869FC /* Release */ = {
+		335532F31396D42800399789 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
@@ -327,7 +508,7 @@
 			};
 			name = Release;
 		};
-		F3C314B5134E543D003869FC /* Debug */ = {
+		335532F51396D42800399789 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -345,7 +526,7 @@
 			};
 			name = Debug;
 		};
-		F3C314B6134E543D003869FC /* Release */ = {
+		335532F61396D42800399789 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -363,75 +544,66 @@
 			};
 			name = Release;
 		};
-		F3C314B8134E543D003869FC /* Debug */ = {
+		3355333E1396D5FF00399789 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TBCacaoTests/TBCacaoTests-Prefix.pch";
-				INFOPLIST_FILE = "TBCacaoTests/TBCacaoTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
+				GCC_PREFIX_HEADER = "TBCacaoTest/TBCacaoTest-Prefix.pch";
+				INFOPLIST_FILE = "TBCacaoTest/TBCacaoTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		F3C314B9134E543D003869FC /* Release */ = {
+		3355333F1396D5FF00399789 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TBCacaoTests/TBCacaoTests-Prefix.pch";
-				INFOPLIST_FILE = "TBCacaoTests/TBCacaoTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					SenTestingKit,
-				);
+				GCC_PREFIX_HEADER = "TBCacaoTest/TBCacaoTest-Prefix.pch";
+				INFOPLIST_FILE = "TBCacaoTest/TBCacaoTest-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3C31486134E543C003869FC /* Build configuration list for PBXProject "TBCacao" */ = {
+		335532DB1396D42800399789 /* Build configuration list for PBXProject "TBCacao" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3C314B2134E543D003869FC /* Debug */,
-				F3C314B3134E543D003869FC /* Release */,
+				335532F21396D42800399789 /* Debug */,
+				335532F31396D42800399789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3C314B4134E543D003869FC /* Build configuration list for PBXNativeTarget "TBCacao" */ = {
+		335532F41396D42800399789 /* Build configuration list for PBXNativeTarget "TBCacao" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3C314B5134E543D003869FC /* Debug */,
-				F3C314B6134E543D003869FC /* Release */,
+				335532F51396D42800399789 /* Debug */,
+				335532F61396D42800399789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		F3C314B7134E543D003869FC /* Build configuration list for PBXNativeTarget "TBCacaoTests" */ = {
+		3355333D1396D5FF00399789 /* Build configuration list for PBXNativeTarget "TBCacaoTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3C314B8134E543D003869FC /* Debug */,
-				F3C314B9134E543D003869FC /* Release */,
+				3355333E1396D5FF00399789 /* Debug */,
+				3355333F1396D5FF00399789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F3C31483134E543C003869FC /* Project object */;
+	rootObject = 335532D81396D42800399789 /* Project object */;
 }

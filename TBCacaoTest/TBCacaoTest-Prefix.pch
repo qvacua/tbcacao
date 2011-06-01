@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'TBCacaoTest' target in the 'TBCacaoTest' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
