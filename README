@@ -1,0 +1,8 @@
+TheobromaCacao (TBCacao)
+
+* About
+
+TBCacao is a small and simple Cocoa framework to mimic (only) the most
+basic feature of the framework Spring (http://www.springsource.org/) for
+Java, namely the singleton management. More description to come...
+
