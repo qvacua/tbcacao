@@ -1,3 +1,10 @@
+/**
+ * A rudimentary logging system
+ *
+ * @author Tae Won Ha
+ * @since 0.0.1
+ */
+
 #ifdef DEBUG
     #ifndef TBLOG_FOR_DEBUG
         #define TBLOG_FOR_DEBUG
