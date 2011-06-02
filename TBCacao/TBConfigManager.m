@@ -1,3 +1,8 @@
+/*
+ * Copyright 2011 Tae Won Ha, See LICENSE for details.
+ *
+ */
+
 #import "TBConfigManager.h"
 #import "TBLog.h"
 #import "TBError.h"

@@ -53,7 +53,7 @@
 		335533741396D6B800399789 /* TBObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533011396D48500399789 /* TBObjcProperty.m */; };
 		3355337D1396D6E300399789 /* cacao-dummy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3355337B1396D6E300399789 /* cacao-dummy.plist */; };
 		3355337E1396D6E300399789 /* cacao-wrong-version.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3355337C1396D6E300399789 /* cacao-wrong-version.plist */; };
-		33EC75D513976C0B0004283F /* TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 33EC75D413976C0B0004283F /* TBCacao.h */; };
+		33EC75D513976C0B0004283F /* TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 33EC75D413976C0B0004283F /* TBCacao.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -315,6 +315,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33EC75D513976C0B0004283F /* TBCacao.h in Headers */,
 				335533021396D48500399789 /* TBCacaoMain.h in Headers */,
 				335533041396D48500399789 /* TBConfigManager.h in Headers */,
 				335533061396D48500399789 /* TBManualCacaoProvider.h in Headers */,
@@ -323,7 +324,6 @@
 				335533171396D48F00399789 /* NSString+TBCacao.h in Headers */,
 				335533191396D48F00399789 /* TBError.h in Headers */,
 				3355331B1396D48F00399789 /* TBLog.h in Headers */,
-				33EC75D513976C0B0004283F /* TBCacao.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
