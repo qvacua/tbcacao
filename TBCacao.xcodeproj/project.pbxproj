@@ -107,7 +107,7 @@
 		3355335B1396D66600399789 /* DummyStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyStateManager.h; sourceTree = "<group>"; };
 		3355335C1396D66600399789 /* DummyStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyStateManager.m; sourceTree = "<group>"; };
 		3355335E1396D66600399789 /* TBErrorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBErrorTest.m; sourceTree = "<group>"; };
-		3355336C1396D68900399789 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = ../../../../Library/Frameworks/GHUnit.framework; sourceTree = "<group>"; };
+		3355336C1396D68900399789 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = /Library/Frameworks/GHUnit.framework; sourceTree = "<absolute>"; };
 		3355337B1396D6E300399789 /* cacao-dummy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cacao-dummy.plist"; sourceTree = "<group>"; };
 		3355337C1396D6E300399789 /* cacao-wrong-version.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cacao-wrong-version.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,9 +155,8 @@
 		335532E41396D42800399789 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3355336C1396D68900399789 /* GHUnit.framework */,
 				335532EA1396D42800399789 /* Foundation.framework */,
-				335533251396D5FF00399789 /* Cocoa.framework */,
+				33EC758B139768B10004283F /* For testing */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -222,8 +221,8 @@
 		3355332B1396D5FF00399789 /* TBCacaoTest */ = {
 			isa = PBXGroup;
 			children = (
-				335533491396D66600399789 /* Categories */,
 				3355334C1396D66600399789 /* DummyObjects */,
+				335533491396D66600399789 /* Categories */,
 				3355335D1396D66600399789 /* Errors */,
 				335533401396D65A00399789 /* TBBaseUnitTest.h */,
 				335533411396D65A00399789 /* TBBaseUnitTest.m */,
@@ -295,6 +294,15 @@
 				3355337C1396D6E300399789 /* cacao-wrong-version.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		33EC758B139768B10004283F /* For testing */ = {
+			isa = PBXGroup;
+			children = (
+				3355336C1396D68900399789 /* GHUnit.framework */,
+				335533251396D5FF00399789 /* Cocoa.framework */,
+			);
+			name = "For testing";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -602,6 +610,7 @@
 				3355333F1396D5FF00399789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

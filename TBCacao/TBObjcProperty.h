@@ -1,5 +1,5 @@
 /**
- * A wrapper class for objc_property_t. It currently support only objects, i.e. int or BOOL are not (yet) supported.
+ * A wrapper class for objc_property_t. It currently supports only objects, i.e. int or BOOL are not (yet) supported.
  *
  * @author Tae Won Ha
  * @since 0.0.1
