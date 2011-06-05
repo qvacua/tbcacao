@@ -53,6 +53,7 @@
 		335533741396D6B800399789 /* TBObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533011396D48500399789 /* TBObjcProperty.m */; };
 		3355337D1396D6E300399789 /* cacao-dummy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3355337B1396D6E300399789 /* cacao-dummy.plist */; };
 		3355337E1396D6E300399789 /* cacao-wrong-version.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3355337C1396D6E300399789 /* cacao-wrong-version.plist */; };
+		33DBEF33139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DBEF32139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.m */; };
 		33EC75D513976C0B0004283F /* TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 33EC75D413976C0B0004283F /* TBCacao.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,8 @@
 		3355336C1396D68900399789 /* GHUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnit.framework; path = /Library/Frameworks/GHUnit.framework; sourceTree = "<absolute>"; };
 		3355337B1396D6E300399789 /* cacao-dummy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cacao-dummy.plist"; sourceTree = "<group>"; };
 		3355337C1396D6E300399789 /* cacao-wrong-version.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cacao-wrong-version.plist"; sourceTree = "<group>"; };
+		33DBEF31139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyManualCacaoProviderSecond.h; sourceTree = "<group>"; };
+		33DBEF32139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyManualCacaoProviderSecond.m; sourceTree = "<group>"; };
 		33EC75D413976C0B0004283F /* TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCacao.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -272,6 +275,8 @@
 				335533541396D66600399789 /* DummyManualCacao.m */,
 				335533551396D66600399789 /* DummyManualCacaoProvider.h */,
 				335533561396D66600399789 /* DummyManualCacaoProvider.m */,
+				33DBEF31139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.h */,
+				33DBEF32139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.m */,
 				335533571396D66600399789 /* DummyPlainObject.h */,
 				335533581396D66600399789 /* DummyPlainObject.m */,
 				335533591396D66600399789 /* DummyPlainSubObject.h */,
@@ -455,6 +460,7 @@
 				335533671396D66600399789 /* DummyPlainSubObject.m in Sources */,
 				335533681396D66600399789 /* DummyStateManager.m in Sources */,
 				335533691396D66600399789 /* TBErrorTest.m in Sources */,
+				33DBEF33139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

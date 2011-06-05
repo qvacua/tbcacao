@@ -7,6 +7,7 @@
 #import "DummyFinanceManager.h"
 #import "DummyInhabitantManager.h"
 #import "DummyManualCacaoProvider.h"
+#import "DummyManualCacaoProviderSecond.h"
 #import "DummyPlainObject.h"
 #import "DummyPlainSubObject.h"
 #import "DummyStateManager.h"
@@ -37,13 +38,25 @@
 - (void)testInitializeCacao {
     [cacao initializeCacao];
 
-    GHAssertTrue([cacao.manualCacaoProviders count] == 1, @"There is only one manual cacao provider.");
+    GHAssertTrue([cacao.manualCacaoProviders count] == 2, @"There should be two manual cacao providers.");
 
-    DummyManualCacaoProvider *manualCacaoProvider = [cacao.manualCacaoProviders objectAtIndex:0];
+    DummyManualCacaoProvider *manualCacaoProvider = nil;
+    DummyManualCacaoProviderSecond *manualCacaoProviderSecond = nil;
+    for (id provider in cacao.manualCacaoProviders) {
+        if ([provider isMemberOfClass:[DummyManualCacaoProvider class]]) {
+            manualCacaoProvider = provider;
+        }
+        if ([provider isMemberOfClass:[DummyManualCacaoProviderSecond class]]) {
+            manualCacaoProviderSecond = provider;
+        }
+    }
 
     GHAssertNotNil(manualCacaoProvider, @"Manual cacao provider is nil.");
     GHAssertTrue([manualCacaoProvider.object class] == [DummyPlainObject class], @"Class should be DummyPlainObject.");
     GHAssertTrue([manualCacaoProvider.subObject class] == [DummyPlainSubObject class], @"Class should be DummyPlainSubObject.");
+
+    GHAssertNotNil(manualCacaoProviderSecond, @"Manual cacao provider second is nil.");
+    GHAssertTrue([manualCacaoProviderSecond.notificationCenter class] == [NSNotificationCenter class], @"Class should be NSNotificationCenter");
 
     DummyPlainObject *plainObject = [cacao cacaoForName:@"myObject"];
     DummyPlainSubObject *plainSubObject = [cacao cacaoForName:@"mySubObject"];
@@ -72,6 +85,7 @@
     GHAssertTrue(cityManager.financeManager == financeManager, @"Finance manager of city manager not correct.");
 
     GHAssertTrue(inhabitantManager.cityManager == cityManager, @"City manager of inhabitant manager not correct.");
+    GHAssertTrue(inhabitantManager.notificationCenter == [NSNotificationCenter defaultCenter], @"Notification center of inhabitant manager not correct.");
 
     GHAssertTrue(financeManager.object == plainObject, @"Object of finance manager not correct.");
 }

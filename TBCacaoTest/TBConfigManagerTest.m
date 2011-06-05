@@ -53,8 +53,8 @@
     
     GHAssertTrue([configManager readConfigWithPossibleError:nil], @"No error should occur.");
     GHAssertTrue([configManager.configCacaos count] == 4, @"The number of cacaos is 4.");
-    GHAssertTrue([configManager.configManualCacaos count] == 3, @"The number of manual cacaos is 3.");
-    GHAssertTrue([configManager.configManualCacaoProviders count] == 1, @"The number of manual cacao provider is 1.");
+    GHAssertTrue([configManager.configManualCacaos count] == 4, @"The number of manual cacaos is 4.");
+    GHAssertTrue([configManager.configManualCacaoProviders count] == 2, @"The number of manual cacao provider is 2.");
 }
 
 @end

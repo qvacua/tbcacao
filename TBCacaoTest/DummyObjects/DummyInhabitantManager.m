@@ -5,6 +5,7 @@
 
 
 @synthesize cityManager;
+@synthesize notificationCenter;
 
 
 @end

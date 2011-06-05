@@ -20,6 +20,7 @@
 			<key>autowire</key>
 			<array>
 				<string>myCityManager</string>
+				<string>myNotificationCenter</string>
 			</array>
 			<key>class</key>
 			<string>DummyInhabitantManager</string>
@@ -52,6 +53,12 @@
 	<key>manual-cacao</key>
 	<array>
 		<dict>
+			<key>class</key>
+			<string>NSNotificationCenter</string>
+			<key>name</key>
+			<string>myNotificationCenter</string>
+		</dict>
+		<dict>
 			<key>autowire</key>
 			<array>
 				<string>myStateManager</string>
@@ -76,6 +83,12 @@
 	</array>
 	<key>manual-cacao-provider</key>
 	<array>
+		<dict>
+			<key>class</key>
+			<string>DummyManualCacaoProviderSecond</string>
+			<key>name</key>
+			<string>mySecondProvider</string>
+		</dict>
 		<dict>
 			<key>class</key>
 			<string>DummyManualCacaoProvider</string>
