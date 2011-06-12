@@ -98,44 +98,6 @@ static TBCacao *cacao = nil;
     return cacao;
 }
 
-- (NSString *)classNameOfManualCacao: (NSString *) name  {
-    for (NSDictionary *manualCacaoConfig in configManager.configManualCacaos) {
-        if ([[manualCacaoConfig objectForKey:@"name"] isEqualToString:name]) {
-            return [manualCacaoConfig objectForKey:@"class"];
-        }
-    }
-
-    return nil;
-}
-
-- (id)manualCacaoProviderFromFirstHavingPropertyClass:(NSString *)className {
-
-    for (id provider in manualCacaoBuilder.manualCacaoProviders) {
-        NSArray *properties = [[provider class] objcProperties];
-
-        for (TBObjcProperty *property in properties) {
-
-            if ([property.nameOfClass isEqualToString:className]) {
-                return [provider valueForKey:property.name];
-            }
-
-        }
-
-    }
-
-    log4Fatal(@"There is no manual Cacao provider which has a property with the class \"%@.\"", className);
-
-    return nil;
-}
-
-- (id)createManualCacao:(NSString *)name {
-    id manualCacao = [self manualCacaoProviderFromFirstHavingPropertyClass:[self classNameOfManualCacao:name]];
-
-    log4Info(@"Manual Cacao \"%@\" created.", name);
-
-    return manualCacao;
-}
-
 - (void) autowireAllCacaos {
     for (NSDictionary *cacaoConfig in configManager.configManualCacaos) {
         NSString *name = [cacaoConfig objectForKey:@"name"];
@@ -158,16 +120,6 @@ static TBCacao *cacao = nil;
     }
 }
 
-- (void) createAllManualCacaos {
-    for (NSDictionary *cacaoConfig in configManager.configManualCacaos) {
-        NSString *name = [cacaoConfig objectForKey:@"name"];
-
-        id manualCacao = [self createManualCacao:name];
-
-        [cacaos setObject:manualCacao forKey:name];
-    }
-}
-
 - (void) createAllCacaos {
     for (NSDictionary *cacaoConfig in configManager.configCacaos) {
         [self createCacao:cacaoConfig];
@@ -183,10 +135,10 @@ static TBCacao *cacao = nil;
 
         return;
     }
-    
+
     if (! manualCacaoBuilder) {
         log4Fatal(@"No manual cacao builder present.");
-        
+
         return;
     }
 
@@ -194,9 +146,7 @@ static TBCacao *cacao = nil;
 
     cacaos = [[NSMutableDictionary allocWithZone:nil] initWithCapacity:([configManager.configCacaos count] + [configManager.configManualCacaos count])];
 
-    [manualCacaoBuilder buildManualCacaoProvidersFrom:configManager.configManualCacaoProviders];
-
-    [self createAllManualCacaos];
+    [cacaos addEntriesFromDictionary:[manualCacaoBuilder allManualCacaos]];
 
     [self createAllCacaos];
 
@@ -225,7 +175,7 @@ static TBCacao *cacao = nil;
 - (void)dealloc {
     [configManager release];
     [manualCacaoBuilder release];
-    
+
     [cacaos release];
 
     [super dealloc];

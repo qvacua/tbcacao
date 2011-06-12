@@ -9,7 +9,7 @@
  * @since 0.0.1
  *
  * Copyright 2011 Tae Won Ha, See LICENSE for details.
- * 
+ *
  */
 
 #import <Foundation/Foundation.h>
@@ -22,12 +22,20 @@
 @private
     TBConfigManager *configManager;
     TBManualCacaoBuilder *manualCacaoBuilder;
-    
+
     NSMutableDictionary *cacaos;
 }
 
-
+/**
+ * TBConfigManager which contains all the configuration. Must be set before TBCacao can be used.
+ * @since 0.0.1
+ */
 @property (retain, readwrite) TBConfigManager *configManager;
+
+/**
+ * TBManualCacaoBuilder is used to obtain all manual Cacaos. Must be set before TBCacao can be used.
+ * @since 0.0.1
+ */
 @property (retain, readwrite) TBManualCacaoBuilder *manualCacaoBuilder;
 
 
