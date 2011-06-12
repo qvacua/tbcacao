@@ -15,19 +15,20 @@
 #import <Foundation/Foundation.h>
 
 
-@class TBConfigManager;
+@class TBConfigManager, TBManualCacaoBuilder;
 
 
 @interface TBCacao : NSObject {
 @private
     TBConfigManager *configManager;
-    NSMutableArray *manualCacaoProviders;
+    TBManualCacaoBuilder *manualCacaoBuilder;
+    
     NSMutableDictionary *cacaos;
 }
 
 
 @property (retain, readwrite) TBConfigManager *configManager;
-@property (readonly) NSArray *manualCacaoProviders;
+@property (retain, readwrite) TBManualCacaoBuilder *manualCacaoBuilder;
 
 
 /**

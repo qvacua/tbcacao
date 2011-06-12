@@ -68,5 +68,11 @@
  */
 - (id)initWithConfigFileName:(NSString *)filename;
 
+/**
+ * Returns true if clazz is the class of a Cacao
+ * @since 0.0.1
+ */
+- (BOOL)hasClass:(Class)clazz;
+
 
 @end

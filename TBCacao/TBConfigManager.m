@@ -3,6 +3,8 @@
  *
  */
 
+#import "NSObject+TBCacao.h"
+
 #import "TBConfigManager.h"
 #import "TBLog.h"
 #import "TBError.h"
@@ -55,16 +57,25 @@
     return YES;
 }
 
+- (BOOL)configRead {
+    return (self.configCacaos && self.configManualCacaos && self.configManualCacaoProviders);
+}
+
 
 - (BOOL)readConfigWithPossibleError:(TBError **)error {
     
+    if ([self configRead]) {
+        log4Info(@"Config already read.");
+        return YES;
+    }
+    
     NSDictionary *configDict = [self configDictionaryWithPossibleError:error];
     
-    if (configDict == nil) {
+    if (! configDict) {
         return NO;
     }
     
-    if ([self checkConfigBuild:configDict error:error] == NO) {
+    if (! [self checkConfigBuild:configDict error:error]) {
         return NO;
     }
     
@@ -75,6 +86,31 @@
     return YES;
 }
 
+- (BOOL)hasClass:(Class)clazz {
+    
+    if (! [self configRead]) {
+        log4Warn(@"Config is not read yet.");
+        return NO;
+    }
+    
+    for (NSDictionary *config in [self configCacaos]) {
+        NSString *cacaoClass = [config objectForKey:@"class"];
+        
+        if ([cacaoClass isEqualToString:[clazz classAsString]]) {
+            return YES;
+        }
+    }
+    
+    for (NSDictionary *config in [self configManualCacaos]) {
+        NSString *manualCacaoClass = [config objectForKey:@"class"];
+        
+        if ([manualCacaoClass isEqualToString:[clazz classAsString]]) {
+            return YES;
+        }
+    }
+    
+    return NO;
+}
 
 - (id)init {
     if ((self = [super init])) {

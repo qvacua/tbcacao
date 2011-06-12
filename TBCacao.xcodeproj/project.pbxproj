@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331D4BB713A33925008D779F /* TBManualCacaoBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 331D4BB513A33925008D779F /* TBManualCacaoBuilder.h */; };
+		331D4BBA13A33E35008D779F /* TBManualCacaoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 331D4BB613A33925008D779F /* TBManualCacaoBuilder.m */; };
+		331D4BBC13A34E17008D779F /* TBManualCacaoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 331D4BB613A33925008D779F /* TBManualCacaoBuilder.m */; };
+		333D619313A1631D00EC919B /* DummyPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 333D619213A1631D00EC919B /* DummyPropertyObject.m */; };
 		335532F01396D42800399789 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 335532EE1396D42800399789 /* InfoPlist.strings */; };
 		335533021396D48500399789 /* TBCacaoMain.h in Headers */ = {isa = PBXBuildFile; fileRef = 335532FA1396D48500399789 /* TBCacaoMain.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		335533031396D48500399789 /* TBCacaoMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 335532FB1396D48500399789 /* TBCacaoMain.m */; };
@@ -58,6 +62,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		331D4BB513A33925008D779F /* TBManualCacaoBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBManualCacaoBuilder.h; path = "Manual Cacaos/TBManualCacaoBuilder.h"; sourceTree = "<group>"; };
+		331D4BB613A33925008D779F /* TBManualCacaoBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBManualCacaoBuilder.m; path = "Manual Cacaos/TBManualCacaoBuilder.m"; sourceTree = "<group>"; };
+		333D619113A1631D00EC919B /* DummyPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyPropertyObject.h; sourceTree = "<group>"; };
+		333D619213A1631D00EC919B /* DummyPropertyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyPropertyObject.m; sourceTree = "<group>"; };
 		335532E21396D42800399789 /* TBCacao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBCacao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		335532EA1396D42800399789 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		335532ED1396D42800399789 /* TBCacao-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacao-Info.plist"; sourceTree = "<group>"; };
@@ -67,8 +75,8 @@
 		335532FB1396D48500399789 /* TBCacaoMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBCacaoMain.m; sourceTree = "<group>"; };
 		335532FC1396D48500399789 /* TBConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBConfigManager.h; sourceTree = "<group>"; };
 		335532FD1396D48500399789 /* TBConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBConfigManager.m; sourceTree = "<group>"; };
-		335532FE1396D48500399789 /* TBManualCacaoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBManualCacaoProvider.h; sourceTree = "<group>"; };
-		335532FF1396D48500399789 /* TBManualCacaoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBManualCacaoProvider.m; sourceTree = "<group>"; };
+		335532FE1396D48500399789 /* TBManualCacaoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBManualCacaoProvider.h; path = "Manual Cacaos/TBManualCacaoProvider.h"; sourceTree = "<group>"; };
+		335532FF1396D48500399789 /* TBManualCacaoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBManualCacaoProvider.m; path = "Manual Cacaos/TBManualCacaoProvider.m"; sourceTree = "<group>"; };
 		335533001396D48500399789 /* TBObjcProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBObjcProperty.h; sourceTree = "<group>"; };
 		335533011396D48500399789 /* TBObjcProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBObjcProperty.m; sourceTree = "<group>"; };
 		3355330C1396D48F00399789 /* NSObject+TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TBCacao.h"; sourceTree = "<group>"; };
@@ -138,6 +146,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		331D4BB413A338ED008D779F /* Manual Cacaos */ = {
+			isa = PBXGroup;
+			children = (
+				335532FE1396D48500399789 /* TBManualCacaoProvider.h */,
+				335532FF1396D48500399789 /* TBManualCacaoProvider.m */,
+				331D4BB513A33925008D779F /* TBManualCacaoBuilder.h */,
+				331D4BB613A33925008D779F /* TBManualCacaoBuilder.m */,
+			);
+			name = "Manual Cacaos";
+			sourceTree = "<group>";
+		};
 		335532D61396D42800399789 = {
 			isa = PBXGroup;
 			children = (
@@ -175,12 +194,11 @@
 				335533101396D48F00399789 /* Errors */,
 				335532FA1396D48500399789 /* TBCacaoMain.h */,
 				335532FB1396D48500399789 /* TBCacaoMain.m */,
-				335532FC1396D48500399789 /* TBConfigManager.h */,
-				335532FD1396D48500399789 /* TBConfigManager.m */,
-				335532FE1396D48500399789 /* TBManualCacaoProvider.h */,
-				335532FF1396D48500399789 /* TBManualCacaoProvider.m */,
 				335533001396D48500399789 /* TBObjcProperty.h */,
 				335533011396D48500399789 /* TBObjcProperty.m */,
+				335532FC1396D48500399789 /* TBConfigManager.h */,
+				335532FD1396D48500399789 /* TBConfigManager.m */,
+				331D4BB413A338ED008D779F /* Manual Cacaos */,
 				335532EC1396D42800399789 /* Supporting Files */,
 			);
 			path = TBCacao;
@@ -283,6 +301,8 @@
 				3355335A1396D66600399789 /* DummyPlainSubObject.m */,
 				3355335B1396D66600399789 /* DummyStateManager.h */,
 				3355335C1396D66600399789 /* DummyStateManager.m */,
+				333D619113A1631D00EC919B /* DummyPropertyObject.h */,
+				333D619213A1631D00EC919B /* DummyPropertyObject.m */,
 			);
 			path = DummyObjects;
 			sourceTree = "<group>";
@@ -329,6 +349,7 @@
 				335533171396D48F00399789 /* NSString+TBCacao.h in Headers */,
 				335533191396D48F00399789 /* TBError.h in Headers */,
 				3355331B1396D48F00399789 /* TBLog.h in Headers */,
+				331D4BB713A33925008D779F /* TBManualCacaoBuilder.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +451,7 @@
 				335533161396D48F00399789 /* NSObject+TBCacao.m in Sources */,
 				335533181396D48F00399789 /* NSString+TBCacao.m in Sources */,
 				3355331A1396D48F00399789 /* TBError.m in Sources */,
+				331D4BBA13A33E35008D779F /* TBManualCacaoBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +483,8 @@
 				335533681396D66600399789 /* DummyStateManager.m in Sources */,
 				335533691396D66600399789 /* TBErrorTest.m in Sources */,
 				33DBEF33139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.m in Sources */,
+				333D619313A1631D00EC919B /* DummyPropertyObject.m in Sources */,
+				331D4BBC13A34E17008D779F /* TBManualCacaoBuilder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

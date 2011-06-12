@@ -7,30 +7,24 @@
 @implementation DummyManualCacaoProvider
 
 
-@dynamic object;
-@dynamic subObject;
-@dynamic manualCacao;
+@synthesize object;
+@synthesize subObject;
+@synthesize manualCacao;
 
 
-- (DummyPlainObject *)object {
-    DummyPlainObject *result = [[DummyPlainObject allocWithZone:nil] init];
-    result.stringProperty = @"String";
+- (id)init {
+    if ((self = [super init])) {
+        object = [[DummyPlainObject allocWithZone:nil] init];
+        object.stringProperty = @"String";
+        
+        subObject = [[DummyPlainSubObject allocWithZone:nil] init];
+        subObject.stringProperty = @"String2";
+        subObject.arrayProperty = [NSArray arrayWithObjects:@"first", @"second", nil];
+        
+        manualCacao = [[DummyManualCacao allocWithZone:nil] init];
+    }
     
-    return result;
-}
-
-- (DummyPlainSubObject *)subObject {
-    DummyPlainSubObject *result = [[DummyPlainSubObject allocWithZone:nil] init];
-    result.stringProperty = @"String2";
-    result.arrayProperty = [NSArray arrayWithObjects:@"first", @"second", nil];
-    
-    return result;
-}
-
-- (DummyManualCacao *)manualCacao {
-    DummyManualCacao *result = [[DummyManualCacao allocWithZone:nil] init];
-    
-    return result;
+    return self;
 }
 
 - (void)dealloc {

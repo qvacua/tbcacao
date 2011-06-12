@@ -2,6 +2,7 @@
 #import "TBBaseUnitTest.h"
 #import "TBCacao.h"
 #import "TBConfigManager.h"
+#import "TBManualCacaoBuilder.h"
 
 #import "DummyCityManager.h"
 #import "DummyFinanceManager.h"
@@ -18,6 +19,7 @@
 @private
     TBCacao *cacao;
     TBConfigManager *configManager;
+    TBManualCacaoBuilder *manualCacaoBuilder;
 }
 
 @end
@@ -27,22 +29,29 @@
 
 - (void)setUp {
     cacao = [[TBCacao allocWithZone:nil] init];
+    
     configManager = [[TBConfigManager allocWithZone:nil] initWithConfigFileName:@"cacao-dummy.plist"];
     cacao.configManager = configManager;
+    
+    manualCacaoBuilder = [[TBManualCacaoBuilder allocWithZone:nil] init];
+    cacao.manualCacaoBuilder = manualCacaoBuilder;
 }
 
 - (void)tearDown {
+    [configManager release];
+    [manualCacaoBuilder release];
+    
     [cacao release];
 }
 
 - (void)testInitializeCacao {
     [cacao initializeCacao];
 
-    GHAssertTrue([cacao.manualCacaoProviders count] == 2, @"There should be two manual cacao providers.");
+    GHAssertTrue([cacao.manualCacaoBuilder.manualCacaoProviders count] == 2, @"There should be two manual cacao providers.");
 
     DummyManualCacaoProvider *manualCacaoProvider = nil;
     DummyManualCacaoProviderSecond *manualCacaoProviderSecond = nil;
-    for (id provider in cacao.manualCacaoProviders) {
+    for (id provider in cacao.manualCacaoBuilder.manualCacaoProviders) {
         if ([provider isMemberOfClass:[DummyManualCacaoProvider class]]) {
             manualCacaoProvider = provider;
         }

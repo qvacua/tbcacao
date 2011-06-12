@@ -13,6 +13,8 @@
 
 
 @synthesize stringProperty;
+@synthesize intProperty;
+@synthesize customName = _customName;
 
 
 - (id)init

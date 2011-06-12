@@ -20,7 +20,7 @@
 - (void)testAllProperties {
     NSArray *properties = [DummyPlainSubObject objcProperties];
     
-    GHAssertTrue([properties count] == 2, @"There should be 2 properties alltogether for \"%@.\"", [DummyPlainSubObject classAsString]);
+    GHAssertTrue([properties count] == 4, @"There should be 1 + 3 (superclass) properties alltogether for \"%@.\"", [DummyPlainSubObject classAsString]);
     
     TBObjcProperty *firstProperty = [properties objectAtIndex:0];
     TBObjcProperty *secondProperty = [properties objectAtIndex:1];
