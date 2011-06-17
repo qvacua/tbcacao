@@ -3,3 +3,5 @@ build
 *.xcodeproj/project.xcworkspace
 *.xcodeproj/xcuserdata
 *.swp
+*.mm
+

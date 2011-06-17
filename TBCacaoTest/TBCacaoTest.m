@@ -10,7 +10,6 @@
 #import "DummyManualCacaoProvider.h"
 #import "DummyManualCacaoProviderSecond.h"
 #import "DummyPlainObject.h"
-#import "DummyPlainSubObject.h"
 #import "DummyStateManager.h"
 #import "DummyManualCacao.h"
 
@@ -34,10 +33,6 @@
     
     configManager = [[TBConfigManager allocWithZone:nil] initWithConfigFileName:@"cacao-dummy.plist"];
     cacao.configManager = configManager;
-    
-    manualCacaoBuilder = [[TBManualCacaoBuilder allocWithZone:nil] init];
-    manualCacaoBuilder.configManager = configManager;
-    cacao.manualCacaoBuilder = manualCacaoBuilder;
 }
 
 - (void)tearDown {
@@ -54,7 +49,6 @@
 
     // manual Cacaos
     DummyPlainObject *plainObject = [cacao cacaoForName:@"myObject"];
-    DummyPlainSubObject *plainSubObject = [cacao cacaoForName:@"mySubObject"];
     DummyManualCacao *manualCacao = [cacao cacaoForName:@"myManualCacao"];
     NSNotificationCenter *notificationCenter = [cacao cacaoForName:@"myNotificationCenter"];
 

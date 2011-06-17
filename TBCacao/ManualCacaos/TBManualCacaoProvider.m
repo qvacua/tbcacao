@@ -4,7 +4,6 @@
  */
 
 #import "TBManualCacaoProvider.h"
-#import "TBLog.h"
 
 
 @implementation TBManualCacaoProvider

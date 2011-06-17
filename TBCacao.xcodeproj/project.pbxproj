@@ -20,7 +20,7 @@
 		335533161396D48F00399789 /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355330D1396D48F00399789 /* NSObject+TBCacao.m */; };
 		335533171396D48F00399789 /* NSString+TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 3355330E1396D48F00399789 /* NSString+TBCacao.h */; };
 		335533181396D48F00399789 /* NSString+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 3355330F1396D48F00399789 /* NSString+TBCacao.m */; };
-		335533191396D48F00399789 /* TBError.h in Headers */ = {isa = PBXBuildFile; fileRef = 335533111396D48F00399789 /* TBError.h */; };
+		335533191396D48F00399789 /* TBError.h in Headers */ = {isa = PBXBuildFile; fileRef = 335533111396D48F00399789 /* TBError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3355331A1396D48F00399789 /* TBError.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533121396D48F00399789 /* TBError.m */; };
 		3355331B1396D48F00399789 /* TBLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 335533141396D48F00399789 /* TBLog.h */; };
 		3355331E1396D5BC00399789 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335532EA1396D42800399789 /* Foundation.framework */; };
@@ -52,14 +52,17 @@
 		335533741396D6B800399789 /* TBObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 335533011396D48500399789 /* TBObjcProperty.m */; };
 		3355337D1396D6E300399789 /* cacao-dummy.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3355337B1396D6E300399789 /* cacao-dummy.plist */; };
 		3355337E1396D6E300399789 /* cacao-wrong-version.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3355337C1396D6E300399789 /* cacao-wrong-version.plist */; };
-		33B8925C13A543C80031D925 /* TBManualCacaoBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 33B8925813A543C80031D925 /* TBManualCacaoBuilder.h */; };
 		33B8925D13A543C80031D925 /* TBManualCacaoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B8925913A543C80031D925 /* TBManualCacaoBuilder.m */; };
 		33B8925E13A543C80031D925 /* TBManualCacaoBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B8925913A543C80031D925 /* TBManualCacaoBuilder.m */; };
-		33B8925F13A543C80031D925 /* TBManualCacaoProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 33B8925A13A543C80031D925 /* TBManualCacaoProvider.h */; };
+		33B8925F13A543C80031D925 /* TBManualCacaoProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 33B8925A13A543C80031D925 /* TBManualCacaoProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33B8926013A543C80031D925 /* TBManualCacaoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B8925B13A543C80031D925 /* TBManualCacaoProvider.m */; };
 		33B8926113A543C80031D925 /* TBManualCacaoProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B8925B13A543C80031D925 /* TBManualCacaoProvider.m */; };
+		33B8926413A608460031D925 /* TBException.h in Headers */ = {isa = PBXBuildFile; fileRef = 33B8926213A608460031D925 /* TBException.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33B8926513A608460031D925 /* TBException.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B8926313A608460031D925 /* TBException.m */; };
+		33B8926613A608460031D925 /* TBException.m in Sources */ = {isa = PBXBuildFile; fileRef = 33B8926313A608460031D925 /* TBException.m */; };
 		33DBEF33139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DBEF32139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.m */; };
 		33EC75D513976C0B0004283F /* TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 33EC75D413976C0B0004283F /* TBCacao.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33FA18DB13ABE84C001AD09E /* TBManualCacaoBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = 33B8925813A543C80031D925 /* TBManualCacaoBuilder.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +125,8 @@
 		33B8925913A543C80031D925 /* TBManualCacaoBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBManualCacaoBuilder.m; path = ManualCacaos/TBManualCacaoBuilder.m; sourceTree = "<group>"; };
 		33B8925A13A543C80031D925 /* TBManualCacaoProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBManualCacaoProvider.h; path = ManualCacaos/TBManualCacaoProvider.h; sourceTree = "<group>"; };
 		33B8925B13A543C80031D925 /* TBManualCacaoProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBManualCacaoProvider.m; path = ManualCacaos/TBManualCacaoProvider.m; sourceTree = "<group>"; };
+		33B8926213A608460031D925 /* TBException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBException.h; path = ../Exceptions/TBException.h; sourceTree = "<group>"; };
+		33B8926313A608460031D925 /* TBException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBException.m; path = ../Exceptions/TBException.m; sourceTree = "<group>"; };
 		33DBEF31139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyManualCacaoProviderSecond.h; sourceTree = "<group>"; };
 		33DBEF32139BAC0D0083CB02 /* DummyManualCacaoProviderSecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyManualCacaoProviderSecond.m; sourceTree = "<group>"; };
 		33EC75D413976C0B0004283F /* TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBCacao.h; sourceTree = "<group>"; };
@@ -193,6 +198,7 @@
 				33EC75D413976C0B0004283F /* TBCacao.h */,
 				3355330B1396D48F00399789 /* Categories */,
 				335533131396D48F00399789 /* Global */,
+				33B8926713A609CE0031D925 /* Exceptions */,
 				335533101396D48F00399789 /* Errors */,
 				335532FA1396D48500399789 /* TBCacaoMain.h */,
 				335532FB1396D48500399789 /* TBCacaoMain.m */,
@@ -327,6 +333,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		33B8926713A609CE0031D925 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				33B8926213A608460031D925 /* TBException.h */,
+				33B8926313A608460031D925 /* TBException.m */,
+			);
+			name = Exceptions;
+			path = Errors;
+			sourceTree = "<group>";
+		};
 		33EC758B139768B10004283F /* For testing */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,15 +360,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				33EC75D513976C0B0004283F /* TBCacao.h in Headers */,
-				335533021396D48500399789 /* TBCacaoMain.h in Headers */,
+				33B8926413A608460031D925 /* TBException.h in Headers */,
+				335533191396D48F00399789 /* TBError.h in Headers */,
 				335533041396D48500399789 /* TBConfigManager.h in Headers */,
+				33B8925F13A543C80031D925 /* TBManualCacaoProvider.h in Headers */,
+				335533021396D48500399789 /* TBCacaoMain.h in Headers */,
+				33FA18DB13ABE84C001AD09E /* TBManualCacaoBuilder.h in Headers */,
 				335533081396D48500399789 /* TBObjcProperty.h in Headers */,
 				335533151396D48F00399789 /* NSObject+TBCacao.h in Headers */,
 				335533171396D48F00399789 /* NSString+TBCacao.h in Headers */,
-				335533191396D48F00399789 /* TBError.h in Headers */,
 				3355331B1396D48F00399789 /* TBLog.h in Headers */,
-				33B8925C13A543C80031D925 /* TBManualCacaoBuilder.h in Headers */,
-				33B8925F13A543C80031D925 /* TBManualCacaoProvider.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +472,7 @@
 				3355331A1396D48F00399789 /* TBError.m in Sources */,
 				33B8925D13A543C80031D925 /* TBManualCacaoBuilder.m in Sources */,
 				33B8926013A543C80031D925 /* TBManualCacaoProvider.m in Sources */,
+				33B8926513A608460031D925 /* TBException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +507,7 @@
 				334DDDFE13A4C75300B4D325 /* TBManualCacaoBuilderTest.m in Sources */,
 				33B8925E13A543C80031D925 /* TBManualCacaoBuilder.m in Sources */,
 				33B8926113A543C80031D925 /* TBManualCacaoProvider.m in Sources */,
+				33B8926613A608460031D925 /* TBException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,13 +15,12 @@
 #import <Foundation/Foundation.h>
 
 
-@class TBConfigManager, TBManualCacaoBuilder;
+@class TBConfigManager;
 
 
 @interface TBCacao : NSObject {
 @private
     TBConfigManager *configManager;
-    TBManualCacaoBuilder *manualCacaoBuilder;
 
     NSMutableDictionary *cacaos;
 }
@@ -31,13 +30,6 @@
  * @since 0.0.1
  */
 @property (retain, readwrite) TBConfigManager *configManager;
-
-/**
- * TBManualCacaoBuilder is used to obtain all manual Cacaos. Must be set before TBCacao can be used.
- * @since 0.0.1
- */
-@property (retain, readwrite) TBManualCacaoBuilder *manualCacaoBuilder;
-
 
 /**
  * Main method of TBCacao. Initializes all cacaos and manual cacaos and autowires them.
