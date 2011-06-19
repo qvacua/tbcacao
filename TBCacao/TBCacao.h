@@ -11,5 +11,7 @@
 
 #import <TBCacao/TBCacaoMain.h>
 #import <TBCacao/TBConfigManager.h>
+#import <TBCacao/TBException.h>
 #import <TBCacao/TBConfigException.h>
 #import <TBCacao/TBManualCacaoException.h>
+#import <TBcacao/TBRegularCacaoException.h>
