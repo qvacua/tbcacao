@@ -1,6 +1,8 @@
 #import "TBBaseUnitTest.h"
 #import "TBManualCacaoBuilder.h"
 #import "TBConfigManager.h"
+#import "TBManualCacaoException.h"
+#import "TBConfigException.h"
 
 #import "DummyManualCacaoProvider.h"
 #import "DummyManualCacaoProviderSecond.h"
@@ -19,14 +21,13 @@
 @implementation TBManualCacaoBuilderTest
 
 
-- (void)setUp {
-    [super setUp];
-    
-    configManager = [[TBConfigManager allocWithZone:nil] initWithConfigFileName:@"cacao-dummy.plist"];
-    [configManager readConfigWithPossibleError:nil];
+- (void)setUpWithConfigFileName:(NSString *)configFileName  {
+    configManager = [[TBConfigManager allocWithZone:nil] initWithConfigFileName:configFileName];
+    [configManager readConfig];
     
     manualCacaoBuilder = [[TBManualCacaoBuilder allocWithZone:nil] init];
     manualCacaoBuilder.configManager = configManager;
+    
 }
 
 - (void)tearDown {
@@ -36,7 +37,29 @@
     [super tearDown];
 }
 
+- (void)testAbsentConfigManager {
+    [self setUpWithConfigFileName:@"cacao-dummy.plist"];
+    
+    manualCacaoBuilder.configManager = nil;
+    
+    GHAssertThrowsSpecificNamed([manualCacaoBuilder allManualCacaos], TBConfigException, TBConfigConfigManagerAbsentException, @"Config manager absent, therefore an exception should have been thrown.");
+}
+
+- (void)testWrongManualCacaoProvider {
+    [self setUpWithConfigFileName:@"cacao-wrong-manual-cacao-provider.plist"];
+
+    GHAssertThrowsSpecificNamed([manualCacaoBuilder allManualCacaos], TBManualCacaoException, TBManualCacaoProviderClassNotFoundException, @"Wrong provider, an exception should have been thrown.");
+}
+
+- (void)testWrongManualCacao {
+    [self setUpWithConfigFileName:@"cacao-wrong-manual-cacao.plist"];
+    
+    GHAssertThrowsSpecificNamed([manualCacaoBuilder allManualCacaos], TBManualCacaoException, TBManualCacaoClassNotFoundException, @"Wrong manual cacao, an exception should have been thrown.");
+}
+
 - (void)testAllManualCacaos {
+    [self setUpWithConfigFileName:@"cacao-dummy.plist"];
+    
     NSDictionary *manualCacaoDictionary = [manualCacaoBuilder allManualCacaos];
     
     GHAssertTrue([manualCacaoBuilder.manualCacaoProviders count] == 2, @"There should be two manual cacao providers.");

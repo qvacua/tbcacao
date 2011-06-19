@@ -6,16 +6,4 @@
 #import "TBException.h"
 
 
-@implementation TBException
-
-
-- (id)init {
-    if ((self = [super init])) {
-        
-    }
-    
-    return self;
-}
-
-
-@end
+@implementation TBException @end

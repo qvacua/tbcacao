@@ -30,7 +30,7 @@
  * A class method to create an error with a message.
  * @since 0.0.1
  */
-+ (id)errorWithMessage:(NSString *)message;
++ (TBError *)errorWithMessage:(NSString *)message;
 
 
 @end

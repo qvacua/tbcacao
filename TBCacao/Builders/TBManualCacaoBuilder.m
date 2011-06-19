@@ -2,14 +2,17 @@
  * Copyright 2011 Tae Won Ha, See LICENSE for details.
  *
  */
+
 #import <objc/objc-runtime.h>
 
 #import "TBManualCacaoBuilder.h"
-#import "TBManualCacaoProvider.h"
 #import "TBConfigManager.h"
 #import "TBObjcProperty.h"
 #import "NSObject+TBCacao.h"
 #import "TBLog.h"
+#import "TBError.h"
+#import "TBManualCacaoException.h"
+#import "TBConfigException.h"
 
 
 @implementation TBManualCacaoBuilder
@@ -24,29 +27,7 @@
 }
 
 
-- (BOOL)checkSuperclassOfManualCacaoProvider:(Class)class {
-
-    if (class == nil) {
-        NSString *errorMsg = [NSString stringWithFormat:@"The class %@ seems to be not there in the ObjC-Runtime, therefore it could not be instantiated.", class];
-
-        log4Fatal(@"%@", errorMsg);
-
-        return NO;
-    }
-
-    if ([class superclass] != [TBManualCacaoProvider class]) {
-        NSString *errorMsg = [NSString stringWithFormat:@"The manual Cacao provider \"%@\" is not a subclass of \"%@.\"", [class classAsString], [TBManualCacaoProvider classAsString]];
-
-        log4Fatal(@"%@", errorMsg);
-
-        return NO;
-    }
-
-    return YES;
-}
-
-
-- (BOOL)buildManualCacaoProviders {
+- (BOOL)buildManualCacaoProvidersWithPossibleError:(TBError **)error {
     manualCacaoProviders = [[NSMutableArray allocWithZone:nil] initWithCapacity:[configManager.configManualCacaoProviders count]];
 
     for (NSDictionary *providerDict in configManager.configManualCacaoProviders) {
@@ -55,8 +36,12 @@
 
         id class = objc_getClass([className UTF8String]);
 
-        if ([self checkSuperclassOfManualCacaoProvider:class] == NO) {
-            break;
+        if (! class) {
+            *error = [TBError errorWithMessage:[NSString stringWithFormat:@"The class %@ seems to be not there in the ObjC-Runtime, therefore it could not be instantiated.", class]];
+
+            log4Fatal(@"%@", (*error).message);
+
+            return NO;
         }
 
         id provider = [class_createInstance(class, 0) init];
@@ -78,7 +63,7 @@
     return nil;
 }
 
-- (id)manualCacaoProviderFromFirstHavingPropertyClass:(NSString *)className {
+- (id)manualCacaoFromFirstProviderHavingPropertyClass:(NSString *)className {
 
     for (id provider in self.manualCacaoProviders) {
         NSArray *properties = [[provider class] objcProperties];
@@ -93,13 +78,21 @@
 
     }
 
-    log4Fatal(@"There is no manual Cacao provider which has a property with the class \"%@.\"", className);
-
     return nil;
 }
 
-- (id)createManualCacao:(NSString *)name {
-    id manualCacao = [self manualCacaoProviderFromFirstHavingPropertyClass:[self classNameOfManualCacao:name]];
+- (id)createManualCacao:(NSString *)name error:(TBError **)error {
+    NSString *className = [self classNameOfManualCacao:name];
+
+    id manualCacao = [self manualCacaoFromFirstProviderHavingPropertyClass:className];
+
+    if (! manualCacao) {
+        *error = [TBError errorWithMessage:[NSString stringWithFormat:@"There is no manual Cacao provider which has a property with the class \"%@.\"", className]];
+
+        log4Fatal(@"%@", (*error).message);
+
+        return nil;
+    }
 
     log4Info(@"Manual Cacao \"%@\" created.", name);
 
@@ -107,21 +100,33 @@
 }
 
 - (NSDictionary *)allManualCacaos {
+    
+    if (! self.configManager) {
+        @throw [TBConfigException exceptionAbsentConfigManagerWithReason:@"Config manager not found."];
+    }
+    
     NSMutableDictionary *manualCacaos = [NSMutableDictionary dictionaryWithCapacity:[configManager.configManualCacaos count]];
 
-    if (! [self buildManualCacaoProviders]) {
-        return nil;
+    TBError *error = nil;
+
+    if (! [self buildManualCacaoProvidersWithPossibleError:&error]) {
+        @throw [TBManualCacaoException exceptionProviderWithReason:error.message];
     }
 
     for (NSDictionary *cacaoConfig in configManager.configManualCacaos) {
         NSString *name = [cacaoConfig objectForKey:@"name"];
 
-        id manualCacao = [self createManualCacao:name];
+        id manualCacao = [self createManualCacao:name error:&error];
+
+        if (error || ! manualCacao) {
+            @throw [TBManualCacaoException exceptionManualCacaoWithReason:error.message];
+        }
 
         [manualCacaos setObject:manualCacao forKey:name];
     }
 
     return manualCacaos;
+    
 }
 
 - (void)dealloc {

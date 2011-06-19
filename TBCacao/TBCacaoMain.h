@@ -33,6 +33,10 @@
 
 /**
  * Main method of TBCacao. Initializes all cacaos and manual cacaos and autowires them.
+ * @throws TBConfigException
+ * @throws TBManualCacaoException
+ * @throws TBRegularCacaoException
+ * @since 0.0.1
  */
 - (void)initializeCacao;
 

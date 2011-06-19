@@ -2,7 +2,7 @@
 
 #import "TBBaseUnitTest.h"
 #import "TBConfigManager.h"
-#import "TBError.h"
+#import "TBConfigException.h"
 #import "DummyPlainObject.h"
 #import "DummyCityManager.h"
 #import "DummyFinanceManager.h"
@@ -39,22 +39,29 @@
     GHAssertTrue([configManager.configFileName isEqualToString:@"some name"], @"The config file name is not the given one.");
 }
 
+- (void)testNoConfigFileName {
+    configManager.configFileName = nil;
+    
+    GHAssertThrowsSpecificNamed([configManager readConfig], TBConfigException, TBConfigBuildNumberIncompatibleException, @"No config file name and therefore a TBConfigException should have been thrown.");
+}
 
 - (void)testWrongVersion {
     configManager.configFileName = @"cacao-wrong-version.plist";
+            
+    GHAssertThrowsSpecificNamed([configManager readConfig], TBConfigException, TBConfigBuildNumberIncompatibleException, @"The version should not be correct and therefore a TBConfigException should have been thrown.");
+}
+
+- (void)testWrongConfigFile {
+    configManager.configFileName = @"cacao-plainly-wrong.plist";
     
-    TBError *error = nil;
-
-    GHAssertFalse([configManager readConfigWithPossibleError:&error], @"The version should not be correct.");
-
-    GHAssertNotNil(error, @"The error object should not be nil.");
-    GHAssertTrue([error.message length] > 0, @"The error message should not be empty.");
+    GHAssertThrowsSpecificNamed([configManager readConfig], TBConfigException, TBConfigConfigFileBadlyFormattedException, @"The config file is badly formatted. An exception should have been thrown.");
 }
 
 - (void)testReadConfig {
     configManager.configFileName = @"cacao-dummy.plist";
     
-    GHAssertTrue([configManager readConfigWithPossibleError:nil], @"No error should occur.");
+    GHAssertNoThrow([configManager readConfig], @"No exception should be thrown.");
+    
     GHAssertTrue([configManager.configCacaos count] == 4, @"The number of cacaos is 4.");
     GHAssertTrue([configManager.configManualCacaos count] == 4, @"The number of manual cacaos is 4.");
     GHAssertTrue([configManager.configManualCacaoProviders count] == 2, @"The number of manual cacao provider is 2.");
@@ -63,7 +70,7 @@
 - (void)testHasClass {
     configManager.configFileName = @"cacao-dummy.plist";
     
-    [configManager readConfigWithPossibleError:nil];
+    [configManager readConfig];
     
     GHAssertTrue([configManager hasClass:[DummyCityManager class]], @"%@ is included.", [DummyCityManager class]);
     GHAssertTrue([configManager hasClass:[DummyFinanceManager class]], @"%@ is included.", [DummyFinanceManager class]);

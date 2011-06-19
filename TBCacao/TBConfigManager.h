@@ -57,10 +57,11 @@
 @property (readonly) NSArray *configManualCacaoProviders;
 
 /**
- * Reads the config file. This method is NOT called by the init method.
+ * Reads the config file. This method is NOT called by the init method
+ * @throws TBConfigException
  * @since 0.0.1
  */
-- (BOOL)readConfigWithPossibleError:(TBError **)error;
+- (BOOL)readConfig;
 
 /**
  * Inits the config manager with the given file name.

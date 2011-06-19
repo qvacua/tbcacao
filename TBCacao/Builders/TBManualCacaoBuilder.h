@@ -1,5 +1,5 @@
 /**
- * This is a helper class to create and load the manual Cacaos.
+ * This is a helper class to create and load manual Cacaos.
  *
  * @author Tae Won Ha
  * @since 0.0.1
@@ -35,7 +35,9 @@
 
 
 /**
- * This method reads the config and returns a dictionary with all manualCacaos with their name as their keys.
+ * This method reads the config and returns a dictionary with all manual Cacaos with their name as their keys.
+ * @throws TBManualCacaoException
+ * @throws TBConfigException
  * @since 0.0.1
  */
 - (NSDictionary *)allManualCacaos;

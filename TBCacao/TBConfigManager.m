@@ -8,6 +8,7 @@
 #import "TBConfigManager.h"
 #import "TBLog.h"
 #import "TBError.h"
+#import "TBConfigException.h"
 
 
 @implementation TBConfigManager
@@ -57,26 +58,31 @@
     return YES;
 }
 
-- (BOOL)configRead {
+- (BOOL)configAlreadyRead {
     return (self.configCacaos && self.configManualCacaos && self.configManualCacaoProviders);
 }
 
 
-- (BOOL)readConfigWithPossibleError:(TBError **)error {
+- (BOOL)readConfig {
     
-    if ([self configRead]) {
+    if ([self configAlreadyRead]) {
         log4Info(@"Config already read.");
         return YES;
     }
     
-    NSDictionary *configDict = [self configDictionaryWithPossibleError:error];
-    
-    if (! configDict) {
-        return NO;
+    if (! self.configFileName) {
+        @throw [TBConfigException exceptionAbsentConfigFileNameWithReason:@"No config file name given."];
     }
     
-    if (! [self checkConfigBuild:configDict error:error]) {
-        return NO;
+    TBError *error = nil;
+    NSDictionary *configDict = [self configDictionaryWithPossibleError:&error];
+    
+    if (error) {
+        @throw [TBConfigException exceptionParsingConfigFileWithReason:error.message];
+    }
+    
+    if (! [self checkConfigBuild:configDict error:&error]) {
+        @throw [TBConfigException exceptionBuildNumberWithReason:error.message];
     }
     
     configManualCacaoProviders = [[NSArray allocWithZone:nil] initWithArray:[configDict objectForKey:@"manual-cacao-provider"]];
@@ -88,7 +94,7 @@
 
 - (BOOL)hasClass:(Class)clazz {
     
-    if (! [self configRead]) {
+    if (! [self configAlreadyRead]) {
         log4Warn(@"Config is not read yet.");
         return NO;
     }
@@ -114,7 +120,7 @@
 
 - (id)init {
     if ((self = [super init])) {
-        configFileName = TBCacaoConfigFileNameDefault;
+        configFileName = [[NSString allocWithZone:nil] initWithString:TBCacaoConfigFileNameDefault];
     }
     
     return self;

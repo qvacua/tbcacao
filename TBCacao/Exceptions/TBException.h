@@ -1,4 +1,7 @@
 /**
+ * The base class for all exceptions thrown in TBCacao.
+ * Not actually thrown.
+ *
  * @author Tae Won Ha
  * @since 0.0.1
  *
@@ -9,12 +12,4 @@
 #import <Foundation/Foundation.h>
 
 
-#define TBExceptionName @"TBGeneralException"
-
-
-@interface TBException : NSException {
-@private
-    
-}
-
-@end
+@interface TBException : NSException {} @end

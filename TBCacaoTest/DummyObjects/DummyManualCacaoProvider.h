@@ -1,11 +1,10 @@
 #import <Foundation/Foundation.h>
 
-#import "TBManualCacaoProvider.h"
 
 @class DummyPlainObject, DummyPlainSubObject, DummyManualCacao;
 
 
-@interface DummyManualCacaoProvider : TBManualCacaoProvider {
+@interface DummyManualCacaoProvider : NSObject {
 @private
     DummyPlainObject *object;
     DummyPlainSubObject *subObject;

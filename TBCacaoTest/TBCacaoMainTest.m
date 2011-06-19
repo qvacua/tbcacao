@@ -2,6 +2,7 @@
 #import "TBBaseUnitTest.h"
 #import "TBCacao.h"
 #import "TBConfigManager.h"
+#import "TBConfigException.h"
 #import "TBManualCacaoBuilder.h"
 
 #import "DummyCityManager.h"
@@ -14,7 +15,7 @@
 #import "DummyManualCacao.h"
 
 
-@interface TBCacaoTest : TBBaseUnitTest {
+@interface TBCacaoMainTest : TBBaseUnitTest {
 @private
     TBCacao *cacao;
     TBConfigManager *configManager;
@@ -24,7 +25,7 @@
 @end
 
 
-@implementation TBCacaoTest
+@implementation TBCacaoMainTest
 
 - (void)setUp {
     [super setUp];
@@ -42,6 +43,12 @@
     [cacao release];
     
     [super tearDown];
+}
+
+- (void)testEmptyConfigManager {
+    cacao.configManager = nil;  // setting a retained property to nil releases the property!
+    
+    GHAssertThrowsSpecific([cacao initializeCacao], TBConfigException, @"A TBConfigException should have been thrown.");
 }
 
 - (void)testInitializeCacao {

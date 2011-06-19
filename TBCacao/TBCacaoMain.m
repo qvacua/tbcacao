@@ -12,10 +12,12 @@
 
 #import "TBCacao.h"
 #import "TBObjcProperty.h"
-#import "TBManualCacaoProvider.h"
 #import "TBConfigManager.h"
 #import "TBManualCacaoBuilder.h"
-#import "TBError.h"
+#import "TBRegularCacaoBuilder.h"
+
+#import "TBException.h"
+#import "TBConfigException.h"
 
 
 static TBCacao *cacao = nil;
@@ -47,13 +49,7 @@ static TBCacao *cacao = nil;
     return (NSArray *)result;
 }
 
-- (NSArray *)objcPropertiesForCacao:(NSString *)name {
-    Class class = objc_getClass([[configManager.configCacaos valueForKeyPath:[name stringByAppendingFormat:@".%@", @"class"]] UTF8String]);
-
-    return [self objcPropertiesForClass:class];
-}
-
-- (void) setForCacao: (id) cacao autowireCacao: (id) cacaoToAutowire  {
+- (void)setForCacao:(id)cacao autowireCacao:(id)cacaoToAutowire  {
     NSArray *objcProperties = [self objcPropertiesForClass:[cacao class]];
 
     for (TBObjcProperty *property in objcProperties) {
@@ -71,33 +67,7 @@ static TBCacao *cacao = nil;
     }
 }
 
-- (id) createCacao:(NSDictionary *)config {
-    NSString *name = [config objectForKey:@"name"];
-    id cacao = [cacaos objectForKey:name];
-
-    if (cacao) {
-        return cacao;
-    }
-
-    NSString *className = [config objectForKey:@"class"];
-    cacao = class_createInstance(objc_getClass([className UTF8String]), 0);
-
-    if (cacao == nil) {
-        log4Warn(@"Cacao \"%@\" could not be created since the class \"%@\" does not seem to be present.", name, className);
-
-        return nil;
-    }
-
-    [cacao init];
-    [cacaos setObject:cacao forKey:name];
-    [cacao release];
-
-    log4Info(@"Cacao \"%@\" of class \"%@\" created.", name, className);
-
-    return cacao;
-}
-
-- (void) autowireAllCacaos {
+- (void)autowireAllCacaos {
     for (NSDictionary *cacaoConfig in configManager.configManualCacaos) {
         NSString *name = [cacaoConfig objectForKey:@"name"];
 
@@ -119,34 +89,58 @@ static TBCacao *cacao = nil;
     }
 }
 
-- (void) createAllCacaos {
-    for (NSDictionary *cacaoConfig in configManager.configCacaos) {
-        [self createCacao:cacaoConfig];
+- (void)readConfig {
+    if (! configManager) {
+        TBConfigException *exception = [TBConfigException exceptionAbsentConfigManagerWithReason:@"No config manager present."];
+        
+        log4Fatal(@"%@", [exception reason]);
+        
+        @throw exception;
+    }
+    
+    [configManager readConfig]; // @throws TBConfigException
+}
+
+- (void)buildManualCacaos {
+    TBManualCacaoBuilder *manualCacaoBuilder = [[TBManualCacaoBuilder allocWithZone:nil] init];
+    manualCacaoBuilder.configManager = configManager;
+    NSDictionary *allManualCacaos;
+    
+    @try {
+        allManualCacaos = [manualCacaoBuilder allManualCacaos]; // @throws TBManualCacaoException or TBConfigException
+    } @catch (TBException *exception) {
+        @throw exception;
+    } @finally {
+        [cacaos addEntriesFromDictionary:allManualCacaos];
+        [manualCacaoBuilder release];
     }
 }
 
+- (void)buildRegularCacaos {
+    TBRegularCacaoBuilder *regularCacaoBuilder = [[TBRegularCacaoBuilder allocWithZone:nil] init];
+    regularCacaoBuilder.configManager = configManager;
+    NSDictionary *allRegularCacaos;
+    
+    @try {
+        allRegularCacaos = [regularCacaoBuilder allRegularCacaos]; // @throws TBRegularCacaoException or TBConfigException
+    } @catch (TBException *exception) {
+        @throw exception;
+    } @finally {
+        [cacaos addEntriesFromDictionary:allRegularCacaos];
+        [regularCacaoBuilder release];
+    }
+}
 
 - (void)initializeCacao {
     log4Info(@"Cacao initialization started.");
 
-    if (! configManager) {
-        log4Fatal(@"No config manager present.");
-
-        return;
-    }
-
-    [configManager readConfigWithPossibleError:nil];
+    [self readConfig]; // @throws TBConfigException
     
-    TBManualCacaoBuilder *manualCacaoBuilder = [[TBManualCacaoBuilder allocWithZone:nil] init];
-    manualCacaoBuilder.configManager = configManager;
-
     cacaos = [[NSMutableDictionary allocWithZone:nil] initWithCapacity:([configManager.configCacaos count] + [configManager.configManualCacaos count])];
 
-    [cacaos addEntriesFromDictionary:[manualCacaoBuilder allManualCacaos]];
-    
-    [manualCacaoBuilder release];
+    [self buildManualCacaos]; // @throws TBManualCacaoException or TBConfigException
 
-    [self createAllCacaos];
+    [self buildRegularCacaos]; // @throws TBRegularCacaoException or TBConfigException
 
     [self autowireAllCacaos];
 
@@ -156,7 +150,6 @@ static TBCacao *cacao = nil;
 - (id)cacaoForName:(NSString *)name {
     return [cacaos objectForKey:name];
 }
-
 
 + (TBCacao *)cacao {
     @synchronized(self) {
