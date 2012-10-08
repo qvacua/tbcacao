@@ -8,6 +8,6 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface TBCacaoTests : SenTestCase
+@interface TBBaseTest : SenTestCase
 
 @end

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1929B7A0FC9F7F26EA0C84BE /* TBContextTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B405089EF1AB609CB96F /* TBContextTest.m */; };
 		4B5CE9B316233B9700053151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
 		4B5CE9BD16233B9700053151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5CE9BB16233B9700053151 /* InfoPlist.strings */; };
-		4B5CE9C916233B9700053151 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9C816233B9700053151 /* SenTestingKit.framework */; };
 		4B5CE9CA16233B9700053151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
 		4B5CE9CD16233B9700053151 /* TBCacao.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9AF16233B9700053151 /* TBCacao.framework */; };
 		4B5CE9D316233B9700053151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5CE9D116233B9700053151 /* InfoPlist.strings */; };
-		4B5CE9D616233B9700053151 /* TBCacaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9D516233B9700053151 /* TBCacaoTests.m */; };
+		4B5CE9D616233B9700053151 /* TBBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9D516233B9700053151 /* TBBaseTest.m */; };
 		4B5CE9E316233BCE00053151 /* TBBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9DF16233BCE00053151 /* TBBean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B5CE9E416233BCE00053151 /* TBBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E016233BCE00053151 /* TBBean.m */; };
 		4B5CE9E516233BCE00053151 /* TBBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E016233BCE00053151 /* TBBean.m */; };
@@ -22,6 +22,9 @@
 		4B5CE9E816233BCE00053151 /* TBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E216233BCE00053151 /* TBContext.m */; };
 		4B5CE9E916233BDF00053151 /* TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9BF16233B9700053151 /* TBCacao.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B5CE9EB16233C1500053151 /* TBLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9EA16233C1500053151 /* TBLog.h */; };
+		4B5CEA561623627900053151 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9C816233B9700053151 /* SenTestingKit.framework */; };
+		4B5CEA5B1623629800053151 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CEA571623628F00053151 /* OCHamcrest.framework */; };
+		4B5CEA5C1623629800053151 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CEA581623628F00053151 /* OCMockito.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1929B405089EF1AB609CB96F /* TBContextTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBContextTest.m; sourceTree = "<group>"; };
 		4B5CE9AF16233B9700053151 /* TBCacao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBCacao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5CE9B216233B9700053151 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		4B5CE9B516233B9700053151 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -48,13 +52,15 @@
 		4B5CE9C816233B9700053151 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4B5CE9D016233B9700053151 /* TBCacaoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacaoTests-Info.plist"; sourceTree = "<group>"; };
 		4B5CE9D216233B9700053151 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4B5CE9D416233B9700053151 /* TBCacaoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBCacaoTests.h; sourceTree = "<group>"; };
-		4B5CE9D516233B9700053151 /* TBCacaoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBCacaoTests.m; sourceTree = "<group>"; };
+		4B5CE9D416233B9700053151 /* TBBaseTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBBaseTest.h; sourceTree = "<group>"; };
+		4B5CE9D516233B9700053151 /* TBBaseTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBBaseTest.m; sourceTree = "<group>"; };
 		4B5CE9DF16233BCE00053151 /* TBBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBean.h; sourceTree = "<group>"; };
 		4B5CE9E016233BCE00053151 /* TBBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBean.m; sourceTree = "<group>"; };
 		4B5CE9E116233BCE00053151 /* TBContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBContext.h; sourceTree = "<group>"; };
 		4B5CE9E216233BCE00053151 /* TBContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBContext.m; sourceTree = "<group>"; };
 		4B5CE9EA16233C1500053151 /* TBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLog.h; sourceTree = "<group>"; };
+		4B5CEA571623628F00053151 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = /Library/Frameworks/OCHamcrest.framework; sourceTree = "<absolute>"; };
+		4B5CEA581623628F00053151 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = /Library/Frameworks/OCMockito.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B5CE9C916233B9700053151 /* SenTestingKit.framework in Frameworks */,
+				4B5CEA5B1623629800053151 /* OCHamcrest.framework in Frameworks */,
+				4B5CEA5C1623629800053151 /* OCMockito.framework in Frameworks */,
+				4B5CEA561623627900053151 /* SenTestingKit.framework in Frameworks */,
 				4B5CE9CA16233B9700053151 /* Cocoa.framework in Frameworks */,
 				4B5CE9CD16233B9700053151 /* TBCacao.framework in Frameworks */,
 			);
@@ -101,6 +109,8 @@
 		4B5CE9B116233B9700053151 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B5CEA571623628F00053151 /* OCHamcrest.framework */,
+				4B5CEA581623628F00053151 /* OCMockito.framework */,
 				4B5CE9B216233B9700053151 /* Cocoa.framework */,
 				4B5CE9C816233B9700053151 /* SenTestingKit.framework */,
 				4B5CE9B416233B9700053151 /* Other Frameworks */,
@@ -145,8 +155,9 @@
 		4B5CE9CE16233B9700053151 /* TBCacaoTests */ = {
 			isa = PBXGroup;
 			children = (
-				4B5CE9D416233B9700053151 /* TBCacaoTests.h */,
-				4B5CE9D516233B9700053151 /* TBCacaoTests.m */,
+				1929B405089EF1AB609CB96F /* TBContextTest.m */,
+				4B5CE9D416233B9700053151 /* TBBaseTest.h */,
+				4B5CE9D516233B9700053151 /* TBBaseTest.m */,
 				4B5CE9CF16233B9700053151 /* Supporting Files */,
 			);
 			path = TBCacaoTests;
@@ -291,9 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B5CE9D616233B9700053151 /* TBCacaoTests.m in Sources */,
+				4B5CE9D616233B9700053151 /* TBBaseTest.m in Sources */,
 				4B5CE9E516233BCE00053151 /* TBBean.m in Sources */,
 				4B5CE9E816233BCE00053151 /* TBContext.m in Sources */,
+				1929B7A0FC9F7F26EA0C84BE /* TBContextTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +398,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/../../../../Library/Frameworks\"/**",
+					"\"${PROJECT_DIR}/../../../../Library/Frameworks\"/**",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
@@ -401,6 +417,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"${PROJECT_DIR}/../../../../Library/Frameworks\"/**",
+					"\"${PROJECT_DIR}/../../../../Library/Frameworks\"/**",
+				);
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
@@ -414,7 +434,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					/Library/Frameworks,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
 				INFOPLIST_FILE = "TBCacaoTests/TBCacaoTests-Info.plist";
@@ -427,7 +450,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					/Library/Frameworks,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
 				INFOPLIST_FILE = "TBCacaoTests/TBCacaoTests-Info.plist";
