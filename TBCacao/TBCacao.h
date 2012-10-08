@@ -1,17 +1,7 @@
-/**
- * Header file which includes all public header files of TBCacao.
- *
- * @author Tae Won Ha
- * @since 0.0.1
- *
- * Copyright 2011 Tae Won Ha, See LICENSE for details.
- *
- */
+#import "TBContext.h"
+#import "TBBean.h"
 
+#define TB_BEAN     + (BOOL)isBean { return YES; }
 
-#import <TBCacao/TBCacaoMain.h>
-#import <TBCacao/TBConfigManager.h>
-#import <TBCacao/TBException.h>
-#import <TBCacao/TBConfigException.h>
-#import <TBCacao/TBManualCacaoException.h>
-#import <TBcacao/TBRegularCacaoException.h>
+#define TB_AUTOWIRE_WITH_INSTANCE_VAR(propertyName, instanceName)       @synthesize propertyName = instanceName; \
+                                                                        +(NSString *)TB_autowire_ ## propertyName { return  @" ## propertyName ## "; }
