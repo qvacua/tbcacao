@@ -15,7 +15,9 @@ static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 
 @property (strong, readonly) NSArray *beans;
 
++ (TBContext *)sharedContext;
+- (void)initContext;
+
 - (void)addBean:(TBBean *)cacao;
-- (void)registerBean:(Class)cls;
 
 @end

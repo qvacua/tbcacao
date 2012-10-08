@@ -48,8 +48,6 @@ BOOL class_is_bean(Class cls) {
     return NO;
 }
 
-static TBContext *sharedInstance;
-
 @implementation TBContext {
     NSMutableArray *_beans;
     NSMutableArray *_beansToInit;
@@ -58,21 +56,6 @@ static TBContext *sharedInstance;
 @synthesize beans = _beans;
 
 #pragma mark NSObject
-+ (void)load{
-    [super load];
-
-    sharedInstance = [[TBContext alloc] init];
-
-    NSArray *classesOfBeans = subclasses_of_class([NSObject class]);
-    [sharedInstance initializeBeans:classesOfBeans];
-
-    [sharedInstance autowireBeans];
-}
-
-+ (TBContext *)sharedContext {
-   return sharedInstance;
-}
-
 - (id)init {
     self = [super init];
     if (self) {
@@ -80,6 +63,26 @@ static TBContext *sharedInstance;
     }
 
     return self;
+}
+
++ (TBContext *)sharedContext {
+    static TBContext *_instance = nil;
+
+    @synchronized (self) {
+        if (_instance == nil) {
+            _instance = [[self alloc] init];
+        }
+    }
+
+    return _instance;
+}
+
+#pragma mark Public
+- (void)initContext {
+    NSArray *classesOfBeans = subclasses_of_class([NSObject class]);
+    [self initializeBeans:classesOfBeans];
+
+    [self autowireBeans];
 }
 
 #pragma mark Private
@@ -91,7 +94,7 @@ static TBContext *sharedInstance;
             NSString *className = @(class_getName(cls));
             id instance = [[NSClassFromString(className) alloc] init];
             TBBean *cacao = [[TBBean alloc] initWithIdentifier:className bean:instance];
-            [sharedInstance addBean:cacao];
+            [self addBean:cacao];
         }
     }
 }
