@@ -5,10 +5,10 @@
  * Copyright © 2012 Tae Won Ha. See LISENCE
  */
 
-#import "TBContext.h"
-#import "TBBean.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
+#import "TBContext.h"
+#import "TBBean.h"
 #import "NSObject+TBCacao.h"
 #import "TBLog.h"
 #import "TBObjcProperty.h"
@@ -126,9 +126,10 @@ BOOL class_is_bean(Class cls) {
 
 - (NSString *)classNameOfProperty:(NSString *)propertyName andClass:(Class)cls {
     NSArray *properties = [cls objcProperties];
-    for (TBObjcProperty *objcProperty in properties) {
-        if ([objcProperty.name isEqualToString:propertyName]) {
-            return objcProperty.nameOfClass;
+
+    for (TBObjcProperty *property in properties) {
+        if ([property.name isEqualToString:propertyName]) {
+            return property.nameOfClass;
         }
     }
 
@@ -165,7 +166,9 @@ BOOL class_is_bean(Class cls) {
         NSString *nameOfBeanClass = [self classNameOfProperty:propertyKey andClass:cls];
         log4Debug(@"Property '%@' of type '%@' from '%@' to autowire found", propertyKey, nameOfBeanClass, NSStringFromClass(cls));
 
-        [bean.targetSource setValue:[self beanWithIdentifier:nameOfBeanClass].targetSource forKey:propertyKey];
+        id beanToBeAutowired = [self beanWithIdentifier:nameOfBeanClass].targetSource;
+        [bean.targetSource setValue:beanToBeAutowired forKey:propertyKey];
+
         break;
     }
 
