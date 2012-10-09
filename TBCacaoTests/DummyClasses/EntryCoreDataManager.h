@@ -6,12 +6,11 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "BaseDao.h"
 
-@class EntryCoreDataManager;
+@class CoreDataManager;
 
-@interface EntryDao : BaseDao
+@interface EntryCoreDataManager : NSObject
 
-@property EntryCoreDataManager *entryCoreDataManager;
+@property CoreDataManager *coreDataManager;
 
 @end

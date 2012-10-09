@@ -5,17 +5,17 @@
  * Copyright © 2012 Tae Won Ha. See LISENCE
  */
 
-#import "EntryDao.h"
 #import "TBCacao.h"
 #import "EntryCoreDataManager.h"
+#import "CoreDataManager.h"
 
-@implementation EntryDao {
+@implementation EntryCoreDataManager {
 @private
-    EntryCoreDataManager *_entryCoreDataManager;
+    CoreDataManager *_coreDataManager;
 }
 
 TB_BEAN
 
-TB_AUTOWIRE_WITH_INSTANCE_VAR(entryCoreDataManager, _entryCoreDataManager);
+TB_AUTOWIRE_WITH_INSTANCE_VAR(coreDataManager, _coreDataManager);
 
 @end
