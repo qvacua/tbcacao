@@ -10,11 +10,12 @@
 @interface TBBean : NSObject
 
 @property (readonly) NSString *identifier;
-@property (readonly) id bean;
+@property (readonly) id targetSource;
 
 - (id)initWithIdentifier:(NSString *)anIdentifier bean:(id)aBean;
-
 + (id)objectWithIdentifier:(NSString *)anIdentifier bean:(id)aBean;
+
+- (BOOL)isEqual:(TBBean *)beanToCompare;
 
 
 @end

@@ -15,7 +15,6 @@
 @synthesize floatProperty;
 @synthesize doubleProperty;
 @synthesize objectProperty;
-
 @synthesize voidPointerProperty;
 
 @end

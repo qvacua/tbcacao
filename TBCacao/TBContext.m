@@ -11,6 +11,7 @@
 #import <objc/message.h>
 #import "NSObject+TBCacao.h"
 #import "TBLog.h"
+#import "TBObjcProperty.h"
 
 #pragma mark Static
 NSArray *subclasses_of_class(Class parentClass) {
@@ -24,7 +25,7 @@ NSArray *subclasses_of_class(Class parentClass) {
 
         do {
             superClass = class_getSuperclass(superClass);
-        } while(superClass && superClass != parentClass);
+        } while (superClass && superClass != parentClass);
 
         if (superClass == nil) {
             continue;
@@ -123,32 +124,52 @@ BOOL class_is_bean(Class cls) {
     }
 }
 
+- (NSString *)classNameOfProperty:(NSString *)propertyName andClass:(Class)cls {
+    NSArray *properties = [cls objcProperties];
+    for (TBObjcProperty *objcProperty in properties) {
+        if ([objcProperty.name isEqualToString:propertyName]) {
+            return objcProperty.nameOfClass;
+        }
+    }
+
+    return nil;
+}
+
 - (void)autowireBeans {
     for (TBBean *bean in self.beans) {
-
-        Class beanClass = [bean.bean class];
-        Class superclass = [bean.bean class];
+        Class superclass = [bean.targetSource class];
         do {
-
-            unsigned int methodCount;
-            Method *methods = class_copyMethodList(object_getClass(superclass), &methodCount);
-            for (int i = 0; i < methodCount; i++) {
-                SEL sel = method_getName(methods[i]);
-                NSString *methodName = [[NSString alloc] initWithCString:sel_getName(sel) encoding:NSUTF8StringEncoding];
-                if ([methodName length] >= [TB_AUTOWIRE_METHOD_PREFIX length] - 1 && [[methodName substringToIndex:[TB_AUTOWIRE_METHOD_PREFIX length]] isEqualToString:TB_AUTOWIRE_METHOD_PREFIX]) {
-                    id propertyKey = objc_msgSend(superclass, sel);
-
-                    log4Debug(@"Property '%@' of '%@' to autowire found", propertyKey, NSStringFromClass(beanClass));
-//                    [bean.bean setValue: forKey:propertyKey];
-
-                }
-            }
-
+            [self autowireBean:bean ofClass:superclass];
             superclass = class_getSuperclass(superclass);
-
         } while (superclass && superclass != [NSObject class]);
-
     }
+}
+
+- (void)autowireBean:(TBBean *)bean ofClass:(Class)cls {
+    unsigned int methodCount;
+    Method *methods = class_copyMethodList(object_getClass(cls), &methodCount);
+
+    for (int i = 0; i < methodCount; i++) {
+        SEL sel = method_getName(methods[i]);
+        NSString *methodName = [[NSString alloc] initWithCString:sel_getName(sel) encoding:NSUTF8StringEncoding];
+
+        if ([methodName length] < [TB_AUTOWIRE_METHOD_PREFIX length]) {
+            continue;
+        }
+
+        if ([[methodName substringToIndex:[TB_AUTOWIRE_METHOD_PREFIX length]] isEqualToString:TB_AUTOWIRE_METHOD_PREFIX] == NO) {
+            continue;
+        }
+
+        id propertyKey = objc_msgSend(cls, sel);
+        NSString *nameOfBeanClass = [self classNameOfProperty:propertyKey andClass:cls];
+        log4Debug(@"Property '%@' of type '%@' from '%@' to autowire found", propertyKey, nameOfBeanClass, NSStringFromClass(cls));
+
+        [bean.targetSource setValue:[self beanWithIdentifier:nameOfBeanClass].targetSource forKey:propertyKey];
+        break;
+    }
+
+    free(methods);
 }
 
 @end

@@ -10,17 +10,18 @@
 @implementation TBBean {
 @private
     NSString *_identifier;
-    id _bean;
+    id _targetSource;
 }
 
 @synthesize identifier = _identifier;
-@synthesize bean = _bean;
+@synthesize targetSource = _targetSource;
 
+#pragma mark NSObject
 - (id)initWithIdentifier:(NSString *)anIdentifier bean:(id)aBean {
     self = [super init];
     if (self) {
         _identifier = anIdentifier;
-        _bean = aBean;
+        _targetSource = aBean;
     }
 
     return self;

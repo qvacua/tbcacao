@@ -24,16 +24,17 @@
 }
 
 - (void)testInitContext {
-    assertThat(@([beans count]), is(@2));
+    assertThat(@([beans count]), is(@3));
     assertThat(beans, consistsOfInAnyOrder(
         [TBBean objectWithIdentifier:@"EntryDao" bean:nil],
-        [TBBean objectWithIdentifier:@"CoreDataManager" bean:nil]
+        [TBBean objectWithIdentifier:@"CoreDataManager" bean:nil],
+        [TBBean objectWithIdentifier:@"EntryCoreDataManager" bean:nil]
     ));
 }
 
 - (void)testBeanWithIdentifier {
     TBBean *entryDaoBean = [context beanWithIdentifier:@"EntryDao"];
-    assertThat([entryDaoBean.bean class], is([EntryDao class]));
+    assertThat([entryDaoBean.targetSource class], is([EntryDao class]));
 }
 
 - (void)testAutowireBeans {
@@ -41,10 +42,10 @@
     TBBean *coreDataManagerBean = [context beanWithIdentifier:@"CoreDataManager"];
     TBBean *entryCoreDataManagerBean = [context beanWithIdentifier:@"EntryCoreDataManager"];
 
-    assertThat([entryCoreDataManagerBean.bean coreDataManager], is(coreDataManagerBean.bean));
+    assertThat([entryCoreDataManagerBean.targetSource coreDataManager], is(coreDataManagerBean.targetSource));
 
-    assertThat([entryDaoBean.bean coreDataManager], is(coreDataManagerBean.bean));
-    assertThat([entryDaoBean.bean entryCoreDataManager], is(entryCoreDataManagerBean.bean));
+    assertThat([entryDaoBean.targetSource coreDataManager], is(coreDataManagerBean.targetSource));
+    assertThat([entryDaoBean.targetSource entryCoreDataManager], is(entryCoreDataManagerBean.targetSource));
 }
 
 @end
