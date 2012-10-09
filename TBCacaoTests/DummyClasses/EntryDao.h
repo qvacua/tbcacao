@@ -5,8 +5,8 @@
  * Copyright © 2012 Tae Won Ha. See LISENCE
  */
 
-#import "TBBaseTest.h"
+#import <Foundation/Foundation.h>
+#import "BaseDao.h"
 
-@implementation TBBaseTest
-
+@interface EntryDao : BaseDao
 @end

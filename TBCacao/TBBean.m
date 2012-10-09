@@ -30,4 +30,8 @@
     return [[TBBean alloc] initWithIdentifier:anIdentifier bean:aBean];
 }
 
+- (BOOL)isEqual:(TBBean *)beanToCompare {
+    return [self.identifier isEqualToString:beanToCompare.identifier];
+}
+
 @end

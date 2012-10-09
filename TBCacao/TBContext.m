@@ -89,11 +89,12 @@ BOOL class_is_bean(Class cls) {
 - (void)initializeBeans:(NSArray *)classes {
     for (Class cls in classes) {
         if (class_is_bean(cls)) {
-            log4Debug(@"Bean found: %@", cls);
+            log4Debug(@"Bean of class '%@' found.", cls);
 
-            NSString *className = @(class_getName(cls));
-            id instance = [[NSClassFromString(className) alloc] init];
-            TBBean *cacao = [[TBBean alloc] initWithIdentifier:className bean:instance];
+            NSString *className = NSStringFromClass(cls);
+            id beanInstance = [[cls alloc] init];
+
+            TBBean *cacao = [TBBean objectWithIdentifier:className bean:beanInstance];
             [self addBean:cacao];
         }
     }
@@ -121,15 +122,15 @@ BOOL class_is_bean(Class cls) {
     }
 }
 
-- (void)addBean:(TBBean *)cacao {
-    for (TBBean *bean in self.beans) {
-        if ([bean.identifier isEqualToString:cacao.identifier]) {
-            log4Warn(@"Trying to add a bean with the same identifier '%@'.", bean.identifier);
+- (void)addBean:(TBBean *)bean {
+    for (TBBean *existingBean in self.beans) {
+        if ([existingBean.identifier isEqualToString:bean.identifier]) {
+            log4Warn(@"Trying to add a bean with the same identifier '%@'.", existingBean.identifier);
             return;
         }
     }
 
-    [_beans addObject:cacao];
+    [_beans addObject:bean];
 }
 
 @end

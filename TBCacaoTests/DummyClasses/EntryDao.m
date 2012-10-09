@@ -5,8 +5,13 @@
  * Copyright © 2012 Tae Won Ha. See LISENCE
  */
 
-#import "TBBaseTest.h"
+#import "EntryDao.h"
+#import "TBCacao.h"
 
-@implementation TBBaseTest
+@implementation EntryDao {
+
+}
+
+TB_BEAN
 
 @end

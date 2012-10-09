@@ -5,8 +5,7 @@
  * Copyright © 2012 Tae Won Ha. See LISENCE
  */
 
-#import "TBBaseTest.h"
+#import <Foundation/Foundation.h>
 
-@implementation TBBaseTest
-
+@interface CoreDataManager : NSObject
 @end
