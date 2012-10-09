@@ -9,6 +9,7 @@
 #import "TBBean.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
+#import "NSObject+TBCacao.h"
 #import "TBLog.h"
 
 #pragma mark Static
@@ -113,7 +114,7 @@ BOOL class_is_bean(Class cls) {
         if (class_is_bean(cls)) {
             log4Debug(@"Bean of class '%@' found.", cls);
 
-            NSString *className = NSStringFromClass(cls);
+            NSString *className = [cls classAsString];
             id beanInstance = [[cls alloc] init];
 
             TBBean *cacao = [TBBean objectWithIdentifier:className bean:beanInstance];
@@ -138,7 +139,7 @@ BOOL class_is_bean(Class cls) {
                     id propertyKey = objc_msgSend(superclass, sel);
 
                     log4Debug(@"Property '%@' of '%@' to autowire found", propertyKey, NSStringFromClass(beanClass));
-                    [bean.bean setValue: forKey:propertyKey];
+//                    [bean.bean setValue: forKey:propertyKey];
 
                 }
             }
