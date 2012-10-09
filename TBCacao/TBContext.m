@@ -50,7 +50,6 @@ BOOL class_is_bean(Class cls) {
 
 @implementation TBContext {
     NSMutableArray *_beans;
-    NSMutableArray *_beansToInit;
 }
 
 @synthesize beans = _beans;

@@ -10,9 +10,7 @@
 
 @interface TBBeanTest : TBBaseTest @end
 
-@implementation TBBeanTest {
-
-}
+@implementation TBBeanTest
 
 - (void)testIsEqual {
     NSObject *obj1 = [[NSObject alloc] init];
