@@ -17,5 +17,4 @@
 
 - (BOOL)isEqual:(TBBean *)beanToCompare;
 
-
 @end

@@ -8,10 +8,16 @@
 #import "TBObjcProperty.h"
 #import "TBLog.h"
 
-@implementation TBObjcProperty
+@implementation TBObjcProperty {
+@private
+    NSString *name;
+    TBObjcPropertyType  type;
+    Class clazz;
+    BOOL readonly;
+}
 
 @synthesize name;
-@dynamic    nameOfClass;
+@dynamic nameOfClass;
 @synthesize clazz;
 @synthesize readonly;
 @synthesize type;

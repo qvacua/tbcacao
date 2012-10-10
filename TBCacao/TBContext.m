@@ -12,6 +12,7 @@
 #import "NSObject+TBCacao.h"
 #import "TBLog.h"
 #import "TBObjcProperty.h"
+#import "TBManualBeanProvider.h"
 
 #pragma mark Static
 NSArray *subclasses_of_class(Class parentClass) {
@@ -32,6 +33,23 @@ NSArray *subclasses_of_class(Class parentClass) {
         }
 
         [result addObject:classes[i]];
+    }
+
+    free(classes);
+
+    return result;
+}
+
+NSArray *classes_conforming_to_protocol(Protocol *aProtocol) {
+    int classCount = objc_getClassList(NULL, 0);
+    Class *classes = (Class *) malloc(sizeof(Class) * classCount);
+
+    classCount = objc_getClassList(classes, classCount);
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    for (int i = 0; i < classCount; i++) {
+        if (class_conformsToProtocol(classes[i], aProtocol)) {
+            [result addObject:classes[i]];
+        }
     }
 
     free(classes);
@@ -62,6 +80,8 @@ BOOL class_is_bean(Class cls) {
 - (void)initContext {
     NSArray *classesOfBeans = subclasses_of_class([NSObject class]);
     [self initializeBeans:classesOfBeans];
+
+    [self initializeManualBeans:classes_conforming_to_protocol(@protocol(TBManualBeanProvider))];
 
     [self autowireBeans];
 }
@@ -122,6 +142,17 @@ BOOL class_is_bean(Class cls) {
             [self addBean:cacao];
         }
     }
+}
+
+- (void)initializeManualBeans:(NSArray *)classes {
+    for (Class cls in classes) {
+        log4Debug(@"Adding manual beans of %@", cls);
+        [self addAllBeans:[cls beans]];
+    }
+}
+
+- (void)addAllBeans:(NSArray *)manyBeans {
+    [_beans addObjectsFromArray:manyBeans];
 }
 
 - (NSString *)classNameOfProperty:(NSString *)propertyName andClass:(Class)cls {

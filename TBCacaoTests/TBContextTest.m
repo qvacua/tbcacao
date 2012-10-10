@@ -8,6 +8,8 @@
 #import "TBBaseTest.h"
 #import "TBCacao.h"
 #import "EntryDao.h"
+#import "CoreDataManager.h"
+#import "EntryCoreDataManager.h"
 
 @interface TBContextTest : TBBaseTest @end
 
@@ -24,12 +26,26 @@
 }
 
 - (void)testInitContext {
-    assertThat(@([beans count]), is(@3));
+    assertThat(@([beans count]), is(@(3 + 3)));
     assertThat(beans, consistsOfInAnyOrder(
+        // annotation-based
         [TBBean objectWithIdentifier:@"EntryDao" bean:nil],
         [TBBean objectWithIdentifier:@"CoreDataManager" bean:nil],
-        [TBBean objectWithIdentifier:@"EntryCoreDataManager" bean:nil]
+        [TBBean objectWithIdentifier:@"EntryCoreDataManager" bean:nil],
+
+        // manual
+        [TBBean objectWithIdentifier:@"DocController" bean:nil],
+        [TBBean objectWithIdentifier:@"Workspace" bean:nil],
+        [TBBean objectWithIdentifier:@"FontManager" bean:nil]
     ));
+
+    assertThat([context beanWithIdentifier:@"EntryDao"].targetSource, instanceOf([EntryDao class]));
+    assertThat([context beanWithIdentifier:@"CoreDataManager"].targetSource, instanceOf([CoreDataManager class]));
+    assertThat([context beanWithIdentifier:@"EntryCoreDataManager"].targetSource, instanceOf([EntryCoreDataManager class]));
+
+    assertThat([context beanWithIdentifier:@"DocController"].targetSource, is([NSDocumentController sharedDocumentController]));
+    assertThat([context beanWithIdentifier:@"Workspace"].targetSource, is([NSWorkspace sharedWorkspace]));
+    assertThat([context beanWithIdentifier:@"FontManager"].targetSource, is([NSFontManager sharedFontManager]));
 }
 
 - (void)testBeanWithIdentifier {

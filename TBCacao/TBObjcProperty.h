@@ -28,14 +28,7 @@ typedef enum {
     ObjectTBObjcProperty = '@'  // objects
 } TBObjcPropertyType;
 
-@interface TBObjcProperty : NSObject {
-@private
-    NSString           *name;
-    TBObjcPropertyType  type;
-    Class               clazz;
-
-    BOOL                readonly;
-}
+@interface TBObjcProperty : NSObject
 
 @property (readonly, nonatomic) NSString           *name;
 @property (readonly, nonatomic) NSString           *nameOfClass;
@@ -47,7 +40,6 @@ typedef enum {
  * Initializes the TBObjcProperty which wraps the objc_property of Objective-C runtime.
  *`
  * @param objc_property_t  It must not be manually free'ed since TBObjcProperty will do it.
- * @since 0.0.1
  */
 - (id)initWithProperty:(objc_property_t)objc_property;
 
