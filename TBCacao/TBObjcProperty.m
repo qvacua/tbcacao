@@ -27,7 +27,7 @@
 }
 
 - (void) determineTypeAndClass: (NSString *) attrString  {
-    type = [attrString characterAtIndex:1];
+    type = (TBObjcPropertyType) [attrString characterAtIndex:1];
     
     if (ObjectTBObjcProperty == type) {
         [self determineClass: attrString];
@@ -59,7 +59,7 @@
     NSArray *attrStringArray = [propAttrStr componentsSeparatedByString:@","];
     
     for (NSString *attrString in attrStringArray) {
-        char kind = [attrString characterAtIndex:0];
+        unichar kind = [attrString characterAtIndex:0];
         
         switch (kind) {
             case 'T':
