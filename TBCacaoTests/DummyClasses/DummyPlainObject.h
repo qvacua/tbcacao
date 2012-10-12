@@ -11,7 +11,7 @@
 @private
     NSString *stringProperty;
     int intProperty;
-    
+
     int _customName;
 }
 
