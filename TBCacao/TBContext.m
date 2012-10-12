@@ -203,10 +203,11 @@ BOOL class_is_bean(Class cls) {
 
         id propertyKey = objc_msgSend(cls, sel);
         NSString *nameOfBeanClass = [self classNameOfProperty:propertyKey andClass:cls];
-        log4Debug(@"Property '%@' of type '%@' from '%@' to autowire found", propertyKey, nameOfBeanClass, NSStringFromClass(cls));
 
         id beanToBeAutowired = [self beanWithIdentifier:nameOfBeanClass].targetSource;
         [targetSource setValue:beanToBeAutowired forKey:propertyKey];
+
+        log4Debug(@"Autowiring property '%@' of type '%@' from '%@'.", propertyKey, nameOfBeanClass, NSStringFromClass(cls));
     }
 
     free(methods);
