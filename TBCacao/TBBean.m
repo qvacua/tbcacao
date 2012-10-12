@@ -27,12 +27,24 @@
     return self;
 }
 
+- (id)initWithTargetSource:(id)targetSource {
+    return [self initWithIdentifier:NSStringFromClass([targetSource class]) bean:targetSource];
+}
+
++ (id)objectWithTargetSource:(id)targetSource {
+    return [[TBBean alloc] initWithTargetSource:targetSource];
+}
+
 + (id)objectWithIdentifier:(NSString *)anIdentifier bean:(id)aBean {
     return [[TBBean alloc] initWithIdentifier:anIdentifier bean:aBean];
 }
 
 - (BOOL)isEqual:(TBBean *)beanToCompare {
     return [self.identifier isEqualToString:beanToCompare.identifier];
+}
+
+- (NSString *)description {
+    return [[NSString alloc] initWithFormat:@"Bean %@ of class %@", self.identifier, NSStringFromClass([self.targetSource class])];
 }
 
 @end

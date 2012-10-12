@@ -16,7 +16,7 @@
 
     if (manualBeans == nil) {
         manualBeans = @[
-            [TBBean objectWithIdentifier:@"DocController" bean:[NSDocumentController sharedDocumentController]]
+            [TBBean objectWithTargetSource:[NSDocumentController sharedDocumentController]]
         ];
     }
 
