@@ -75,4 +75,25 @@
     assertThat(seed.workspace, is([NSWorkspace sharedWorkspace]));
 }
 
+- (void)testReplaceBean {
+    CoreDataManager *mock = mock([CoreDataManager class]);
+
+    [context replaceBeanWithIdentifier:@"CoreDataManager" withTargetSource:mock];
+    assertThat([context beanWithIdentifier:@"CoreDataManager"].targetSource, is(mock));
+}
+
+- (void)testReautowireBeans {
+    CoreDataManager *mock = mock([CoreDataManager class]);
+
+    [context replaceBeanWithIdentifier:@"CoreDataManager" withTargetSource:mock];
+    [context reautowireBeans];
+
+    TBBean *entryDaoBean = [context beanWithIdentifier:@"EntryDao"];
+    TBBean *coreDataManagerBean = [context beanWithIdentifier:@"CoreDataManager"];
+    TBBean *entryCoreDataManagerBean = [context beanWithIdentifier:@"EntryCoreDataManager"];
+
+    assertThat([entryCoreDataManagerBean.targetSource coreDataManager], is(coreDataManagerBean.targetSource));
+    assertThat([entryDaoBean.targetSource coreDataManager], is(coreDataManagerBean.targetSource));
+}
+
 @end

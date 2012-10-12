@@ -111,6 +111,25 @@ BOOL class_is_bean(Class cls) {
     [self autowireTargetSource:seed];
 }
 
+- (void)replaceBeanWithIdentifier:(NSString *)identifier withTargetSource:(id)targetSource {
+    TBBean *newBean = [TBBean objectWithIdentifier:identifier bean:targetSource];
+
+    TBBean *oldBean;
+    for (TBBean *bean in self.beans) {
+        if ([bean isEqual:newBean]) {
+            oldBean = bean;
+            break;
+        }
+    }
+
+    [_beans removeObject:oldBean];
+    [_beans addObject:newBean];
+}
+
+- (void)reautowireBeans {
+    [self autowireBeans];
+}
+
 #pragma mark NSObject
 - (id)init {
     self = [super init];
