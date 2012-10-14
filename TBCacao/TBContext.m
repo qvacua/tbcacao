@@ -72,15 +72,21 @@ BOOL class_is_bean(Class cls) {
 
 @implementation TBContext {
     NSMutableArray *_beans;
+    BOOL _contextInitialized;
 }
 
 @synthesize beans = _beans;
 
 #pragma mark Public
 - (void)initContext {
+    if (_contextInitialized) {
+        return;
+    }
+
+    _contextInitialized = YES;
+
     NSArray *classesOfBeans = subclasses_of_class([NSObject class]);
     [self initializeBeans:classesOfBeans];
-
     [self initializeManualBeans:classes_conforming_to_protocol(@protocol(TBManualBeanProvider))];
 
     [self autowireBeans];
