@@ -47,8 +47,6 @@
 		4B5CEA561623627900053151 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9C816233B9700053151 /* SenTestingKit.framework */; };
 		4B5CEA5B1623629800053151 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CEA571623628F00053151 /* OCHamcrest.framework */; };
 		4B5CEA5C1623629800053151 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CEA581623628F00053151 /* OCMockito.framework */; };
-		4B5CEA6516248BEC00053151 /* Qkit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CEA6316248BEC00053151 /* Qkit.framework */; };
-		4B5CEA6616248BEC00053151 /* QTestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CEA6416248BEC00053151 /* QTestKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,8 +112,6 @@
 		4B5CE9EA16233C1500053151 /* TBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLog.h; sourceTree = "<group>"; };
 		4B5CEA571623628F00053151 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = /Library/Frameworks/OCHamcrest.framework; sourceTree = "<absolute>"; };
 		4B5CEA581623628F00053151 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = /Library/Frameworks/OCMockito.framework; sourceTree = "<absolute>"; };
-		4B5CEA6316248BEC00053151 /* Qkit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Qkit.framework; path = ../../../../Library/Frameworks/Qkit.framework; sourceTree = "<group>"; };
-		4B5CEA6416248BEC00053151 /* QTestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTestKit.framework; path = ../../../../Library/Frameworks/QTestKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +131,6 @@
 				4B5CEA5C1623629800053151 /* OCMockito.framework in Frameworks */,
 				4B5CEA561623627900053151 /* SenTestingKit.framework in Frameworks */,
 				4B5CE9CA16233B9700053151 /* Cocoa.framework in Frameworks */,
-				4B5CEA6516248BEC00053151 /* Qkit.framework in Frameworks */,
-				4B5CEA6616248BEC00053151 /* QTestKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +195,6 @@
 		4B5CE9B116233B9700053151 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B5CEA6316248BEC00053151 /* Qkit.framework */,
-				4B5CEA6416248BEC00053151 /* QTestKit.framework */,
 				4B5CEA571623628F00053151 /* OCHamcrest.framework */,
 				4B5CEA581623628F00053151 /* OCMockito.framework */,
 				4B5CE9B216233B9700053151 /* Cocoa.framework */,
@@ -524,10 +516,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"${PROJECT_DIR}/../../../../Library/Frameworks\"/**",
-					"\"${PROJECT_DIR}/../../../../Library/Frameworks\"/**",
-				);
+				FRAMEWORK_SEARCH_PATHS = "/Library/Frameworks/**";
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
@@ -543,10 +532,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"${PROJECT_DIR}/../../../../Library/Frameworks\"/**",
-					"\"${PROJECT_DIR}/../../../../Library/Frameworks\"/**",
-				);
+				FRAMEWORK_SEARCH_PATHS = "/Library/Frameworks/**";
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
@@ -561,8 +547,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 					/Library/Frameworks,
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
@@ -577,8 +563,8 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 					/Library/Frameworks,
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";

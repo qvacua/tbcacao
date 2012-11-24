@@ -4,4 +4,4 @@ build
 *.xcodeproj/xcuserdata
 *.swp
 *.mm
-
+.idea
