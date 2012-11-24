@@ -32,6 +32,10 @@ typedef enum {
 
 @property (readonly, nonatomic) NSString           *name;
 @property (readonly, nonatomic) NSString           *nameOfClass;
+
+/**
+* can be nil when the property is declared as id or id <SomeProtocol>
+*/
 @property (readonly, nonatomic) Class              clazz;
 @property (readonly, nonatomic) TBObjcPropertyType type;
 @property (readonly, nonatomic) BOOL               readonly;

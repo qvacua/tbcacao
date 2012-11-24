@@ -16,5 +16,7 @@
 @synthesize doubleProperty;
 @synthesize objectProperty;
 @synthesize voidPointerProperty;
+@synthesize protocolProperty = _protocolProperty;
+@synthesize idProperty = _idProperty;
 
 @end

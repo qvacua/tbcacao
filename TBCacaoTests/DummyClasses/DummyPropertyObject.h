@@ -19,6 +19,8 @@
     __weak DummyPlainObject *objectProperty;
     
     void *voidPointerProperty;
+    id <NSLocking> _protocolProperty;
+    id _idProperty;
 }
 
 @property (readonly) BOOL boolProperty;
@@ -28,5 +30,7 @@
 @property (readonly) double doubleProperty;
 @property (weak) DummyPlainObject *objectProperty;
 @property void *voidPointerProperty;
+@property id <NSLocking> protocolProperty;
+@property id idProperty;
 
 @end

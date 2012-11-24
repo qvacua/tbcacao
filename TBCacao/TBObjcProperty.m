@@ -26,9 +26,26 @@
     return [clazz description];
 }
 
-- (void) determineClass: (NSString *) attrString  {
+- (void) determineClass: (NSString *) attrString {
+    if ([attrString length] == 2) {
+        clazz = nil;
+        return;
+    }
+
     NSString *nameOfClass = [[NSString allocWithZone:nil] initWithString:[attrString substringWithRange:NSMakeRange(3, [attrString length] - 4)]];
-    
+
+    if ([[nameOfClass substringToIndex:1] isEqualToString:@"<"]) {
+        // id <SomeProtocol>
+        clazz = nil;
+        return;
+    }
+
+    if ([[nameOfClass substringToIndex:1] isEqualToString:@","]) {
+        // id
+        clazz = nil;
+        return;
+    }
+
     clazz = objc_getClass([nameOfClass UTF8String]);
 }
 
@@ -91,11 +108,6 @@
     
     if ((self = [super init])) {
         [self parsePropertyAttribute:objc_property];
-        
-        if (type == ObjectTBObjcProperty && clazz == nil) {
-            log4Warn(@"The class for the property could not be found in the Objc-runtime.");
-            return nil;
-        }
     }
     
     return self;

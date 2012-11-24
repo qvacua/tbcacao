@@ -14,6 +14,7 @@
 		1929B29AA4B7482D2A1ED796 /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA31A16B6D938E61F2BC /* NSObject+TBCacao.m */; };
 		1929B3A0527873BE4D927C6B /* DummyManualBeanProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B49FFFA119DE7F10AB2D /* DummyManualBeanProvider.m */; };
 		1929B3CE9E24801BD878DF10 /* NSString+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BF9A4E7300E4617C5731 /* NSString+TBCacao.m */; };
+		1929B46E699B02166A98040D /* DummySeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B1A662E9C11F26F07D74 /* DummySeed.m */; };
 		1929B4AFA6BAAFC25C538AC3 /* NSObjectCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BDE2CAA27401668A81C6 /* NSObjectCategoryTest.m */; };
 		1929B4F4C23D4535D7DBC10F /* NSString+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BF9A4E7300E4617C5731 /* NSString+TBCacao.m */; };
 		1929B4FB66030E4EEC61E577 /* DummyPlainObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA5A1C5D063244120555 /* DummyPlainObject.m */; };
@@ -64,6 +65,7 @@
 		1929B0F083F879DDF3CB06DF /* NSString+TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBCacao.h"; sourceTree = "<group>"; };
 		1929B13951369D9B7C23E08E /* DummyPropertyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyPropertyObject.m; sourceTree = "<group>"; };
 		1929B186B8FECBE8907A47CC /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		1929B1A662E9C11F26F07D74 /* DummySeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummySeed.m; sourceTree = "<group>"; };
 		1929B1B9585C5787F3C686AB /* AnotherManualBeanProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherManualBeanProvider.h; sourceTree = "<group>"; };
 		1929B1FDA1EA8C918B31D3D5 /* DummyPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyPropertyObject.h; sourceTree = "<group>"; };
 		1929B34591FCD0E3B50F98F1 /* AnotherManualBeanProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherManualBeanProvider.m; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		1929B9FE3773F98DEB454ED3 /* DummyPlainSubObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyPlainSubObject.m; sourceTree = "<group>"; };
 		1929BA31A16B6D938E61F2BC /* NSObject+TBCacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TBCacao.m"; sourceTree = "<group>"; };
 		1929BA5A1C5D063244120555 /* DummyPlainObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyPlainObject.m; sourceTree = "<group>"; };
+		1929BAD9483574B476E3ECBF /* DummySeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummySeed.h; sourceTree = "<group>"; };
 		1929BDA63F75AFFECCBB324A /* TBManualBeanProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBManualBeanProvider.h; sourceTree = "<group>"; };
 		1929BDE2CAA27401668A81C6 /* NSObjectCategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectCategoryTest.m; sourceTree = "<group>"; };
 		1929BE769E53707A81CFF270 /* BaseDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseDao.m; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 		1929B11469559769E3CD3007 /* DummyClasses */ = {
 			isa = PBXGroup;
 			children = (
+				1929BAD9483574B476E3ECBF /* DummySeed.h */,
+				1929B1A662E9C11F26F07D74 /* DummySeed.m */,
 				1929B1B9585C5787F3C686AB /* AnotherManualBeanProvider.h */,
 				1929B34591FCD0E3B50F98F1 /* AnotherManualBeanProvider.m */,
 				1929B534082120C450BE0997 /* DummyManualBeanProvider.h */,
@@ -424,6 +429,7 @@
 				1929BF0AA7265C82C710A94B /* DummyPropertyObject.m in Sources */,
 				1929B3A0527873BE4D927C6B /* DummyManualBeanProvider.m in Sources */,
 				1929B8BFEB309F714CED53FD /* AnotherManualBeanProvider.m in Sources */,
+				1929B46E699B02166A98040D /* DummySeed.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

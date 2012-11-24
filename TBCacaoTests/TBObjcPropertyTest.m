@@ -28,7 +28,7 @@
     
     free(properties);
     
-    assertThat(result, hasSize(7));
+    assertThat(result, hasSize(9));
     
     TBObjcProperty *boolProperty = [result objectAtIndex:0];
     assertThat(boolProperty.name, is(@"boolProperty"));
@@ -59,6 +59,14 @@
     TBObjcProperty *unknownProperty = [result objectAtIndex:6];
     assertThat(unknownProperty.name, is(@"voidPointerProperty"));
     assertThat(@(unknownProperty.type), is(@(UnknownTBOjcProperty)));
+
+    TBObjcProperty *protocolObject = [result objectAtIndex:7];
+    assertThat(protocolObject.name, is(@"protocolProperty"));
+    assertThat(@(protocolObject.type), is(@(ObjectTBObjcProperty)));
+
+    TBObjcProperty *idObject = [result objectAtIndex:8];
+    assertThat(idObject.name, is(@"idProperty"));
+    assertThat(@(idObject.type), is(@(ObjectTBObjcProperty)));
 }
 
 @end

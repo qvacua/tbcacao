@@ -72,15 +72,21 @@ BOOL class_is_bean(Class cls) {
 
 @implementation TBContext {
     NSMutableArray *_beans;
+    BOOL _contextInitialized;
 }
 
 @synthesize beans = _beans;
 
 #pragma mark Public
 - (void)initContext {
+    if (_contextInitialized) {
+        return;
+    }
+
+    _contextInitialized = YES;
+
     NSArray *classesOfBeans = subclasses_of_class([NSObject class]);
     [self initializeBeans:classesOfBeans];
-
     [self initializeManualBeans:classes_conforming_to_protocol(@protocol(TBManualBeanProvider))];
 
     [self autowireBeans];
@@ -105,6 +111,29 @@ BOOL class_is_bean(Class cls) {
     }
 
     return nil;
+}
+
+- (void)autowireSeed:(id)seed {
+    [self autowireTargetSource:seed];
+}
+
+- (void)replaceBeanWithIdentifier:(NSString *)identifier withTargetSource:(id)targetSource {
+    TBBean *newBean = [TBBean objectWithIdentifier:identifier bean:targetSource];
+
+    TBBean *oldBean;
+    for (TBBean *bean in self.beans) {
+        if ([bean isEqual:newBean]) {
+            oldBean = bean;
+            break;
+        }
+    }
+
+    [_beans removeObject:oldBean];
+    [_beans addObject:newBean];
+}
+
+- (void)reautowireBeans {
+    [self autowireBeans];
 }
 
 #pragma mark NSObject
@@ -169,15 +198,19 @@ BOOL class_is_bean(Class cls) {
 
 - (void)autowireBeans {
     for (TBBean *bean in self.beans) {
-        Class superclass = [bean.targetSource class];
-        do {
-            [self autowireBean:bean ofClass:superclass];
-            superclass = class_getSuperclass(superclass);
-        } while (superclass && superclass != [NSObject class]);
+        [self autowireTargetSource:bean.targetSource];
     }
 }
 
-- (void)autowireBean:(TBBean *)bean ofClass:(Class)cls {
+- (void)autowireTargetSource:(id)targetSource {
+    Class superclass = [targetSource class];
+    do {
+        [self autowireTargetSource:targetSource asClass:superclass];
+        superclass = class_getSuperclass(superclass);
+    } while (superclass && superclass != [NSObject class]);
+}
+
+- (void)autowireTargetSource:(id)targetSource asClass:(Class)cls {
     unsigned int methodCount;
     Method *methods = class_copyMethodList(object_getClass(cls), &methodCount);
 
@@ -195,12 +228,11 @@ BOOL class_is_bean(Class cls) {
 
         id propertyKey = objc_msgSend(cls, sel);
         NSString *nameOfBeanClass = [self classNameOfProperty:propertyKey andClass:cls];
-        log4Debug(@"Property '%@' of type '%@' from '%@' to autowire found", propertyKey, nameOfBeanClass, NSStringFromClass(cls));
 
         id beanToBeAutowired = [self beanWithIdentifier:nameOfBeanClass].targetSource;
-        [bean.targetSource setValue:beanToBeAutowired forKey:propertyKey];
+        [targetSource setValue:beanToBeAutowired forKey:propertyKey];
 
-        break;
+        log4Debug(@"Autowiring property '%@' of type '%@' from '%@'.", propertyKey, nameOfBeanClass, NSStringFromClass(cls));
     }
 
     free(methods);

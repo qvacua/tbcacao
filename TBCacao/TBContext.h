@@ -15,6 +15,8 @@ static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 
 @property (strong, readonly) NSArray *beans;
 
+- (void)reautowireBeans;
+
 - (id)init;
 + (TBContext *)sharedContext;
 
@@ -22,4 +24,8 @@ static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 - (void)addBean:(TBBean *)bean;
 
 - (TBBean *)beanWithIdentifier:(NSString *)identifier;
+
+- (void)autowireSeed:(id)seed;
+- (void)replaceBeanWithIdentifier:(NSString *)identifier withTargetSource:(id)targetSource;
+
 @end

@@ -15,8 +15,8 @@
 
     if (cocoaBeans == nil) {
         cocoaBeans = @[
-            [TBBean objectWithIdentifier:@"Workspace" bean:[NSWorkspace sharedWorkspace]],
-            [TBBean objectWithIdentifier:@"FontManager" bean:[NSFontManager sharedFontManager]]
+            [TBBean objectWithTargetSource:[NSWorkspace sharedWorkspace]],
+            [TBBean objectWithTargetSource:[NSFontManager sharedFontManager]]
         ];
     }
 
