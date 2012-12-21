@@ -24,6 +24,7 @@ static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 - (void)addBean:(TBBean *)bean;
 
 - (TBBean *)beanWithIdentifier:(NSString *)identifier;
+- (NSString *)identifierForTargetSource:(id)targetSource;
 
 - (void)autowireSeed:(id)seed;
 - (void)replaceBeanWithIdentifier:(NSString *)identifier withTargetSource:(id)targetSource;

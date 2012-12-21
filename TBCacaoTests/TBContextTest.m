@@ -50,6 +50,14 @@
     assertThat([context beanWithIdentifier:@"NSFontManager"].targetSource, is([NSFontManager sharedFontManager]));
 }
 
+- (void)testIdentifierForTargetSource {
+    id targetSource = [context beanWithIdentifier:@"EntryDao"].targetSource;
+    assertThat([context identifierForTargetSource:targetSource], is(@"EntryDao"));
+
+    targetSource = [context beanWithIdentifier:@"NSDocumentController"].targetSource;
+    assertThat([context identifierForTargetSource:targetSource], is(@"NSDocumentController"));
+}
+
 - (void)testBeanWithIdentifier {
     TBBean *entryDaoBean = [context beanWithIdentifier:@"EntryDao"];
     assertThat([entryDaoBean.targetSource class], is([EntryDao class]));

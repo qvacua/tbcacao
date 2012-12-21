@@ -113,6 +113,16 @@ BOOL class_is_bean(Class cls) {
     return nil;
 }
 
+- (NSString *)identifierForTargetSource:(id)targetSource {
+    for (TBBean *bean in self.beans) {
+        if (targetSource == bean.targetSource) {
+            return bean.identifier;
+        }
+    }
+
+    return nil;
+}
+
 - (void)autowireSeed:(id)seed {
     [self autowireTargetSource:seed];
 }
