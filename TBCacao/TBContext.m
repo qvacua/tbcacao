@@ -113,6 +113,10 @@ BOOL class_is_bean(Class cls) {
     return nil;
 }
 
+- (id)targetSourceWithClass:(Class)clazz {
+    return [self targetSourceWithIdentifier:[clazz description]];
+}
+
 - (id)targetSourceWithIdentifier:(NSString *)identifier {
     return [self beanWithIdentifier:identifier].targetSource;
 }
