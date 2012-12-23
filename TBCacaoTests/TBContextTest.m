@@ -63,6 +63,11 @@
     assertThat([entryDaoBean.targetSource class], is([EntryDao class]));
 }
 
+- (void)testTargetWithIdentifier {
+    TBBean *entryDaoBeanTargetSource = [context targetSourceWithIdentifier:@"EntryDao"];
+    assertThat([entryDaoBeanTargetSource class], is([EntryDao class]));
+}
+
 - (void)testAutowireBeans {
     TBBean *entryDaoBean = [context beanWithIdentifier:@"EntryDao"];
     TBBean *coreDataManagerBean = [context beanWithIdentifier:@"CoreDataManager"];

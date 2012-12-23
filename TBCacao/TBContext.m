@@ -113,6 +113,10 @@ BOOL class_is_bean(Class cls) {
     return nil;
 }
 
+- (id)targetSourceWithIdentifier:(NSString *)identifier {
+    return [self beanWithIdentifier:identifier].targetSource;
+}
+
 - (NSString *)identifierForTargetSource:(id)targetSource {
     for (TBBean *bean in self.beans) {
         if (targetSource == bean.targetSource) {
