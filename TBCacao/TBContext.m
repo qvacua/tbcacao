@@ -61,13 +61,17 @@ BOOL class_is_bean(Class cls) {
     unsigned int methodCount;
     Method *methods = class_copyMethodList(object_getClass(cls), &methodCount);
 
+    BOOL result = NO;
     for (int i = 0; i < methodCount; i++) {
         if (@selector(isBean) == method_getName(methods[i])) {
-            return YES;
+            result = YES;
+            break;
         }
     }
 
-    return NO;
+    free(methods);
+
+    return result;
 }
 
 @implementation TBContext {
