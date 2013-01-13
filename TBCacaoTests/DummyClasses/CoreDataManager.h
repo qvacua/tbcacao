@@ -7,5 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CoreDataManager : NSObject
+@protocol TBInitializingBean;
+
+@interface CoreDataManager : NSObject <TBInitializingBean>
+@property (copy)NSString *stringProperty;
 @end

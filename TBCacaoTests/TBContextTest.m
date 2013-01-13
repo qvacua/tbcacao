@@ -48,6 +48,8 @@
     assertThat([context beanContainerWithIdentifier:@"NSDocumentController"].targetSource, is([NSDocumentController sharedDocumentController]));
     assertThat([context beanContainerWithIdentifier:@"NSWorkspace"].targetSource, is([NSWorkspace sharedWorkspace]));
     assertThat([context beanContainerWithIdentifier:@"NSFontManager"].targetSource, is([NSFontManager sharedFontManager]));
+
+    assertThat([[context beanWithClass:[CoreDataManager class]] stringProperty], is(@"PostConstruct"));
 }
 
 - (void)testIdentifierForTargetSource {

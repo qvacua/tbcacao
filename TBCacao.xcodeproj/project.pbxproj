@@ -23,6 +23,7 @@
 		1929B8B1B62A1841D5F97F37 /* EntryCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BF57FB090A3053798031 /* EntryCoreDataManager.m */; };
 		1929B8BFEB309F714CED53FD /* AnotherManualBeanProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B34591FCD0E3B50F98F1 /* AnotherManualBeanProvider.m */; };
 		1929BAA62754CFD3DBEFB2C6 /* TBObjcProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B65F79B2EBA05F4B217F /* TBObjcProperty.h */; };
+		1929BAB844278E8ECE4A8E61 /* TBInitializingBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B90C2B879CA1727046F2 /* TBInitializingBean.h */; };
 		1929BB8A7B03758A676413BE /* NSString+TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B0F083F879DDF3CB06DF /* NSString+TBCacao.h */; };
 		1929BC721F67925348B31720 /* DummyPlainSubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B9FE3773F98DEB454ED3 /* DummyPlainSubObject.m */; };
 		1929BCBF6CA830B4B76AFA82 /* NSObject+TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B80572CA6503A34D8451 /* NSObject+TBCacao.h */; };
@@ -81,6 +82,7 @@
 		1929B7FB393AB02038C1EC56 /* DummyPlainSubObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyPlainSubObject.h; sourceTree = "<group>"; };
 		1929B80572CA6503A34D8451 /* NSObject+TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TBCacao.h"; sourceTree = "<group>"; };
 		1929B8E8550FA86B82D6E9B4 /* DummyPlainObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyPlainObject.h; sourceTree = "<group>"; };
+		1929B90C2B879CA1727046F2 /* TBInitializingBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBInitializingBean.h; sourceTree = "<group>"; };
 		1929B9296038B62D0E778304 /* EntryDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryDao.h; sourceTree = "<group>"; };
 		1929B9DB7E237BBDFD9D4D2E /* BaseDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseDao.h; sourceTree = "<group>"; };
 		1929B9FE3773F98DEB454ED3 /* DummyPlainSubObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyPlainSubObject.m; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				1929B65F79B2EBA05F4B217F /* TBObjcProperty.h */,
 				1929B7D257822DAA61930744 /* TBObjcProperty.m */,
 				1929B04272DA2D3531AA6A23 /* CocoaCategories */,
+				1929B90C2B879CA1727046F2 /* TBInitializingBean.h */,
 			);
 			path = TBCacao;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				1929BAA62754CFD3DBEFB2C6 /* TBObjcProperty.h in Headers */,
 				1929BCBF6CA830B4B76AFA82 /* NSObject+TBCacao.h in Headers */,
 				1929BB8A7B03758A676413BE /* NSString+TBCacao.h in Headers */,
+				1929BAB844278E8ECE4A8E61 /* TBInitializingBean.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

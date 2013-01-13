@@ -7,12 +7,11 @@
 
 #import <objc/runtime.h>
 #import <objc/message.h>
-#import "TBContext.h"
-#import "TBBeanContainer.h"
+#import <TBCacao/TBCacao.h>
 #import "NSObject+TBCacao.h"
 #import "TBLog.h"
 #import "TBObjcProperty.h"
-#import "TBManualBeanProvider.h"
+#import "TBInitializingBean.h"
 
 static NSString * const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 
@@ -96,6 +95,8 @@ BOOL class_is_bean(Class cls) {
     [self initializeManualBeans:classes_conforming_to_protocol(@protocol(TBManualBeanProvider))];
 
     [self autowireBeans];
+
+    [self callPostConstruct];
 }
 
 - (void)addBeanContainer:(TBBeanContainer *)beanContainer {
@@ -260,6 +261,16 @@ BOOL class_is_bean(Class cls) {
     }
 
     free(methods);
+}
+
+- (void)callPostConstruct {
+    for (TBBeanContainer *beanContainer in _beanContainers) {
+        id bean = beanContainer.targetSource;
+
+        if (class_conformsToProtocol([bean class], @protocol(TBInitializingBean))) {
+            [bean postConstruct];
+        }
+    }
 }
 
 @end

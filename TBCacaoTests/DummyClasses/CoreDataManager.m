@@ -8,8 +8,16 @@
 #import "TBCacao.h"
 #import "CoreDataManager.h"
 
-@implementation CoreDataManager
+@implementation CoreDataManager {
+    NSString *stringProperty;
+}
 
 TB_BEAN
+
+@synthesize stringProperty;
+
+- (void)postConstruct {
+    stringProperty = @"PostConstruct";
+}
 
 @end
