@@ -16,17 +16,17 @@
 - (id)initWithIdentifier:(NSString *)anIdentifier bean:(id)aBean;
 
 /**
-* The identifier will be targetSource' class name, i.e. NSStringFromClass([targetSource class])
+* The identifier will be bean's class name, i.e. NSStringFromClass([targetSource class])
 */
-- (id)initWithTargetSource:(id)targetSource;
+- (id)initWithBean:(id)bean;
 
 /**
-* The identifier will be targetSource' class name, i.e. NSStringFromClass([targetSource class])
+* The identifier will be bean's class name, i.e. NSStringFromClass([targetSource class])
 */
-+ (id)objectWithTargetSource:(id)targetSource;
-+ (id)objectWithIdentifier:(NSString *)anIdentifier bean:(id)aBean;
++ (id)beanContainerWithBean:(id)targetSource;
++ (id)beanContainerWithIdentifier:(NSString *)anIdentifier bean:(id)aBean;
 
-- (BOOL)isEqual:(TBBeanContainer *)beanToCompare;
+- (BOOL)isEqual:(TBBeanContainer *)beanContainerToCompare;
 - (NSString *)description;
 
 @end

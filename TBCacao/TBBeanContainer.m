@@ -27,20 +27,20 @@
     return self;
 }
 
-- (id)initWithTargetSource:(id)targetSource {
-    return [self initWithIdentifier:NSStringFromClass([targetSource class]) bean:targetSource];
+- (id)initWithBean:(id)bean {
+    return [self initWithIdentifier:NSStringFromClass([bean class]) bean:bean];
 }
 
-+ (id)objectWithTargetSource:(id)targetSource {
-    return [[TBBeanContainer alloc] initWithTargetSource:targetSource];
++ (id)beanContainerWithBean:(id)targetSource {
+    return [[TBBeanContainer alloc] initWithBean:targetSource];
 }
 
-+ (id)objectWithIdentifier:(NSString *)anIdentifier bean:(id)aBean {
++ (id)beanContainerWithIdentifier:(NSString *)anIdentifier bean:(id)aBean {
     return [[TBBeanContainer alloc] initWithIdentifier:anIdentifier bean:aBean];
 }
 
-- (BOOL)isEqual:(TBBeanContainer *)beanToCompare {
-    return [self.identifier isEqualToString:beanToCompare.identifier];
+- (BOOL)isEqual:(TBBeanContainer *)beanContainerToCompare {
+    return [self.identifier isEqualToString:beanContainerToCompare.identifier];
 }
 
 - (NSString *)description {

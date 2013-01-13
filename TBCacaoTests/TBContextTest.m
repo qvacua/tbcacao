@@ -31,14 +31,14 @@
     assertThat(@([beans count]), is(@(3 + 3)));
     assertThat(beans, consistsOfInAnyOrder(
             // annotation-based
-            [TBBeanContainer objectWithIdentifier:@"EntryDao" bean:nil],
-            [TBBeanContainer objectWithIdentifier:@"CoreDataManager" bean:nil],
-            [TBBeanContainer objectWithIdentifier:@"EntryCoreDataManager" bean:nil],
+            [TBBeanContainer beanContainerWithIdentifier:@"EntryDao" bean:nil],
+            [TBBeanContainer beanContainerWithIdentifier:@"CoreDataManager" bean:nil],
+            [TBBeanContainer beanContainerWithIdentifier:@"EntryCoreDataManager" bean:nil],
 
             // manual
-            [TBBeanContainer objectWithIdentifier:@"NSDocumentController" bean:nil],
-            [TBBeanContainer objectWithIdentifier:@"NSWorkspace" bean:nil],
-            [TBBeanContainer objectWithIdentifier:@"NSFontManager" bean:nil]
+            [TBBeanContainer beanContainerWithIdentifier:@"NSDocumentController" bean:nil],
+            [TBBeanContainer beanContainerWithIdentifier:@"NSWorkspace" bean:nil],
+            [TBBeanContainer beanContainerWithIdentifier:@"NSFontManager" bean:nil]
     ));
 
     assertThat([context beanContainerWithIdentifier:@"EntryDao"].targetSource, instanceOf([EntryDao class]));

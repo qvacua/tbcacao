@@ -142,7 +142,7 @@ BOOL class_is_bean(Class cls) {
 }
 
 - (void)replaceBeanWithIdentifier:(NSString *)identifier withBean:(id)bean {
-    TBBeanContainer *newBean = [TBBeanContainer objectWithIdentifier:identifier bean:bean];
+    TBBeanContainer *newBean = [TBBeanContainer beanContainerWithIdentifier:identifier bean:bean];
 
     TBBeanContainer *oldBean;
     for (TBBeanContainer *bean in self.beanContainers) {
@@ -191,7 +191,7 @@ BOOL class_is_bean(Class cls) {
             NSString *className = [cls classAsString];
             id beanInstance = [[cls alloc] init];
 
-            TBBeanContainer *cacao = [TBBeanContainer objectWithIdentifier:className bean:beanInstance];
+            TBBeanContainer *cacao = [TBBeanContainer beanContainerWithIdentifier:className bean:beanInstance];
             [self addBeanContainer:cacao];
         }
     }

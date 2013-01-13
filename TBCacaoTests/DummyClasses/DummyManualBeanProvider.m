@@ -10,13 +10,13 @@
 
 @implementation DummyManualBeanProvider
 
-+ (NSArray *)beans {
++ (NSArray *)beanContainers {
     static NSArray *cocoaBeans;
 
     if (cocoaBeans == nil) {
         cocoaBeans = @[
-            [TBBeanContainer objectWithTargetSource:[NSWorkspace sharedWorkspace]],
-            [TBBeanContainer objectWithTargetSource:[NSFontManager sharedFontManager]]
+                [TBBeanContainer beanContainerWithBean:[NSWorkspace sharedWorkspace]],
+                [TBBeanContainer beanContainerWithBean:[NSFontManager sharedFontManager]]
         ];
     }
 

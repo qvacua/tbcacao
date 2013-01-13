@@ -32,7 +32,7 @@
 		1929BD7631DC961DD0B0602F /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA31A16B6D938E61F2BC /* NSObject+TBCacao.m */; };
 		1929BF0AA7265C82C710A94B /* DummyPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B13951369D9B7C23E08E /* DummyPropertyObject.m */; };
 		1929BFE5703B364D76DF04C9 /* BaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BE769E53707A81CFF270 /* BaseDao.m */; };
-		4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9DF16233BCE00053151 /* TBBeanContainer.h */; };
+		4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9DF16233BCE00053151 /* TBBeanContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B5CE9B316233B9700053151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
 		4B5CE9BD16233B9700053151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5CE9BB16233B9700053151 /* InfoPlist.strings */; };
 		4B5CE9CA16233B9700053151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
@@ -280,9 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B5CE9E916233BDF00053151 /* TBCacao.h in Headers */,
+				4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */,
 				1929B256428085E17C648139 /* TBManualBeanProvider.h in Headers */,
 				4B5CE9E616233BCE00053151 /* TBContext.h in Headers */,
-				4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */,
 				4B5CE9EB16233C1500053151 /* TBLog.h in Headers */,
 				1929BAA62754CFD3DBEFB2C6 /* TBObjcProperty.h in Headers */,
 				1929BCBF6CA830B4B76AFA82 /* NSObject+TBCacao.h in Headers */,

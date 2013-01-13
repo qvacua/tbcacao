@@ -11,12 +11,12 @@
 
 @implementation AnotherManualBeanProvider
 
-+ (NSArray *)beans {
++ (NSArray *)beanContainers {
     static NSArray *manualBeans;
 
     if (manualBeans == nil) {
         manualBeans = @[
-            [TBBeanContainer objectWithTargetSource:[NSDocumentController sharedDocumentController]]
+                [TBBeanContainer beanContainerWithBean:[NSDocumentController sharedDocumentController]]
         ];
     }
 

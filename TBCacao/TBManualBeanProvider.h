@@ -8,6 +8,6 @@
 @protocol TBManualBeanProvider <NSObject>
 
 @required
-+ (NSArray *)beans;
++ (NSArray *)beanContainers;
 
 @end
