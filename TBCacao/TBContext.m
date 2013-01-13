@@ -8,11 +8,13 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import "TBContext.h"
-#import "TBBean.h"
+#import "TBBeanContainer.h"
 #import "NSObject+TBCacao.h"
 #import "TBLog.h"
 #import "TBObjcProperty.h"
 #import "TBManualBeanProvider.h"
+
+static NSString * const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 
 #pragma mark Static
 NSArray *subclasses_of_class(Class parentClass) {
@@ -75,11 +77,11 @@ BOOL class_is_bean(Class cls) {
 }
 
 @implementation TBContext {
-    NSMutableArray *_beans;
+    NSMutableArray *_beanContainers;
     BOOL _contextInitialized;
 }
 
-@synthesize beans = _beans;
+@synthesize beanContainers = _beanContainers;
 
 #pragma mark Public
 - (void)initContext {
@@ -96,19 +98,19 @@ BOOL class_is_bean(Class cls) {
     [self autowireBeans];
 }
 
-- (void)addBean:(TBBean *)bean {
-    for (TBBean *existingBean in self.beans) {
-        if ([existingBean.identifier isEqualToString:bean.identifier]) {
+- (void)addBeanContainer:(TBBeanContainer *)beanContainer {
+    for (TBBeanContainer *existingBean in self.beanContainers) {
+        if ([existingBean.identifier isEqualToString:beanContainer.identifier]) {
             log4Warn(@"Trying to add a bean with the same identifier '%@'.", existingBean.identifier);
             return;
         }
     }
 
-    [_beans addObject:bean];
+    [_beanContainers addObject:beanContainer];
 }
 
-- (TBBean *)beanWithIdentifier:(NSString *)identifier {
-    for (TBBean *bean in self.beans) {
+- (TBBeanContainer *)beanContainerWithIdentifier:(NSString *)identifier {
+    for (TBBeanContainer *bean in self.beanContainers) {
         if ([identifier isEqualToString:bean.identifier]) {
             return bean;
         }
@@ -117,17 +119,17 @@ BOOL class_is_bean(Class cls) {
     return nil;
 }
 
-- (id)targetSourceWithClass:(Class)clazz {
-    return [self targetSourceWithIdentifier:[clazz description]];
+- (id)beanWithClass:(Class)clazz {
+    return [self beanWithIdentifier:[clazz description]];
 }
 
-- (id)targetSourceWithIdentifier:(NSString *)identifier {
-    return [self beanWithIdentifier:identifier].targetSource;
+- (id)beanWithIdentifier:(NSString *)identifier {
+    return [self beanContainerWithIdentifier:identifier].targetSource;
 }
 
-- (NSString *)identifierForTargetSource:(id)targetSource {
-    for (TBBean *bean in self.beans) {
-        if (targetSource == bean.targetSource) {
+- (NSString *)identifierForBean:(id)bean {
+    for (TBBeanContainer *bean in self.beanContainers) {
+        if (bean == bean.targetSource) {
             return bean.identifier;
         }
     }
@@ -139,19 +141,19 @@ BOOL class_is_bean(Class cls) {
     [self autowireTargetSource:seed];
 }
 
-- (void)replaceBeanWithIdentifier:(NSString *)identifier withTargetSource:(id)targetSource {
-    TBBean *newBean = [TBBean objectWithIdentifier:identifier bean:targetSource];
+- (void)replaceBeanWithIdentifier:(NSString *)identifier withBean:(id)bean {
+    TBBeanContainer *newBean = [TBBeanContainer objectWithIdentifier:identifier bean:bean];
 
-    TBBean *oldBean;
-    for (TBBean *bean in self.beans) {
+    TBBeanContainer *oldBean;
+    for (TBBeanContainer *bean in self.beanContainers) {
         if ([bean isEqual:newBean]) {
             oldBean = bean;
             break;
         }
     }
 
-    [_beans removeObject:oldBean];
-    [_beans addObject:newBean];
+    [_beanContainers removeObject:oldBean];
+    [_beanContainers addObject:newBean];
 }
 
 - (void)reautowireBeans {
@@ -162,7 +164,7 @@ BOOL class_is_bean(Class cls) {
 - (id)init {
     self = [super init];
     if (self) {
-        _beans = [[NSMutableArray alloc] init];
+        _beanContainers = [[NSMutableArray alloc] init];
     }
 
     return self;
@@ -189,8 +191,8 @@ BOOL class_is_bean(Class cls) {
             NSString *className = [cls classAsString];
             id beanInstance = [[cls alloc] init];
 
-            TBBean *cacao = [TBBean objectWithIdentifier:className bean:beanInstance];
-            [self addBean:cacao];
+            TBBeanContainer *cacao = [TBBeanContainer objectWithIdentifier:className bean:beanInstance];
+            [self addBeanContainer:cacao];
         }
     }
 }
@@ -198,12 +200,12 @@ BOOL class_is_bean(Class cls) {
 - (void)initializeManualBeans:(NSArray *)classes {
     for (Class cls in classes) {
         log4Debug(@"Adding manual beans of %@", cls);
-        [self addAllBeans:[cls beans]];
+        [self addAllBeans:[cls beanContainers]];
     }
 }
 
 - (void)addAllBeans:(NSArray *)manyBeans {
-    [_beans addObjectsFromArray:manyBeans];
+    [_beanContainers addObjectsFromArray:manyBeans];
 }
 
 - (NSString *)classNameOfProperty:(NSString *)propertyName andClass:(Class)cls {
@@ -219,7 +221,7 @@ BOOL class_is_bean(Class cls) {
 }
 
 - (void)autowireBeans {
-    for (TBBean *bean in self.beans) {
+    for (TBBeanContainer *bean in self.beanContainers) {
         [self autowireTargetSource:bean.targetSource];
     }
 }
@@ -251,7 +253,7 @@ BOOL class_is_bean(Class cls) {
         id propertyKey = objc_msgSend(cls, sel);
         NSString *nameOfBeanClass = [self classNameOfProperty:propertyKey andClass:cls];
 
-        id beanToBeAutowired = [self beanWithIdentifier:nameOfBeanClass].targetSource;
+        id beanToBeAutowired = [self beanContainerWithIdentifier:nameOfBeanClass].targetSource;
         [targetSource setValue:beanToBeAutowired forKey:propertyKey];
 
         log4Debug(@"Autowiring property '%@' of type '%@' from '%@'.", propertyKey, nameOfBeanClass, NSStringFromClass(cls));

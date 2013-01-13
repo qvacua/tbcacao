@@ -5,7 +5,7 @@
  * Copyright © 2012 Tae Won Ha. See LICENSE
  */
 
-#import "TBBean.h"
+#import "TBBeanContainer.h"
 #import "TBManualBeanProvider.h"
 #import "AnotherManualBeanProvider.h"
 
@@ -16,7 +16,7 @@
 
     if (manualBeans == nil) {
         manualBeans = @[
-            [TBBean objectWithTargetSource:[NSDocumentController sharedDocumentController]]
+            [TBBeanContainer objectWithTargetSource:[NSDocumentController sharedDocumentController]]
         ];
     }
 

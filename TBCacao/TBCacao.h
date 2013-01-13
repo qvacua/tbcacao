@@ -1,5 +1,5 @@
 #import "TBContext.h"
-#import "TBBean.h"
+#import "TBBeanContainer.h"
 
 #define TB_BEAN     + (BOOL)isBean { return YES; }
 

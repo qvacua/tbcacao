@@ -7,13 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
-@class TBBean;
+@class TBBeanContainer;
 
-static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 
 @interface TBContext : NSObject
 
-@property (strong, readonly) NSArray *beans;
+@property (strong, readonly) NSArray *beanContainers;
 
 - (void)reautowireBeans;
 
@@ -21,17 +20,15 @@ static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 + (TBContext *)sharedContext;
 
 - (void)initContext;
-- (void)addBean:(TBBean *)bean;
+- (void)addBeanContainer:(TBBeanContainer *)beanContainer;
 
-- (TBBean *)beanWithIdentifier:(NSString *)identifier;
+- (TBBeanContainer *)beanContainerWithIdentifier:(NSString *)identifier;
 
--(id)targetSourceWithClass:(Class)clazz;
-
--(id)targetSourceWithIdentifier:(NSString *)identifier;
-
-- (NSString *)identifierForTargetSource:(id)targetSource;
+-(id)beanWithClass:(Class)clazz;
+-(id)beanWithIdentifier:(NSString *)identifier;
+- (NSString *)identifierForBean:(id)bean;
 
 - (void)autowireSeed:(id)seed;
-- (void)replaceBeanWithIdentifier:(NSString *)identifier withTargetSource:(id)targetSource;
+- (void)replaceBeanWithIdentifier:(NSString *)identifier withBean:(id)bean;
 
 @end

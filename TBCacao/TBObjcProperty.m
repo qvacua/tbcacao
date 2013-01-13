@@ -1,17 +1,17 @@
 /**
  * Tae Won Ha
  * http://qvacua.com
+ * https://github.com/qvacua
  *
- * Copyright © 2012 Tae Won Ha. See LICENSE
+ * See LICENSE
  */
 
 #import "TBObjcProperty.h"
 #import "TBLog.h"
 
 @implementation TBObjcProperty {
-@private
     NSString *name;
-    TBObjcPropertyType  type;
+    TBObjcPropertyType type;
     Class clazz;
     BOOL readonly;
 }
@@ -32,7 +32,7 @@
         return;
     }
 
-    NSString *nameOfClass = [[NSString allocWithZone:nil] initWithString:[attrString substringWithRange:NSMakeRange(3, [attrString length] - 4)]];
+    NSString *nameOfClass = [[NSString alloc] initWithString:[attrString substringWithRange:NSMakeRange(3, [attrString length] - 4)]];
 
     if ([[nameOfClass substringToIndex:1] isEqualToString:@"<"]) {
         // id <SomeProtocol>

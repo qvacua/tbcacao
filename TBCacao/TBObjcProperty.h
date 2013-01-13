@@ -1,8 +1,9 @@
 /**
  * Tae Won Ha
  * http://qvacua.com
+ * https://github.com/qvacua
  *
- * Copyright © 2012 Tae Won Ha. See LICENSE
+ * See LICENSE
  */
 
 /**
@@ -30,20 +31,18 @@ typedef enum {
 
 @interface TBObjcProperty : NSObject
 
-@property (readonly, nonatomic) NSString           *name;
-@property (readonly, nonatomic) NSString           *nameOfClass;
+@property (readonly, nonatomic) NSString *name;
+@property (readonly, nonatomic) NSString *nameOfClass;
 
 /**
-* can be nil when the property is declared as id or id <SomeProtocol>
+* Can be nil when the property is declared as id or id <SomeProtocol>
 */
-@property (readonly, nonatomic) Class              clazz;
+@property (readonly, nonatomic) Class clazz;
 @property (readonly, nonatomic) TBObjcPropertyType type;
-@property (readonly, nonatomic) BOOL               readonly;
+@property (readonly, nonatomic) BOOL readonly;
 
 /**
- * Initializes the TBObjcProperty which wraps the objc_property of Objective-C runtime.
- *`
- * @param objc_property_t  It must not be manually free'ed since TBObjcProperty will do it.
+ * Initializes the TBObjcProperty which wraps the objc_property of Objective-C runtime. objc_property is not freed.
  */
 - (id)initWithProperty:(objc_property_t)objc_property;
 

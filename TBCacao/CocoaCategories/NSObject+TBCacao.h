@@ -1,8 +1,9 @@
 /**
  * Tae Won Ha
  * http://qvacua.com
+ * https://github.com/qvacua
  *
- * Copyright © 2012 Tae Won Ha. See LICENSE
+ * See LICENSE
  */
 
 #import <Foundation/Foundation.h>
@@ -10,21 +11,18 @@
 @interface NSObject (TBCacao)
 
 /**
- * Class method which returns the class name as string.
- * @since 0.0.1
+ * Returns the class name as string.
  */
 + (NSString *)classAsString;
 
 /**
- * Class method which returns an array of all Objective-C properties as TBObjcProperty including properties of all superclasses.
- * The properties of NSObject is NOT included.
- * @since 0.0.1
+ * Returns an array of all Objective-C properties as TBObjcProperty including properties of all superclasses.
+ * The properties of NSObject is not included.
  */
 + (NSArray *)objcProperties;
 
 /**
- * Class method which returns an array of all Objective-C properties as TBObjcProperty NOT including properties of its superclass(es).
- * @since 0.0.1
+ * Returns an array of all Objective-C properties as TBObjcProperty not including properties of its superclass(es).
  */
 + (NSArray *)objcPropertiesWithoutSuperclass;
 

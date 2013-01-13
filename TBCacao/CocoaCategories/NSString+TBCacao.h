@@ -1,8 +1,9 @@
 /**
  * Tae Won Ha
  * http://qvacua.com
+ * https://github.com/qvacua
  *
- * Copyright © 2012 Tae Won Ha. See LICENSE
+ * See LICENSE
  */
 
 #import <Foundation/Foundation.h>
@@ -11,7 +12,6 @@
 
 /**
  * Returns YES if the string starts with str.
- * @since 0.0.1
  */
 - (BOOL)startsWithString:(NSString *)str;
 

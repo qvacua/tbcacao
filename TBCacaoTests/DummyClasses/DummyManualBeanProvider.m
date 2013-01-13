@@ -6,7 +6,7 @@
  */
 
 #import "DummyManualBeanProvider.h"
-#import "TBBean.h"
+#import "TBBeanContainer.h"
 
 @implementation DummyManualBeanProvider
 
@@ -15,8 +15,8 @@
 
     if (cocoaBeans == nil) {
         cocoaBeans = @[
-            [TBBean objectWithTargetSource:[NSWorkspace sharedWorkspace]],
-            [TBBean objectWithTargetSource:[NSFontManager sharedFontManager]]
+            [TBBeanContainer objectWithTargetSource:[NSWorkspace sharedWorkspace]],
+            [TBBeanContainer objectWithTargetSource:[NSFontManager sharedFontManager]]
         ];
     }
 

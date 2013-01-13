@@ -5,9 +5,9 @@
  * Copyright © 2012 Tae Won Ha. See LICENSE
  */
 
-#import "TBBean.h"
+#import "TBBeanContainer.h"
 
-@implementation TBBean {
+@implementation TBBeanContainer {
 @private
     NSString *_identifier;
     id _targetSource;
@@ -32,14 +32,14 @@
 }
 
 + (id)objectWithTargetSource:(id)targetSource {
-    return [[TBBean alloc] initWithTargetSource:targetSource];
+    return [[TBBeanContainer alloc] initWithTargetSource:targetSource];
 }
 
 + (id)objectWithIdentifier:(NSString *)anIdentifier bean:(id)aBean {
-    return [[TBBean alloc] initWithIdentifier:anIdentifier bean:aBean];
+    return [[TBBeanContainer alloc] initWithIdentifier:anIdentifier bean:aBean];
 }
 
-- (BOOL)isEqual:(TBBean *)beanToCompare {
+- (BOOL)isEqual:(TBBeanContainer *)beanToCompare {
     return [self.identifier isEqualToString:beanToCompare.identifier];
 }
 

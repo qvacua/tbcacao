@@ -1,13 +1,14 @@
 /**
  * Tae Won Ha
  * http://qvacua.com
+ * https://github.com/qvacua
  *
- * Copyright © 2012 Tae Won Ha. See LICENSE
+ * See LICENSE
  */
 
 #import <Foundation/Foundation.h>
 
-@interface TBBean : NSObject
+@interface TBBeanContainer : NSObject
 
 @property (readonly) NSString *identifier;
 @property (readonly) id targetSource;
@@ -25,7 +26,7 @@
 + (id)objectWithTargetSource:(id)targetSource;
 + (id)objectWithIdentifier:(NSString *)anIdentifier bean:(id)aBean;
 
-- (BOOL)isEqual:(TBBean *)beanToCompare;
+- (BOOL)isEqual:(TBBeanContainer *)beanToCompare;
 - (NSString *)description;
 
 @end

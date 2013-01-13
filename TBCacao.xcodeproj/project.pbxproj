@@ -32,14 +32,14 @@
 		1929BD7631DC961DD0B0602F /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA31A16B6D938E61F2BC /* NSObject+TBCacao.m */; };
 		1929BF0AA7265C82C710A94B /* DummyPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B13951369D9B7C23E08E /* DummyPropertyObject.m */; };
 		1929BFE5703B364D76DF04C9 /* BaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BE769E53707A81CFF270 /* BaseDao.m */; };
+		4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9DF16233BCE00053151 /* TBBeanContainer.h */; };
 		4B5CE9B316233B9700053151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
 		4B5CE9BD16233B9700053151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5CE9BB16233B9700053151 /* InfoPlist.strings */; };
 		4B5CE9CA16233B9700053151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
 		4B5CE9D316233B9700053151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5CE9D116233B9700053151 /* InfoPlist.strings */; };
 		4B5CE9D616233B9700053151 /* TBBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9D516233B9700053151 /* TBBaseTest.m */; };
-		4B5CE9E316233BCE00053151 /* TBBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9DF16233BCE00053151 /* TBBean.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B5CE9E416233BCE00053151 /* TBBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E016233BCE00053151 /* TBBean.m */; };
-		4B5CE9E516233BCE00053151 /* TBBean.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E016233BCE00053151 /* TBBean.m */; };
+		4B5CE9E416233BCE00053151 /* TBBeanContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E016233BCE00053151 /* TBBeanContainer.m */; };
+		4B5CE9E516233BCE00053151 /* TBBeanContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E016233BCE00053151 /* TBBeanContainer.m */; };
 		4B5CE9E616233BCE00053151 /* TBContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9E116233BCE00053151 /* TBContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B5CE9E716233BCE00053151 /* TBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E216233BCE00053151 /* TBContext.m */; };
 		4B5CE9E816233BCE00053151 /* TBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E216233BCE00053151 /* TBContext.m */; };
@@ -108,8 +108,8 @@
 		4B5CE9D216233B9700053151 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B5CE9D416233B9700053151 /* TBBaseTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBBaseTest.h; sourceTree = "<group>"; };
 		4B5CE9D516233B9700053151 /* TBBaseTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBBaseTest.m; sourceTree = "<group>"; };
-		4B5CE9DF16233BCE00053151 /* TBBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBean.h; sourceTree = "<group>"; };
-		4B5CE9E016233BCE00053151 /* TBBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBean.m; sourceTree = "<group>"; };
+		4B5CE9DF16233BCE00053151 /* TBBeanContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBeanContainer.h; sourceTree = "<group>"; };
+		4B5CE9E016233BCE00053151 /* TBBeanContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBeanContainer.m; sourceTree = "<group>"; };
 		4B5CE9E116233BCE00053151 /* TBContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBContext.h; sourceTree = "<group>"; };
 		4B5CE9E216233BCE00053151 /* TBContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBContext.m; sourceTree = "<group>"; };
 		4B5CE9EA16233C1500053151 /* TBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLog.h; sourceTree = "<group>"; };
@@ -225,8 +225,8 @@
 				1929BDA63F75AFFECCBB324A /* TBManualBeanProvider.h */,
 				4B5CE9EA16233C1500053151 /* TBLog.h */,
 				4B5CE9BF16233B9700053151 /* TBCacao.h */,
-				4B5CE9DF16233BCE00053151 /* TBBean.h */,
-				4B5CE9E016233BCE00053151 /* TBBean.m */,
+				4B5CE9DF16233BCE00053151 /* TBBeanContainer.h */,
+				4B5CE9E016233BCE00053151 /* TBBeanContainer.m */,
 				4B5CE9E116233BCE00053151 /* TBContext.h */,
 				4B5CE9E216233BCE00053151 /* TBContext.m */,
 				4B5CE9B916233B9700053151 /* Supporting Files */,
@@ -280,9 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B5CE9E916233BDF00053151 /* TBCacao.h in Headers */,
-				4B5CE9E316233BCE00053151 /* TBBean.h in Headers */,
 				1929B256428085E17C648139 /* TBManualBeanProvider.h in Headers */,
 				4B5CE9E616233BCE00053151 /* TBContext.h in Headers */,
+				4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */,
 				4B5CE9EB16233C1500053151 /* TBLog.h in Headers */,
 				1929BAA62754CFD3DBEFB2C6 /* TBObjcProperty.h in Headers */,
 				1929BCBF6CA830B4B76AFA82 /* NSObject+TBCacao.h in Headers */,
@@ -397,7 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B5CE9E416233BCE00053151 /* TBBean.m in Sources */,
+				4B5CE9E416233BCE00053151 /* TBBeanContainer.m in Sources */,
 				4B5CE9E716233BCE00053151 /* TBContext.m in Sources */,
 				1929B21B861E9FAD63FFDF75 /* TBObjcProperty.m in Sources */,
 				1929BD7631DC961DD0B0602F /* NSObject+TBCacao.m in Sources */,
@@ -410,7 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B5CE9D616233B9700053151 /* TBBaseTest.m in Sources */,
-				4B5CE9E516233BCE00053151 /* TBBean.m in Sources */,
+				4B5CE9E516233BCE00053151 /* TBBeanContainer.m in Sources */,
 				4B5CE9E816233BCE00053151 /* TBContext.m in Sources */,
 				1929B7A0FC9F7F26EA0C84BE /* TBContextTest.m in Sources */,
 				1929BFE5703B364D76DF04C9 /* BaseDao.m in Sources */,
