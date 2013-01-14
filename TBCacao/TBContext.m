@@ -14,6 +14,7 @@
 #import "TBInitializingBean.h"
 
 static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
+static NSString *const TB_MANULWIRE_METHOD_PREFIX = @"TB_manualwire_";
 
 #pragma mark Static
 NSArray *subclasses_of_class(Class parentClass) {
@@ -129,9 +130,9 @@ BOOL class_is_bean(Class cls) {
 }
 
 - (NSString *)identifierForBean:(id)bean {
-    for (TBBeanContainer *bean in self.beanContainers) {
-        if (bean == bean.targetSource) {
-            return bean.identifier;
+    for (TBBeanContainer *beanContainer in self.beanContainers) {
+        if (bean == beanContainer.targetSource) {
+            return beanContainer.identifier;
         }
     }
 
@@ -139,7 +140,7 @@ BOOL class_is_bean(Class cls) {
 }
 
 - (void)autowireSeed:(id)seed {
-    [self autowireTargetSource:seed];
+    [self autowireTargetSource:seed methodPrefix:TB_MANULWIRE_METHOD_PREFIX];
 }
 
 - (void)replaceBeanWithIdentifier:(NSString *)identifier withBean:(id)bean {
@@ -223,19 +224,19 @@ BOOL class_is_bean(Class cls) {
 
 - (void)autowireBeans {
     for (TBBeanContainer *bean in self.beanContainers) {
-        [self autowireTargetSource:bean.targetSource];
+        [self autowireTargetSource:bean.targetSource methodPrefix:TB_AUTOWIRE_METHOD_PREFIX];
     }
 }
 
-- (void)autowireTargetSource:(id)targetSource {
+- (void)autowireTargetSource:(id)targetSource methodPrefix:(NSString *)methodPrefix {
     Class superclass = [targetSource class];
     do {
-        [self autowireTargetSource:targetSource asClass:superclass];
+        [self autowireTargetSource:targetSource asClass:superclass methodPrefix:methodPrefix];
         superclass = class_getSuperclass(superclass);
     } while (superclass && superclass != [NSObject class]);
 }
 
-- (void)autowireTargetSource:(id)targetSource asClass:(Class)cls {
+- (void)autowireTargetSource:(id)targetSource asClass:(Class)cls methodPrefix:(NSString *)methodPrefix {
     unsigned int methodCount;
     Method *methods = class_copyMethodList(object_getClass(cls), &methodCount);
 
@@ -243,11 +244,11 @@ BOOL class_is_bean(Class cls) {
         SEL sel = method_getName(methods[i]);
         NSString *methodName = [[NSString alloc] initWithCString:sel_getName(sel) encoding:NSUTF8StringEncoding];
 
-        if ([methodName length] < [TB_AUTOWIRE_METHOD_PREFIX length]) {
+        if ([methodName length] < [methodPrefix length]) {
             continue;
         }
 
-        if ([[methodName substringToIndex:[TB_AUTOWIRE_METHOD_PREFIX length]] isEqualToString:TB_AUTOWIRE_METHOD_PREFIX] == NO) {
+        if ([[methodName substringToIndex:[methodPrefix length]] isEqualToString:methodPrefix] == NO) {
             continue;
         }
 

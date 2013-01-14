@@ -15,7 +15,7 @@
     NSWorkspace *_workspace;
 }
 
-TB_AUTOWIRE_WITH_INSTANCE_VAR(coreDataManager, _coreDataManager)
-TB_AUTOWIRE_WITH_INSTANCE_VAR(workspace, _workspace);
+TB_MANUALWIRE_WITH_INSTANCE_VAR(coreDataManager, _coreDataManager)
+TB_MANUALWIRE_WITH_INSTANCE_VAR(workspace, _workspace)
 
 @end
