@@ -23,7 +23,7 @@
 		1929B8B1B62A1841D5F97F37 /* EntryCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BF57FB090A3053798031 /* EntryCoreDataManager.m */; };
 		1929B8BFEB309F714CED53FD /* AnotherManualBeanProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B34591FCD0E3B50F98F1 /* AnotherManualBeanProvider.m */; };
 		1929BAA62754CFD3DBEFB2C6 /* TBObjcProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B65F79B2EBA05F4B217F /* TBObjcProperty.h */; };
-		1929BAB844278E8ECE4A8E61 /* TBInitializingBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B90C2B879CA1727046F2 /* TBInitializingBean.h */; };
+		1929BAB844278E8ECE4A8E61 /* TBInitializingBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B90C2B879CA1727046F2 /* TBInitializingBean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1929BB8A7B03758A676413BE /* NSString+TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B0F083F879DDF3CB06DF /* NSString+TBCacao.h */; };
 		1929BC721F67925348B31720 /* DummyPlainSubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B9FE3773F98DEB454ED3 /* DummyPlainSubObject.m */; };
 		1929BCBF6CA830B4B76AFA82 /* NSObject+TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B80572CA6503A34D8451 /* NSObject+TBCacao.h */; };
@@ -284,13 +284,13 @@
 			files = (
 				4B5CE9E916233BDF00053151 /* TBCacao.h in Headers */,
 				4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */,
+				1929BAB844278E8ECE4A8E61 /* TBInitializingBean.h in Headers */,
 				1929B256428085E17C648139 /* TBManualBeanProvider.h in Headers */,
 				4B5CE9E616233BCE00053151 /* TBContext.h in Headers */,
 				4B5CE9EB16233C1500053151 /* TBLog.h in Headers */,
 				1929BAA62754CFD3DBEFB2C6 /* TBObjcProperty.h in Headers */,
 				1929BCBF6CA830B4B76AFA82 /* NSObject+TBCacao.h in Headers */,
 				1929BB8A7B03758A676413BE /* NSString+TBCacao.h in Headers */,
-				1929BAB844278E8ECE4A8E61 /* TBInitializingBean.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
