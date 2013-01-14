@@ -6,9 +6,14 @@
  * See LICENSE
  */
 
+#define TB_POSTCONSTRUCT_ORDER(x) - (NSUInteger)postConstructOrder { return (NSUInteger) x; }
+
 @protocol TBInitializingBean <NSObject>
 
-@optional
+@required
 - (void)postConstruct;
+
+@optional
+- (NSUInteger)postConstructOrder;
 
 @end

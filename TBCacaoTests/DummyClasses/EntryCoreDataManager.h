@@ -8,9 +8,12 @@
 #import <Foundation/Foundation.h>
 
 @class CoreDataManager;
+@protocol TBInitializingBean;
 
-@interface EntryCoreDataManager : NSObject
+@interface EntryCoreDataManager : NSObject <TBInitializingBean>
 
 @property CoreDataManager *coreDataManager;
+
+@property (copy) NSString *stringProperty;
 
 @end

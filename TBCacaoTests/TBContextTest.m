@@ -50,6 +50,7 @@
     assertThat([context beanContainerWithIdentifier:@"NSFontManager"].targetSource, is([NSFontManager sharedFontManager]));
 
     assertThat([[context beanWithClass:[CoreDataManager class]] stringProperty], is(@"PostConstruct"));
+    assertThat([[context beanWithClass:[EntryCoreDataManager class]] stringProperty], is(@"PostConstruct"));
 }
 
 - (void)testIdentifierForTargetSource {

@@ -13,7 +13,7 @@
 #import "TBObjcProperty.h"
 #import "TBInitializingBean.h"
 
-static NSString * const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
+static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 
 #pragma mark Static
 NSArray *subclasses_of_class(Class parentClass) {
@@ -264,12 +264,30 @@ BOOL class_is_bean(Class cls) {
 }
 
 - (void)callPostConstruct {
+    NSMutableArray *beans = [[NSMutableArray alloc] init];
     for (TBBeanContainer *beanContainer in _beanContainers) {
-        id bean = beanContainer.targetSource;
-
-        if (class_conformsToProtocol([bean class], @protocol(TBInitializingBean))) {
-            [bean postConstruct];
+        if (class_conformsToProtocol([beanContainer.targetSource class], @protocol(TBInitializingBean))) {
+            [beans addObject:beanContainer.targetSource];
         }
+    }
+
+    NSArray *sortedBeans = [beans sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
+        NSUInteger orderA = [a respondsToSelector:@selector(postConstructOrder)] ? [a postConstructOrder] : NSUIntegerMax;
+        NSUInteger orderB = [b respondsToSelector:@selector(postConstructOrder)] ? [b postConstructOrder] : NSUIntegerMax;
+
+        if (orderA < orderB) {
+            return NSOrderedAscending;
+        }
+
+        if (orderA > orderB) {
+            return NSOrderedDescending;
+        }
+
+        return NSOrderedSame;
+    }];
+
+    for (id bean in sortedBeans) {
+        [bean postConstruct];
     }
 }
 

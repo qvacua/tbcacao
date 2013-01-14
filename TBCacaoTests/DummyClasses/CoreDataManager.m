@@ -6,6 +6,7 @@
  */
 
 #import "TBCacao.h"
+#import "TBInitializingBean.h"
 #import "CoreDataManager.h"
 
 @implementation CoreDataManager {
@@ -13,6 +14,7 @@
 }
 
 TB_BEAN
+TB_POSTCONSTRUCT_ORDER(1000)
 
 @synthesize stringProperty;
 
