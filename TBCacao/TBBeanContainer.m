@@ -39,8 +39,23 @@
     return [[TBBeanContainer alloc] initWithIdentifier:anIdentifier bean:aBean];
 }
 
-- (BOOL)isEqual:(TBBeanContainer *)beanContainerToCompare {
-    return [self.identifier isEqualToString:beanContainerToCompare.identifier];
+- (BOOL)isEqual:(TBBeanContainer *)other {
+    if (other == self) {
+        return YES;
+    }
+
+    if (!other || ![other isKindOfClass:[self class]]) {
+        return NO;
+    }
+
+    return [self.identifier isEqualToString:other.identifier];
+}
+
+- (NSUInteger)hash {
+    NSUInteger hash = [self.identifier hash];
+    hash = hash * 31u + [self.targetSource hash];
+
+    return hash;
 }
 
 - (NSString *)description {
