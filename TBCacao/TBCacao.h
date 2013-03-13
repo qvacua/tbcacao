@@ -10,3 +10,9 @@
 
 #define TB_MANUALWIRE_WITH_INSTANCE_VAR(propertyName, instanceName)       @synthesize propertyName = instanceName; \
                                                                           +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
+
+#define TB_AUTOWIRE(propertyName)       @synthesize propertyName = _ ## propertyName ; \
+                                        +(NSString *)TB_autowire_ ## propertyName { return  @#propertyName; }
+
+#define TB_MANUALWIRE(propertyName)     @synthesize propertyName = _ ## propertyName ; \
+                                        +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
