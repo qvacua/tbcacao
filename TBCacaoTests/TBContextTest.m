@@ -31,7 +31,7 @@
     assertThat(@([beanContainers count]), is(@(3 + 3)));
     assertThat(beanContainers, consistsOfInAnyOrder(
             // annotation-based
-            [TBBeanContainer beanContainerWithIdentifier:@"EntryDao" bean:nil],
+            [TBBeanContainer beanContainerWithIdentifier:@"EntryDao" bean:nil],    // conforms to TBBean protocol
             [TBBeanContainer beanContainerWithIdentifier:@"CoreDataManager" bean:nil],
             [TBBeanContainer beanContainerWithIdentifier:@"EntryCoreDataManager" bean:nil],
 

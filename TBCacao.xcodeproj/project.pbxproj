@@ -33,6 +33,7 @@
 		1929BD7631DC961DD0B0602F /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA31A16B6D938E61F2BC /* NSObject+TBCacao.m */; };
 		1929BF0AA7265C82C710A94B /* DummyPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B13951369D9B7C23E08E /* DummyPropertyObject.m */; };
 		1929BFE5703B364D76DF04C9 /* BaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BE769E53707A81CFF270 /* BaseDao.m */; };
+		4B10DDA5174F9E1A00B58F6E /* TBBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B62AAC89714A54436655 /* TBBean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9DF16233BCE00053151 /* TBBeanContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B5CE9B316233B9700053151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
 		4B5CE9BD16233B9700053151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5CE9BB16233B9700053151 /* InfoPlist.strings */; };
@@ -76,6 +77,7 @@
 		1929B48C42A36BCE8A595CB2 /* TBBeanTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBeanTest.m; sourceTree = "<group>"; };
 		1929B49FFFA119DE7F10AB2D /* DummyManualBeanProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyManualBeanProvider.m; sourceTree = "<group>"; };
 		1929B534082120C450BE0997 /* DummyManualBeanProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyManualBeanProvider.h; sourceTree = "<group>"; };
+		1929B62AAC89714A54436655 /* TBBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBean.h; sourceTree = "<group>"; };
 		1929B65F79B2EBA05F4B217F /* TBObjcProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBObjcProperty.h; sourceTree = "<group>"; };
 		1929B670C0AF6B460D35C044 /* NSStringCategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringCategoryTest.m; sourceTree = "<group>"; };
 		1929B7D257822DAA61930744 /* TBObjcProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBObjcProperty.m; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				1929B7D257822DAA61930744 /* TBObjcProperty.m */,
 				1929B04272DA2D3531AA6A23 /* CocoaCategories */,
 				1929B90C2B879CA1727046F2 /* TBInitializingBean.h */,
+				1929B62AAC89714A54436655 /* TBBean.h */,
 			);
 			path = TBCacao;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */,
 				1929BAB844278E8ECE4A8E61 /* TBInitializingBean.h in Headers */,
 				1929B256428085E17C648139 /* TBManualBeanProvider.h in Headers */,
+				4B10DDA5174F9E1A00B58F6E /* TBBean.h in Headers */,
 				4B5CE9E616233BCE00053151 /* TBContext.h in Headers */,
 				4B5CE9EB16233C1500053151 /* TBLog.h in Headers */,
 				1929BAA62754CFD3DBEFB2C6 /* TBObjcProperty.h in Headers */,

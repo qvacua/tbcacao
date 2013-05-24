@@ -11,7 +11,6 @@
 #import "NSObject+TBCacao.h"
 #import "TBLog.h"
 #import "TBObjcProperty.h"
-#import "TBInitializingBean.h"
 
 static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 static NSString *const TB_MANULWIRE_METHOD_PREFIX = @"TB_manualwire_";
@@ -60,6 +59,10 @@ NSArray *classes_conforming_to_protocol(Protocol *aProtocol) {
 }
 
 BOOL class_is_bean(Class cls) {
+    if (class_conformsToProtocol(cls, @protocol(TBBean))) {
+        return YES;
+    }
+
     unsigned int methodCount;
     Method *methods = class_copyMethodList(object_getClass(cls), &methodCount);
 

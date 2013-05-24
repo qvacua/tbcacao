@@ -1,4 +1,5 @@
 #import "TBContext.h"
+#import "TBBean.h"
 #import "TBManualBeanProvider.h"
 #import "TBBeanContainer.h"
 #import "TBInitializingBean.h"

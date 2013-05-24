@@ -9,8 +9,9 @@
 #import "BaseDao.h"
 
 @class EntryCoreDataManager;
+@protocol TBBean;
 
-@interface EntryDao : BaseDao
+@interface EntryDao : BaseDao <TBBean>
 
 @property EntryCoreDataManager *entryCoreDataManager;
 @property NSWorkspace *workspace;
