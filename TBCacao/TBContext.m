@@ -276,8 +276,8 @@ BOOL class_is_bean(Class cls) {
     }
 
     NSArray *sortedBeans = [beans sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
-        NSUInteger orderA = [a respondsToSelector:@selector(postConstructOrder)] ? [a postConstructOrder] : NSUIntegerMax;
-        NSUInteger orderB = [b respondsToSelector:@selector(postConstructOrder)] ? [b postConstructOrder] : NSUIntegerMax;
+        NSUInteger orderA = (NSUInteger) ([a respondsToSelector:@selector(postConstructOrder)] ? [a postConstructOrder] : NSUIntegerMax);
+        NSUInteger orderB = (NSUInteger) ([b respondsToSelector:@selector(postConstructOrder)] ? [b postConstructOrder] : NSUIntegerMax);
 
         if (orderA < orderB) {
             return NSOrderedAscending;
