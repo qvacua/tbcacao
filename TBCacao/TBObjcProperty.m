@@ -27,7 +27,7 @@
 }
 
 - (void) determineClass: (NSString *) attrString {
-    if ([attrString length] == 2) {
+    if ([attrString length] <= 3) {
         clazz = nil;
         return;
     }
