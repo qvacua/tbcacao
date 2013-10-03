@@ -106,8 +106,6 @@
 		4B5CE9E116233BCE00053151 /* TBContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBContext.h; sourceTree = "<group>"; };
 		4B5CE9E216233BCE00053151 /* TBContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBContext.m; sourceTree = "<group>"; };
 		4B5CE9EA16233C1500053151 /* TBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLog.h; sourceTree = "<group>"; };
-		4BBAC24617FD68B500E3BE0F /* TBCacaoIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBCacaoIOS-Prefix.pch"; sourceTree = "<group>"; };
-		4BBAC26517FD695000E3BE0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4BEC170717FD63E40070E209 /* TBCacaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBCacaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -177,7 +175,6 @@
 			children = (
 				4B5CE9B816233B9700053151 /* TBCacao */,
 				4B5CE9CE16233B9700053151 /* TBCacaoTests */,
-				4BBAC24417FD68B500E3BE0F /* TBCacaoIOS */,
 				4B5CE9B116233B9700053151 /* Frameworks */,
 				4B5CE9B016233B9700053151 /* Products */,
 			);
@@ -195,8 +192,9 @@
 		4B5CE9B116233B9700053151 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4BBAC26717FD696F00E3BE0F /* iOS */,
-				4BEC173017FD66B90070E209 /* OS X */,
+				4B5CE9B216233B9700053151 /* Cocoa.framework */,
+				1929B1BA9E0C56EA72167C1B /* OCHamcrest.framework */,
+				1929B57A3206B25D97CAEE6A /* OCMockito.framework */,
 				1929B2575DE1A367C666FF0F /* XCTest.framework */,
 			);
 			name = Frameworks;
@@ -256,40 +254,6 @@
 				1929B6DA0F472A7B98CEFD91 /* TBCacaoTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4BBAC24417FD68B500E3BE0F /* TBCacaoIOS */ = {
-			isa = PBXGroup;
-			children = (
-				4BBAC24517FD68B500E3BE0F /* Supporting Files */,
-			);
-			path = TBCacaoIOS;
-			sourceTree = "<group>";
-		};
-		4BBAC24517FD68B500E3BE0F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				4BBAC24617FD68B500E3BE0F /* TBCacaoIOS-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4BBAC26717FD696F00E3BE0F /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				4BBAC26517FD695000E3BE0F /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		4BEC173017FD66B90070E209 /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				4B5CE9B216233B9700053151 /* Cocoa.framework */,
-				1929B1BA9E0C56EA72167C1B /* OCHamcrest.framework */,
-				1929B57A3206B25D97CAEE6A /* OCMockito.framework */,
-			);
-			name = "OS X";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
