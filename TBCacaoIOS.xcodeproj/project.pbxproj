@@ -13,7 +13,6 @@
 		4BAF93BB17FD724C004B98C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAF93BA17FD724C004B98C9 /* UIKit.framework */; };
 		4BAF93BE17FD724C004B98C9 /* libTBCacaoIOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BAF93A617FD724C004B98C9 /* libTBCacaoIOS.a */; };
 		4BAF93C417FD724C004B98C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4BAF93C217FD724C004B98C9 /* InfoPlist.strings */; };
-		4BAF93C617FD724C004B98C9 /* TBCacaoIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF93C517FD724C004B98C9 /* TBCacaoIOSTests.m */; };
 		4BAF93D417FD729D004B98C9 /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF93D117FD729D004B98C9 /* NSObject+TBCacao.m */; };
 		4BAF93D517FD729D004B98C9 /* NSString+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF93D317FD729D004B98C9 /* NSString+TBCacao.m */; };
 		4BAF93E117FD72AA004B98C9 /* TBBeanContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF93D817FD72AA004B98C9 /* TBBeanContainer.m */; };
@@ -72,7 +71,6 @@
 		4BAF93BA17FD724C004B98C9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		4BAF93C117FD724C004B98C9 /* TBCacaoIOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacaoIOSTests-Info.plist"; sourceTree = "<group>"; };
 		4BAF93C317FD724C004B98C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4BAF93C517FD724C004B98C9 /* TBCacaoIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBCacaoIOSTests.m; sourceTree = "<group>"; };
 		4BAF93D017FD729D004B98C9 /* NSObject+TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TBCacao.h"; sourceTree = "<group>"; };
 		4BAF93D117FD729D004B98C9 /* NSObject+TBCacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TBCacao.m"; sourceTree = "<group>"; };
 		4BAF93D217FD729D004B98C9 /* NSString+TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TBCacao.h"; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 		4BAF93BF17FD724C004B98C9 /* TBCacaoIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				4BAF93C517FD724C004B98C9 /* TBCacaoIOSTests.m */,
 				4BAF93C017FD724C004B98C9 /* Supporting Files */,
 			);
 			path = TBCacaoIOSTests;
@@ -293,7 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BAF93C617FD724C004B98C9 /* TBCacaoIOSTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
