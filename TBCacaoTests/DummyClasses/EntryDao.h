@@ -5,7 +5,8 @@
  * Copyright © 2012 Tae Won Ha. See LICENSE
  */
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
+#import "TBCacao.h"
 #import "BaseDao.h"
 
 @class EntryCoreDataManager;

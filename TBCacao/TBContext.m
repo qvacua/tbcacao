@@ -1,13 +1,14 @@
 /**
  * Tae Won Ha
  * http://qvacua.com
+ * https://github.com/qvacua
  *
- * Copyright © 2012 Tae Won Ha. See LICENSE
+ * See LICENSE
  */
 
 #import <objc/runtime.h>
 #import <objc/message.h>
-#import <TBCacao/TBCacao.h>
+#import "TBCacao.h"
 #import "NSObject+TBCacao.h"
 #import "TBLog.h"
 #import "TBObjcProperty.h"
@@ -146,8 +147,8 @@ BOOL class_is_bean(Class cls) {
     [self autowireTargetSource:seed methodPrefix:TB_MANULWIRE_METHOD_PREFIX];
 }
 
-- (void)replaceBeanWithIdentifier:(NSString *)identifier withBean:(id)bean {
-    TBBeanContainer *newBean = [TBBeanContainer beanContainerWithIdentifier:identifier bean:bean];
+- (void)replaceBeanWithIdentifier:(NSString *)identifier withBean:(id)aBean {
+    TBBeanContainer *newBean = [TBBeanContainer beanContainerWithIdentifier:identifier bean:aBean];
 
     TBBeanContainer *oldBean;
     for (TBBeanContainer *bean in self.beanContainers) {
@@ -251,7 +252,7 @@ BOOL class_is_bean(Class cls) {
             continue;
         }
 
-        if ([[methodName substringToIndex:[methodPrefix length]] isEqualToString:methodPrefix] == NO) {
+        if (![[methodName substringToIndex:[methodPrefix length]] isEqualToString:methodPrefix]) {
             continue;
         }
 

@@ -6,7 +6,7 @@
  * See LICENSE
  */
 
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
 
 #import "NSObject+TBCacao.h"
 #import "TBObjcProperty.h"

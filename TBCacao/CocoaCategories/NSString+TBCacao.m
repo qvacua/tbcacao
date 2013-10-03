@@ -14,7 +14,7 @@
     NSUInteger length = [str length];
     NSComparisonResult result = [self compare:str options:NSLiteralSearch range:NSMakeRange(0, length)];
     
-    return (result == NSOrderedSame) ? YES : NO;
+    return result == NSOrderedSame;
 }
 
 @end

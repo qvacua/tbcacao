@@ -1,8 +1,9 @@
 /**
  * Tae Won Ha
  * http://qvacua.com
+ * https://github.com/qvacua
  *
- * Copyright © 2012 Tae Won Ha. See LICENSE
+ * See LICENSE
  */
 
 #import <Foundation/Foundation.h>
@@ -29,6 +30,6 @@
 - (NSString *)identifierForBean:(id)bean;
 
 - (void)autowireSeed:(id)seed;
-- (void)replaceBeanWithIdentifier:(NSString *)identifier withBean:(id)bean;
+- (void)replaceBeanWithIdentifier:(NSString *)identifier withBean:(id)aBean;
 
 @end

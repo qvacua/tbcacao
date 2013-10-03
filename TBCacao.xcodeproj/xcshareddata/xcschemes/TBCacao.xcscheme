@@ -32,8 +32,28 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4B5CE9C616233B9700053151"
-               BuildableName = "TBCacaoTests.octest"
+               BlueprintIdentifier = "4BEC170617FD63E40070E209"
+               BuildableName = "TBCacaoTests.xctest"
+               BlueprintName = "TBCacaoTests"
+               ReferencedContainer = "container:TBCacao.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4BEC16F217FD63890070E209"
+               BuildableName = "Tes.xctest"
+               BlueprintName = "Tes"
+               ReferencedContainer = "container:TBCacao.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4BEC170617FD63E40070E209"
+               BuildableName = "TBCacaoTests.xctest"
                BlueprintName = "TBCacaoTests"
                ReferencedContainer = "container:TBCacao.xcodeproj">
             </BuildableReference>

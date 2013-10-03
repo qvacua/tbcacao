@@ -17,7 +17,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
 
 typedef enum {
     UnknownTBOjcProperty = '?', // unknown type

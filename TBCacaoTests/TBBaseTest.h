@@ -5,7 +5,7 @@
  * Copyright © 2012 Tae Won Ha. See LICENSE
  */
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
@@ -17,6 +17,6 @@
 #define consistsOf(...) contains(__VA_ARGS__, nil)
 #define consistsOfInAnyOrder(...) containsInAnyOrder(__VA_ARGS__, nil)
 
-@interface TBBaseTest : SenTestCase
+@interface TBBaseTest : XCTestCase
 
 @end

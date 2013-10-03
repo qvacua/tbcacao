@@ -7,60 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1929B00BBE82A1555907348D /* EntryDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B36FA0EE07F9D8A2B639 /* EntryDao.m */; };
-		1929B169DA0098AFD3FF52BB /* TBObjcPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B0A2EC629C504BACA457 /* TBObjcPropertyTest.m */; };
 		1929B21B861E9FAD63FFDF75 /* TBObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B7D257822DAA61930744 /* TBObjcProperty.m */; };
 		1929B256428085E17C648139 /* TBManualBeanProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929BDA63F75AFFECCBB324A /* TBManualBeanProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1929B29AA4B7482D2A1ED796 /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA31A16B6D938E61F2BC /* NSObject+TBCacao.m */; };
-		1929B3A0527873BE4D927C6B /* DummyManualBeanProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B49FFFA119DE7F10AB2D /* DummyManualBeanProvider.m */; };
 		1929B3CE9E24801BD878DF10 /* NSString+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BF9A4E7300E4617C5731 /* NSString+TBCacao.m */; };
-		1929B46E699B02166A98040D /* DummySeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B1A662E9C11F26F07D74 /* DummySeed.m */; };
-		1929B4AFA6BAAFC25C538AC3 /* NSObjectCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BDE2CAA27401668A81C6 /* NSObjectCategoryTest.m */; };
-		1929B4F4C23D4535D7DBC10F /* NSString+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BF9A4E7300E4617C5731 /* NSString+TBCacao.m */; };
-		1929B4FB66030E4EEC61E577 /* DummyPlainObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA5A1C5D063244120555 /* DummyPlainObject.m */; };
-		1929B7360791C0945C72D669 /* NSStringCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B670C0AF6B460D35C044 /* NSStringCategoryTest.m */; };
-		1929B7A0FC9F7F26EA0C84BE /* TBContextTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B405089EF1AB609CB96F /* TBContextTest.m */; };
-		1929B8B1B62A1841D5F97F37 /* EntryCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BF57FB090A3053798031 /* EntryCoreDataManager.m */; };
-		1929B8BFEB309F714CED53FD /* AnotherManualBeanProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B34591FCD0E3B50F98F1 /* AnotherManualBeanProvider.m */; };
+		1929B811E261592A3BF84B5A /* TBCacaoTests-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1929B6DA0F472A7B98CEFD91 /* TBCacaoTests-Prefix.pch */; };
 		1929BAA62754CFD3DBEFB2C6 /* TBObjcProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B65F79B2EBA05F4B217F /* TBObjcProperty.h */; };
 		1929BAB844278E8ECE4A8E61 /* TBInitializingBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B90C2B879CA1727046F2 /* TBInitializingBean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1929BB8A7B03758A676413BE /* NSString+TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B0F083F879DDF3CB06DF /* NSString+TBCacao.h */; };
-		1929BC721F67925348B31720 /* DummyPlainSubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B9FE3773F98DEB454ED3 /* DummyPlainSubObject.m */; };
 		1929BCBF6CA830B4B76AFA82 /* NSObject+TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B80572CA6503A34D8451 /* NSObject+TBCacao.h */; };
-		1929BCF8957B0CD9AEAF7AF4 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BE832D5D0071F472B95E /* CoreDataManager.m */; };
-		1929BD3370559062E2F1BBB3 /* TBBeanTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B48C42A36BCE8A595CB2 /* TBBeanTest.m */; };
-		1929BD728F0F1837195AF3B9 /* TBObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B7D257822DAA61930744 /* TBObjcProperty.m */; };
 		1929BD7631DC961DD0B0602F /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA31A16B6D938E61F2BC /* NSObject+TBCacao.m */; };
-		1929BF0AA7265C82C710A94B /* DummyPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B13951369D9B7C23E08E /* DummyPropertyObject.m */; };
-		1929BFE5703B364D76DF04C9 /* BaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BE769E53707A81CFF270 /* BaseDao.m */; };
+		1929BE10EF2F8ED1711F5A6D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
 		4B10DDA5174F9E1A00B58F6E /* TBBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B62AAC89714A54436655 /* TBBean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9DF16233BCE00053151 /* TBBeanContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B5CE9B316233B9700053151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
 		4B5CE9BD16233B9700053151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5CE9BB16233B9700053151 /* InfoPlist.strings */; };
-		4B5CE9CA16233B9700053151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
-		4B5CE9D316233B9700053151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B5CE9D116233B9700053151 /* InfoPlist.strings */; };
-		4B5CE9D616233B9700053151 /* TBBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9D516233B9700053151 /* TBBaseTest.m */; };
 		4B5CE9E416233BCE00053151 /* TBBeanContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E016233BCE00053151 /* TBBeanContainer.m */; };
-		4B5CE9E516233BCE00053151 /* TBBeanContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E016233BCE00053151 /* TBBeanContainer.m */; };
 		4B5CE9E616233BCE00053151 /* TBContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9E116233BCE00053151 /* TBContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B5CE9E716233BCE00053151 /* TBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E216233BCE00053151 /* TBContext.m */; };
-		4B5CE9E816233BCE00053151 /* TBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E216233BCE00053151 /* TBContext.m */; };
 		4B5CE9E916233BDF00053151 /* TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9BF16233B9700053151 /* TBCacao.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B5CE9EB16233C1500053151 /* TBLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9EA16233C1500053151 /* TBLog.h */; };
-		4B5CEA561623627900053151 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9C816233B9700053151 /* SenTestingKit.framework */; };
-		4B5CEA5B1623629800053151 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CEA571623628F00053151 /* OCHamcrest.framework */; };
-		4B5CEA5C1623629800053151 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CEA581623628F00053151 /* OCMockito.framework */; };
+		4BEC170817FD63E40070E209 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1929B2575DE1A367C666FF0F /* XCTest.framework */; };
+		4BEC171917FD64480070E209 /* TBContextTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B405089EF1AB609CB96F /* TBContextTest.m */; };
+		4BEC171A17FD64480070E209 /* TBBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9D516233B9700053151 /* TBBaseTest.m */; };
+		4BEC171B17FD64480070E209 /* DummySeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B1A662E9C11F26F07D74 /* DummySeed.m */; };
+		4BEC171C17FD64480070E209 /* AnotherManualBeanProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B34591FCD0E3B50F98F1 /* AnotherManualBeanProvider.m */; };
+		4BEC171D17FD64480070E209 /* DummyManualBeanProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B49FFFA119DE7F10AB2D /* DummyManualBeanProvider.m */; };
+		4BEC171E17FD64480070E209 /* BaseDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BE769E53707A81CFF270 /* BaseDao.m */; };
+		4BEC171F17FD64480070E209 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BE832D5D0071F472B95E /* CoreDataManager.m */; };
+		4BEC172017FD64480070E209 /* EntryDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B36FA0EE07F9D8A2B639 /* EntryDao.m */; };
+		4BEC172117FD64480070E209 /* EntryCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BF57FB090A3053798031 /* EntryCoreDataManager.m */; };
+		4BEC172217FD64480070E209 /* DummyPlainObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA5A1C5D063244120555 /* DummyPlainObject.m */; };
+		4BEC172317FD64480070E209 /* DummyPlainSubObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B9FE3773F98DEB454ED3 /* DummyPlainSubObject.m */; };
+		4BEC172417FD64480070E209 /* DummyPropertyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B13951369D9B7C23E08E /* DummyPropertyObject.m */; };
+		4BEC172517FD64480070E209 /* TBBeanTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B48C42A36BCE8A595CB2 /* TBBeanTest.m */; };
+		4BEC172617FD64480070E209 /* TBObjcPropertyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B0A2EC629C504BACA457 /* TBObjcPropertyTest.m */; };
+		4BEC172717FD64480070E209 /* NSObjectCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BDE2CAA27401668A81C6 /* NSObjectCategoryTest.m */; };
+		4BEC172817FD64480070E209 /* NSStringCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B670C0AF6B460D35C044 /* NSStringCategoryTest.m */; };
+		4BEC172917FD645F0070E209 /* TBBeanContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E016233BCE00053151 /* TBBeanContainer.m */; };
+		4BEC172A17FD645F0070E209 /* TBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5CE9E216233BCE00053151 /* TBContext.m */; };
+		4BEC172B17FD645F0070E209 /* TBObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B7D257822DAA61930744 /* TBObjcProperty.m */; };
+		4BEC172C17FD645F0070E209 /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA31A16B6D938E61F2BC /* NSObject+TBCacao.m */; };
+		4BEC172D17FD645F0070E209 /* NSString+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BF9A4E7300E4617C5731 /* NSString+TBCacao.m */; };
+		4BEC172E17FD64680070E209 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1929B1BA9E0C56EA72167C1B /* OCHamcrest.framework */; };
+		4BEC172F17FD64680070E209 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1929B57A3206B25D97CAEE6A /* OCMockito.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4B5CE9CB16233B9700053151 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4B5CE9A516233B9700053151 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4B5CE9AE16233B9700053151;
-			remoteInfo = TBCacao;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1929B0A2EC629C504BACA457 /* TBObjcPropertyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBObjcPropertyTest.m; sourceTree = "<group>"; };
@@ -69,7 +59,9 @@
 		1929B186B8FECBE8907A47CC /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		1929B1A662E9C11F26F07D74 /* DummySeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummySeed.m; sourceTree = "<group>"; };
 		1929B1B9585C5787F3C686AB /* AnotherManualBeanProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherManualBeanProvider.h; sourceTree = "<group>"; };
+		1929B1BA9E0C56EA72167C1B /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Externals/OCHamcrest.framework; sourceTree = SOURCE_ROOT; };
 		1929B1FDA1EA8C918B31D3D5 /* DummyPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyPropertyObject.h; sourceTree = "<group>"; };
+		1929B2575DE1A367C666FF0F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1929B34591FCD0E3B50F98F1 /* AnotherManualBeanProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherManualBeanProvider.m; sourceTree = "<group>"; };
 		1929B36FA0EE07F9D8A2B639 /* EntryDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryDao.m; sourceTree = "<group>"; };
 		1929B3E3885E88C66B042611 /* EntryCoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryCoreDataManager.h; sourceTree = "<group>"; };
@@ -77,9 +69,11 @@
 		1929B48C42A36BCE8A595CB2 /* TBBeanTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBeanTest.m; sourceTree = "<group>"; };
 		1929B49FFFA119DE7F10AB2D /* DummyManualBeanProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyManualBeanProvider.m; sourceTree = "<group>"; };
 		1929B534082120C450BE0997 /* DummyManualBeanProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyManualBeanProvider.h; sourceTree = "<group>"; };
+		1929B57A3206B25D97CAEE6A /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = Externals/OCMockito.framework; sourceTree = SOURCE_ROOT; };
 		1929B62AAC89714A54436655 /* TBBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBean.h; sourceTree = "<group>"; };
 		1929B65F79B2EBA05F4B217F /* TBObjcProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBObjcProperty.h; sourceTree = "<group>"; };
 		1929B670C0AF6B460D35C044 /* NSStringCategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringCategoryTest.m; sourceTree = "<group>"; };
+		1929B6DA0F472A7B98CEFD91 /* TBCacaoTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TBCacaoTests-Prefix.pch"; sourceTree = "<group>"; };
 		1929B7D257822DAA61930744 /* TBObjcProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBObjcProperty.m; sourceTree = "<group>"; };
 		1929B7FB393AB02038C1EC56 /* DummyPlainSubObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyPlainSubObject.h; sourceTree = "<group>"; };
 		1929B80572CA6503A34D8451 /* NSObject+TBCacao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TBCacao.h"; sourceTree = "<group>"; };
@@ -99,15 +93,10 @@
 		1929BF9A4E7300E4617C5731 /* NSString+TBCacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TBCacao.m"; sourceTree = "<group>"; };
 		4B5CE9AF16233B9700053151 /* TBCacao.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBCacao.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5CE9B216233B9700053151 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		4B5CE9B516233B9700053151 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		4B5CE9B616233B9700053151 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		4B5CE9B716233B9700053151 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4B5CE9BA16233B9700053151 /* TBCacao-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacao-Info.plist"; sourceTree = "<group>"; };
 		4B5CE9BC16233B9700053151 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B5CE9BE16233B9700053151 /* TBCacao-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBCacao-Prefix.pch"; sourceTree = "<group>"; };
 		4B5CE9BF16233B9700053151 /* TBCacao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBCacao.h; sourceTree = "<group>"; };
-		4B5CE9C716233B9700053151 /* TBCacaoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBCacaoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B5CE9C816233B9700053151 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		4B5CE9D016233B9700053151 /* TBCacaoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TBCacaoTests-Info.plist"; sourceTree = "<group>"; };
 		4B5CE9D216233B9700053151 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4B5CE9D416233B9700053151 /* TBBaseTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBBaseTest.h; sourceTree = "<group>"; };
@@ -117,8 +106,9 @@
 		4B5CE9E116233BCE00053151 /* TBContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBContext.h; sourceTree = "<group>"; };
 		4B5CE9E216233BCE00053151 /* TBContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBContext.m; sourceTree = "<group>"; };
 		4B5CE9EA16233C1500053151 /* TBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLog.h; sourceTree = "<group>"; };
-		4B5CEA571623628F00053151 /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = /Library/Frameworks/OCHamcrest.framework; sourceTree = "<absolute>"; };
-		4B5CEA581623628F00053151 /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = /Library/Frameworks/OCMockito.framework; sourceTree = "<absolute>"; };
+		4BBAC24617FD68B500E3BE0F /* TBCacaoIOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TBCacaoIOS-Prefix.pch"; sourceTree = "<group>"; };
+		4BBAC26517FD695000E3BE0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4BEC170717FD63E40070E209 /* TBCacaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBCacaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,14 +120,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B5CE9C316233B9700053151 /* Frameworks */ = {
+		4BEC170417FD63E40070E209 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B5CEA5B1623629800053151 /* OCHamcrest.framework in Frameworks */,
-				4B5CEA5C1623629800053151 /* OCMockito.framework in Frameworks */,
-				4B5CEA561623627900053151 /* SenTestingKit.framework in Frameworks */,
-				4B5CE9CA16233B9700053151 /* Cocoa.framework in Frameworks */,
+				4BEC172E17FD64680070E209 /* OCHamcrest.framework in Frameworks */,
+				4BEC172F17FD64680070E209 /* OCMockito.framework in Frameworks */,
+				4BEC170817FD63E40070E209 /* XCTest.framework in Frameworks */,
+				1929BE10EF2F8ED1711F5A6D /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +177,7 @@
 			children = (
 				4B5CE9B816233B9700053151 /* TBCacao */,
 				4B5CE9CE16233B9700053151 /* TBCacaoTests */,
+				4BBAC24417FD68B500E3BE0F /* TBCacaoIOS */,
 				4B5CE9B116233B9700053151 /* Frameworks */,
 				4B5CE9B016233B9700053151 /* Products */,
 			);
@@ -196,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				4B5CE9AF16233B9700053151 /* TBCacao.framework */,
-				4B5CE9C716233B9700053151 /* TBCacaoTests.octest */,
+				4BEC170717FD63E40070E209 /* TBCacaoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,23 +195,11 @@
 		4B5CE9B116233B9700053151 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B5CEA571623628F00053151 /* OCHamcrest.framework */,
-				4B5CEA581623628F00053151 /* OCMockito.framework */,
-				4B5CE9B216233B9700053151 /* Cocoa.framework */,
-				4B5CE9C816233B9700053151 /* SenTestingKit.framework */,
-				4B5CE9B416233B9700053151 /* Other Frameworks */,
+				4BBAC26717FD696F00E3BE0F /* iOS */,
+				4BEC173017FD66B90070E209 /* OS X */,
+				1929B2575DE1A367C666FF0F /* XCTest.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4B5CE9B416233B9700053151 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				4B5CE9B516233B9700053151 /* AppKit.framework */,
-				4B5CE9B616233B9700053151 /* CoreData.framework */,
-				4B5CE9B716233B9700053151 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		4B5CE9B816233B9700053151 /* TBCacao */ = {
@@ -274,8 +253,43 @@
 			children = (
 				4B5CE9D016233B9700053151 /* TBCacaoTests-Info.plist */,
 				4B5CE9D116233B9700053151 /* InfoPlist.strings */,
+				1929B6DA0F472A7B98CEFD91 /* TBCacaoTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BBAC24417FD68B500E3BE0F /* TBCacaoIOS */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAC24517FD68B500E3BE0F /* Supporting Files */,
+			);
+			path = TBCacaoIOS;
+			sourceTree = "<group>";
+		};
+		4BBAC24517FD68B500E3BE0F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAC24617FD68B500E3BE0F /* TBCacaoIOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BBAC26717FD696F00E3BE0F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4BBAC26517FD695000E3BE0F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4BEC173017FD66B90070E209 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				4B5CE9B216233B9700053151 /* Cocoa.framework */,
+				1929B1BA9E0C56EA72167C1B /* OCHamcrest.framework */,
+				1929B57A3206B25D97CAEE6A /* OCMockito.framework */,
+			);
+			name = "OS X";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,6 +309,7 @@
 				1929BAA62754CFD3DBEFB2C6 /* TBObjcProperty.h in Headers */,
 				1929BCBF6CA830B4B76AFA82 /* NSObject+TBCacao.h in Headers */,
 				1929BB8A7B03758A676413BE /* NSString+TBCacao.h in Headers */,
+				1929B811E261592A3BF84B5A /* TBCacaoTests-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,24 +334,22 @@
 			productReference = 4B5CE9AF16233B9700053151 /* TBCacao.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4B5CE9C616233B9700053151 /* TBCacaoTests */ = {
+		4BEC170617FD63E40070E209 /* TBCacaoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B5CE9DC16233B9700053151 /* Build configuration list for PBXNativeTarget "TBCacaoTests" */;
+			buildConfigurationList = 4BEC171417FD63E40070E209 /* Build configuration list for PBXNativeTarget "TBCacaoTests" */;
 			buildPhases = (
-				4B5CE9C216233B9700053151 /* Sources */,
-				4B5CE9C316233B9700053151 /* Frameworks */,
-				4B5CE9C416233B9700053151 /* Resources */,
-				4B5CE9C516233B9700053151 /* ShellScript */,
+				4BEC170317FD63E40070E209 /* Sources */,
+				4BEC170417FD63E40070E209 /* Frameworks */,
+				4BEC170517FD63E40070E209 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4B5CE9CC16233B9700053151 /* PBXTargetDependency */,
 			);
 			name = TBCacaoTests;
-			productName = TBCacaoTests;
-			productReference = 4B5CE9C716233B9700053151 /* TBCacaoTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productName = fd;
+			productReference = 4BEC170717FD63E40070E209 /* TBCacaoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -346,6 +359,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Tae Won Ha";
+				TargetAttributes = {
+					4BEC170617FD63E40070E209 = {
+						TestTargetID = 4B5CE9AE16233B9700053151;
+					};
+				};
 			};
 			buildConfigurationList = 4B5CE9A816233B9700053151 /* Build configuration list for PBXProject "TBCacao" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -360,7 +378,7 @@
 			projectRoot = "";
 			targets = (
 				4B5CE9AE16233B9700053151 /* TBCacao */,
-				4B5CE9C616233B9700053151 /* TBCacaoTests */,
+				4BEC170617FD63E40070E209 /* TBCacaoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -374,31 +392,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B5CE9C416233B9700053151 /* Resources */ = {
+		4BEC170517FD63E40070E209 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B5CE9D316233B9700053151 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		4B5CE9C516233B9700053151 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4B5CE9AA16233B9700053151 /* Sources */ = {
@@ -413,43 +414,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B5CE9C216233B9700053151 /* Sources */ = {
+		4BEC170317FD63E40070E209 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B5CE9D616233B9700053151 /* TBBaseTest.m in Sources */,
-				4B5CE9E516233BCE00053151 /* TBBeanContainer.m in Sources */,
-				4B5CE9E816233BCE00053151 /* TBContext.m in Sources */,
-				1929B7A0FC9F7F26EA0C84BE /* TBContextTest.m in Sources */,
-				1929BFE5703B364D76DF04C9 /* BaseDao.m in Sources */,
-				1929BCF8957B0CD9AEAF7AF4 /* CoreDataManager.m in Sources */,
-				1929B00BBE82A1555907348D /* EntryDao.m in Sources */,
-				1929BD3370559062E2F1BBB3 /* TBBeanTest.m in Sources */,
-				1929B8B1B62A1841D5F97F37 /* EntryCoreDataManager.m in Sources */,
-				1929BD728F0F1837195AF3B9 /* TBObjcProperty.m in Sources */,
-				1929B169DA0098AFD3FF52BB /* TBObjcPropertyTest.m in Sources */,
-				1929B29AA4B7482D2A1ED796 /* NSObject+TBCacao.m in Sources */,
-				1929B4AFA6BAAFC25C538AC3 /* NSObjectCategoryTest.m in Sources */,
-				1929B7360791C0945C72D669 /* NSStringCategoryTest.m in Sources */,
-				1929B4F4C23D4535D7DBC10F /* NSString+TBCacao.m in Sources */,
-				1929B4FB66030E4EEC61E577 /* DummyPlainObject.m in Sources */,
-				1929BC721F67925348B31720 /* DummyPlainSubObject.m in Sources */,
-				1929BF0AA7265C82C710A94B /* DummyPropertyObject.m in Sources */,
-				1929B3A0527873BE4D927C6B /* DummyManualBeanProvider.m in Sources */,
-				1929B8BFEB309F714CED53FD /* AnotherManualBeanProvider.m in Sources */,
-				1929B46E699B02166A98040D /* DummySeed.m in Sources */,
+				4BEC172917FD645F0070E209 /* TBBeanContainer.m in Sources */,
+				4BEC172A17FD645F0070E209 /* TBContext.m in Sources */,
+				4BEC172B17FD645F0070E209 /* TBObjcProperty.m in Sources */,
+				4BEC172C17FD645F0070E209 /* NSObject+TBCacao.m in Sources */,
+				4BEC172D17FD645F0070E209 /* NSString+TBCacao.m in Sources */,
+				4BEC171917FD64480070E209 /* TBContextTest.m in Sources */,
+				4BEC171A17FD64480070E209 /* TBBaseTest.m in Sources */,
+				4BEC171B17FD64480070E209 /* DummySeed.m in Sources */,
+				4BEC171C17FD64480070E209 /* AnotherManualBeanProvider.m in Sources */,
+				4BEC171D17FD64480070E209 /* DummyManualBeanProvider.m in Sources */,
+				4BEC171E17FD64480070E209 /* BaseDao.m in Sources */,
+				4BEC171F17FD64480070E209 /* CoreDataManager.m in Sources */,
+				4BEC172017FD64480070E209 /* EntryDao.m in Sources */,
+				4BEC172117FD64480070E209 /* EntryCoreDataManager.m in Sources */,
+				4BEC172217FD64480070E209 /* DummyPlainObject.m in Sources */,
+				4BEC172317FD64480070E209 /* DummyPlainSubObject.m in Sources */,
+				4BEC172417FD64480070E209 /* DummyPropertyObject.m in Sources */,
+				4BEC172517FD64480070E209 /* TBBeanTest.m in Sources */,
+				4BEC172617FD64480070E209 /* TBObjcPropertyTest.m in Sources */,
+				4BEC172717FD64480070E209 /* NSObjectCategoryTest.m in Sources */,
+				4BEC172817FD64480070E209 /* NSStringCategoryTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4B5CE9CC16233B9700053151 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4B5CE9AE16233B9700053151 /* TBCacao */;
-			targetProxy = 4B5CE9CB16233B9700053151 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4B5CE9BB16233B9700053151 /* InfoPlist.strings */ = {
@@ -494,7 +487,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
@@ -516,7 +508,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
 			};
 			name = Release;
 		};
@@ -554,35 +545,68 @@
 			};
 			name = Release;
 		};
-		4B5CE9DD16233B9700053151 /* Debug */ = {
+		4BEC171517FD63E40070E209 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TBCacao.framework/Versions/A/TBCacao";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					/Library/Frameworks,
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+					"$(SRCROOT)/Externals",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
+				GCC_PREFIX_HEADER = "TBCacaoTests/TBCacaoTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "TBCacaoTests/TBCacaoTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		4B5CE9DE16233B9700053151 /* Release */ = {
+		4BEC171617FD63E40070E209 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TBCacao.framework/Versions/A/TBCacao";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
-					/Library/Frameworks,
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+					"$(SRCROOT)/Externals",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TBCacao/TBCacao-Prefix.pch";
+				GCC_PREFIX_HEADER = "TBCacaoTests/TBCacaoTests-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "TBCacaoTests/TBCacaoTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -607,11 +631,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B5CE9DC16233B9700053151 /* Build configuration list for PBXNativeTarget "TBCacaoTests" */ = {
+		4BEC171417FD63E40070E209 /* Build configuration list for PBXNativeTarget "TBCacaoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4B5CE9DD16233B9700053151 /* Debug */,
-				4B5CE9DE16233B9700053151 /* Release */,
+				4BEC171517FD63E40070E209 /* Debug */,
+				4BEC171617FD63E40070E209 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

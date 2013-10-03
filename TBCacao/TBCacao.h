@@ -1,3 +1,11 @@
+/**
+ * Tae Won Ha
+ * http://qvacua.com
+ * https://github.com/qvacua
+ *
+ * See LICENSE
+ */
+
 #import "TBContext.h"
 #import "TBBean.h"
 #import "TBManualBeanProvider.h"
