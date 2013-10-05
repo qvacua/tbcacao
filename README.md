@@ -4,6 +4,13 @@
 
 TBCacao is a small and simple Cocoa framework for dependency injection.
 
+## CocoaPods
+For iOS there is a CocoaPod:
+```
+pod 'TBCacaoIOS'
+```
+The CocoaPod for OS X will be available soon.
+
 ## Example Project
 My other project [Qmind](https://github.com/qvacua/qmind) — a mind mapping app for OS X compatible with FreeMind — uses TBCacao quite extensively. Have a look for a real life example.
 
