@@ -57,7 +57,7 @@ TB_AUTOWIRE(layoutManager)
 @end
 ```
 
-`TB_BEAN` marks both classes as beans such that they are scanned by `TBCacao`. The line `TB_AUTOWIRE(layoutManager)` lets `TBCacao` automatically set the property `layoutManager` with an instance of `MyLayoutManager`.
+The protocol `TBBean` marks both classes as beans such that they are scanned by `TBCacao`. The line `TB_AUTOWIRE(layoutManager)` lets `TBCacao` automatically set the property `layoutManager` with an instance of `MyLayoutManager`.
 
 - - -
 
