@@ -6,3 +6,5 @@ build
 *.mm
 .idea
 Externals/*.framework
+Podfile.lock
+Pods/*
