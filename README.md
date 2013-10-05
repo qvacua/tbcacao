@@ -21,15 +21,13 @@ Assume further that you want to have `MyLayoutManager` automatically injected—
 
 #### MyLayoutManager
 ```objc
-@interface MyLayoutManager : NSObject
+@interface MyLayoutManager : NSObject <TBBean>
 
 - (void)doLayout;
 
 @end
 
 @implementation MyLayoutManager
-
-TB_BEAN
 
 - (void)doLayout {
   NSLog(@"doLayout");
