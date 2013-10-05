@@ -15,6 +15,7 @@
 
 static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
 static NSString *const TB_MANUALWIRE_METHOD_PREFIX = @"TB_manualwire_";
+static NSString *const TB_SCOPE_METHOD = @"TB_scope";
 
 #pragma mark Static
 NSArray *subclasses_of_class(Class parentClass) {
@@ -277,8 +278,8 @@ BOOL class_is_bean(Class cls) {
     }
 
     NSArray *sortedBeans = [beans sortedArrayUsingComparator:^NSComparisonResult(id a, id b) {
-        NSUInteger orderA = (NSUInteger) ([a respondsToSelector:@selector(postConstructOrder)] ? [a postConstructOrder] : NSUIntegerMax);
-        NSUInteger orderB = (NSUInteger) ([b respondsToSelector:@selector(postConstructOrder)] ? [b postConstructOrder] : NSUIntegerMax);
+        NSUInteger orderA = (NSUInteger) ([a respondsToSelector:@selector(TB_postConstructOrder)] ? [a TB_postConstructOrder] : NSUIntegerMax);
+        NSUInteger orderB = (NSUInteger) ([b respondsToSelector:@selector(TB_postConstructOrder)] ? [b TB_postConstructOrder] : NSUIntegerMax);
 
         if (orderA < orderB) {
             return NSOrderedAscending;

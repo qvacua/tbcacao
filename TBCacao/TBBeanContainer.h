@@ -7,11 +7,7 @@
  */
 
 #import <Foundation/Foundation.h>
-
-typedef enum {
-    TBBeanScopeSingleton = 0,
-    TBBeanScopePrototype,
-} TBBeanScope;
+#import "TBBean.h"
 
 @interface TBBeanContainer : NSObject
 

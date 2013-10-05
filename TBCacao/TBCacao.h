@@ -26,7 +26,9 @@
 #define TB_MANUALWIRE(propertyName)     @synthesize propertyName = _ ## propertyName ; \
                                         +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
 
-#define TB_POSTCONSTRUCT_ORDER(x) - (NSUInteger)postConstructOrder { return (NSUInteger) x; }
+#define TB_POSTCONSTRUCT_ORDER(x) - (NSUInteger)TB_postConstructOrder { return (NSUInteger) x; }
+
+#define TB_SCOPE(x)      + (TBBeanScope)TB_scope { return x; }
 
 #ifdef TB_SHORTHAND
 
@@ -37,5 +39,7 @@
                                         +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
 
 #define POSTCONSTRUCT_ORDER(x) - (NSUInteger)postConstructOrder { return (NSUInteger) x; }
+
+#define SCOPE(x)      + (TBBeanScope)TB_scope { return x; }
 
 #endif

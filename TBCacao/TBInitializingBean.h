@@ -12,6 +12,6 @@
 - (void)postConstruct;
 
 @optional
-- (NSUInteger)postConstructOrder;
+- (NSUInteger)TB_postConstructOrder;
 
 @end

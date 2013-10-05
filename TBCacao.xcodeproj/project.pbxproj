@@ -48,8 +48,6 @@
 		4BEC172B17FD645F0070E209 /* TBObjcProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929B7D257822DAA61930744 /* TBObjcProperty.m */; };
 		4BEC172C17FD645F0070E209 /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA31A16B6D938E61F2BC /* NSObject+TBCacao.m */; };
 		4BEC172D17FD645F0070E209 /* NSString+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BF9A4E7300E4617C5731 /* NSString+TBCacao.m */; };
-		4BEC172E17FD64680070E209 /* OCHamcrest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1929B1BA9E0C56EA72167C1B /* OCHamcrest.framework */; };
-		4BEC172F17FD64680070E209 /* OCMockito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1929B57A3206B25D97CAEE6A /* OCMockito.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +57,6 @@
 		1929B186B8FECBE8907A47CC /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		1929B1A662E9C11F26F07D74 /* DummySeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummySeed.m; sourceTree = "<group>"; };
 		1929B1B9585C5787F3C686AB /* AnotherManualBeanProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnotherManualBeanProvider.h; sourceTree = "<group>"; };
-		1929B1BA9E0C56EA72167C1B /* OCHamcrest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCHamcrest.framework; path = Externals/OCHamcrest.framework; sourceTree = SOURCE_ROOT; };
 		1929B1FDA1EA8C918B31D3D5 /* DummyPropertyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyPropertyObject.h; sourceTree = "<group>"; };
 		1929B2575DE1A367C666FF0F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1929B34591FCD0E3B50F98F1 /* AnotherManualBeanProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnotherManualBeanProvider.m; sourceTree = "<group>"; };
@@ -69,7 +66,6 @@
 		1929B48C42A36BCE8A595CB2 /* TBBeanTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBBeanTest.m; sourceTree = "<group>"; };
 		1929B49FFFA119DE7F10AB2D /* DummyManualBeanProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyManualBeanProvider.m; sourceTree = "<group>"; };
 		1929B534082120C450BE0997 /* DummyManualBeanProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyManualBeanProvider.h; sourceTree = "<group>"; };
-		1929B57A3206B25D97CAEE6A /* OCMockito.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OCMockito.framework; path = Externals/OCMockito.framework; sourceTree = SOURCE_ROOT; };
 		1929B62AAC89714A54436655 /* TBBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBBean.h; sourceTree = "<group>"; };
 		1929B65F79B2EBA05F4B217F /* TBObjcProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBObjcProperty.h; sourceTree = "<group>"; };
 		1929B670C0AF6B460D35C044 /* NSStringCategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringCategoryTest.m; sourceTree = "<group>"; };
@@ -122,8 +118,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BEC172E17FD64680070E209 /* OCHamcrest.framework in Frameworks */,
-				4BEC172F17FD64680070E209 /* OCMockito.framework in Frameworks */,
 				4BEC170817FD63E40070E209 /* XCTest.framework in Frameworks */,
 				1929BE10EF2F8ED1711F5A6D /* Cocoa.framework in Frameworks */,
 			);
@@ -193,8 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				4B5CE9B216233B9700053151 /* Cocoa.framework */,
-				1929B1BA9E0C56EA72167C1B /* OCHamcrest.framework */,
-				1929B57A3206B25D97CAEE6A /* OCMockito.framework */,
 				1929B2575DE1A367C666FF0F /* XCTest.framework */,
 			);
 			name = Frameworks;
