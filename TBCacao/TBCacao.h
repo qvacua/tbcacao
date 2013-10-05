@@ -25,3 +25,14 @@
 
 #define TB_MANUALWIRE(propertyName)     @synthesize propertyName = _ ## propertyName ; \
                                         +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
+
+
+#ifdef TB_SHORTHAND
+
+#define AUTOWIRE(propertyName)       @synthesize propertyName = _ ## propertyName ; \
+                                        +(NSString *)TB_autowire_ ## propertyName { return  @#propertyName; }
+
+#define MANUALWIRE(propertyName)     @synthesize propertyName = _ ## propertyName ; \
+                                        +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
+
+#endif
