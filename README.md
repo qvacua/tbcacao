@@ -38,7 +38,7 @@ Assume further that you want to have `MyLayoutManager` automatically injected—
 
 #### MyDrawManager
 ```objc
-@interface MyDrawManager : NSObject
+@interface MyDrawManager : NSObject <TBBean>
 
 @property (weak) MyLayoutManager *layoutManager;
 
@@ -47,8 +47,6 @@ Assume further that you want to have `MyLayoutManager` automatically injected—
 @end
 
 @implementation MyDrawManager
-
-TB_BEAN
 
 TB_AUTOWIRE(layoutManager)
 
