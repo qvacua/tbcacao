@@ -14,7 +14,7 @@
 #import "TBObjcProperty.h"
 
 static NSString *const TB_AUTOWIRE_METHOD_PREFIX = @"TB_autowire_";
-static NSString *const TB_MANULWIRE_METHOD_PREFIX = @"TB_manualwire_";
+static NSString *const TB_MANUALWIRE_METHOD_PREFIX = @"TB_manualwire_";
 
 #pragma mark Static
 NSArray *subclasses_of_class(Class parentClass) {
@@ -144,7 +144,7 @@ BOOL class_is_bean(Class cls) {
 }
 
 - (void)autowireSeed:(id)seed {
-    [self autowireTargetSource:seed methodPrefix:TB_MANULWIRE_METHOD_PREFIX];
+    [self autowireTargetSource:seed methodPrefix:TB_MANUALWIRE_METHOD_PREFIX];
 }
 
 - (void)replaceBeanWithIdentifier:(NSString *)identifier withBean:(id)aBean {

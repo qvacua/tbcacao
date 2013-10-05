@@ -6,5 +6,8 @@
  * See LICENSE
  */
 
+/**
+* If a class implements TBBean protocol, TBCacao will automatically instantiate it as a bean.
+*/
 @protocol TBBean
 @end

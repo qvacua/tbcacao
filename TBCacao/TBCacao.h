@@ -26,6 +26,7 @@
 #define TB_MANUALWIRE(propertyName)     @synthesize propertyName = _ ## propertyName ; \
                                         +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
 
+#define TB_POSTCONSTRUCT_ORDER(x) - (NSUInteger)postConstructOrder { return (NSUInteger) x; }
 
 #ifdef TB_SHORTHAND
 
@@ -34,5 +35,7 @@
 
 #define MANUALWIRE(propertyName)     @synthesize propertyName = _ ## propertyName ; \
                                         +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
+
+#define POSTCONSTRUCT_ORDER(x) - (NSUInteger)postConstructOrder { return (NSUInteger) x; }
 
 #endif

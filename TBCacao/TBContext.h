@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+
 @class TBBeanContainer;
 
 
 @interface TBContext : NSObject
 
-@property (strong, readonly) NSArray *beanContainers;
+@property (readonly) NSArray *beanContainers;
 
 - (void)reautowireBeans;
 
@@ -25,8 +26,8 @@
 
 - (TBBeanContainer *)beanContainerWithIdentifier:(NSString *)identifier;
 
--(id)beanWithClass:(Class)clazz;
--(id)beanWithIdentifier:(NSString *)identifier;
+- (id)beanWithClass:(Class)clazz;
+- (id)beanWithIdentifier:(NSString *)identifier;
 - (NSString *)identifierForBean:(id)bean;
 
 - (void)autowireSeed:(id)seed;
