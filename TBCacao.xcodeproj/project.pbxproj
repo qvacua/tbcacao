@@ -17,6 +17,7 @@
 		1929BCBF6CA830B4B76AFA82 /* NSObject+TBCacao.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B80572CA6503A34D8451 /* NSObject+TBCacao.h */; };
 		1929BD7631DC961DD0B0602F /* NSObject+TBCacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1929BA31A16B6D938E61F2BC /* NSObject+TBCacao.m */; };
 		1929BE10EF2F8ED1711F5A6D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
+		1F9209A51A714BECBE9450AC /* libPods-TBCacaoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9633BAF6C846BFA5A39561 /* libPods-TBCacaoTests.a */; };
 		4B10DDA5174F9E1A00B58F6E /* TBBean.h in Headers */ = {isa = PBXBuildFile; fileRef = 1929B62AAC89714A54436655 /* TBBean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B15773A16A2E8360048480E /* TBBeanContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5CE9DF16233BCE00053151 /* TBBeanContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B5CE9B316233B9700053151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5CE9B216233B9700053151 /* Cocoa.framework */; };
@@ -103,6 +104,8 @@
 		4B5CE9E216233BCE00053151 /* TBContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBContext.m; sourceTree = "<group>"; };
 		4B5CE9EA16233C1500053151 /* TBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBLog.h; sourceTree = "<group>"; };
 		4BEC170717FD63E40070E209 /* TBCacaoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBCacaoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D9633BAF6C846BFA5A39561 /* libPods-TBCacaoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBCacaoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA6FFDCA2F9E485F9626E371 /* Pods-TBCacaoTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBCacaoTests.xcconfig"; path = "Pods/Pods-TBCacaoTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 			files = (
 				4BEC170817FD63E40070E209 /* XCTest.framework in Frameworks */,
 				1929BE10EF2F8ED1711F5A6D /* Cocoa.framework in Frameworks */,
+				1F9209A51A714BECBE9450AC /* libPods-TBCacaoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +175,7 @@
 				4B5CE9CE16233B9700053151 /* TBCacaoTests */,
 				4B5CE9B116233B9700053151 /* Frameworks */,
 				4B5CE9B016233B9700053151 /* Products */,
+				AA6FFDCA2F9E485F9626E371 /* Pods-TBCacaoTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,6 +193,7 @@
 			children = (
 				4B5CE9B216233B9700053151 /* Cocoa.framework */,
 				1929B2575DE1A367C666FF0F /* XCTest.framework */,
+				9D9633BAF6C846BFA5A39561 /* libPods-TBCacaoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -294,9 +300,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BEC171417FD63E40070E209 /* Build configuration list for PBXNativeTarget "TBCacaoTests" */;
 			buildPhases = (
+				CB41A977134F41EC9F486651 /* Check Pods Manifest.lock */,
 				4BEC170317FD63E40070E209 /* Sources */,
 				4BEC170417FD63E40070E209 /* Frameworks */,
 				4BEC170517FD63E40070E209 /* Resources */,
+				33E00A79428E4C8491D6AECC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -356,6 +364,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33E00A79428E4C8491D6AECC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-TBCacaoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB41A977134F41EC9F486651 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4B5CE9AA16233B9700053151 /* Sources */ = {
@@ -503,8 +544,8 @@
 		};
 		4BEC171517FD63E40070E209 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA6FFDCA2F9E485F9626E371 /* Pods-TBCacaoTests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TBCacao.framework/Versions/A/TBCacao";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -527,18 +568,15 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "TBCacaoTests/TBCacaoTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
 		4BEC171617FD63E40070E209 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA6FFDCA2F9E485F9626E371 /* Pods-TBCacaoTests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TBCacao.framework/Versions/A/TBCacao";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -558,10 +596,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "TBCacaoTests/TBCacaoTests-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;

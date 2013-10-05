@@ -14,7 +14,7 @@
 
 #pragma mark Public
 - (id)initWithBean:(id)bean {
-    return [self initWithIdentifier:[bean classAsString] bean:bean];
+    return [self initWithIdentifier:[[bean class] classAsString] bean:bean];
 }
 
 - (id)initWithIdentifier:(NSString *)anIdentifier bean:(id)aBean {
@@ -60,10 +60,6 @@
     if (container == nil)
         return NO;
     if (self.identifier != container.identifier && ![self.identifier isEqualToString:container.identifier])
-        return NO;
-    if (self.targetSource != container.targetSource && ![self.targetSource isEqual:container.targetSource])
-        return NO;
-    if (self.scope != container.scope)
         return NO;
     return YES;
 }
