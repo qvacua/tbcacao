@@ -20,6 +20,9 @@ First, include `TBCacao` in your project by either adding it as a Framework or c
 ```objc
 [[TBContext sharedContext] initContext];
 ```
+
+### TBBean
+
 Assume that we have the following two classes:
 * `MyLayoutManager`
 * `MyDrawingManager`
@@ -66,6 +69,52 @@ TB_AUTOWIRE(layoutManager)
 
 The protocol `TBBean` marks both classes as beans such that they are scanned by `TBCacao`. The line `TB_AUTOWIRE(layoutManager)` lets `TBCacao` automatically set the property `layoutManager` with an instance of `MyLayoutManager`.
 
+### TBManualBeanProvider
+
+Oftentimes you use singltons of Foundation, AppKit/UIKit or other 3rd party frameworks in your classes. For many purposes it is beneficial to have them injected, ie not call messages like `[SomeManager sharedManager]`. This can easily limit the unit-testability of your classes. Let's assume that you have `MyManager` and this class uses `[NSNotificationCenter defaultCenter]`. To inject the default notification center, you do the following
+
+#### MyManualBeanProvider
+```objc
+@interface MyManualBeanProvider : NSObject <TBManualBeanProvider>
+@end
+
+@implementation MyManualBeanProvider
+
++ (NSArray *)beanContainers {
+    static NSArray *manualBeans;
+
+    if (manualBeans == nil) {
+        manualBeans = @[
+                [TBBeanContainer beanContainerWithBean:[NSNotificationCenter defaultCenter]],
+                [TBBeanContainer beanContainerWithBean:[SomeOtherManager sharedManager]],
+        ];
+    }
+
+    return manualBeans;
+}
+
+@end
+```
+
+#### MyManager
+```objc
+@interface MyManager: NSObject <TBBean>
+
+@property (weak) NSNotificationCenter *notificationCenter;
+
+@end
+
+@implementation MyManager
+
+TB_AUTOWIRE(notificationCenter)
+
+@end
+```
+
+Now, you can easily mock the notification center in your unit test for `MyManager`.
+
+Since `TBCacao` automatically scans all classes implementing the protocol `TBManualBeanProvider`, you don't need an interface file; put both `@interface` and `@implementation` in `MyManualBeanProvider.m`.
+
 - - -
 
-TODO: Describe `TBManualBeanProvider` and `TB_MANUALWIRE`.
+TODO: Describe `TB_MANUALWIRE`.
