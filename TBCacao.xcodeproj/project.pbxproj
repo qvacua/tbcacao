@@ -325,7 +325,7 @@
 				ORGANIZATIONNAME = "Tae Won Ha";
 				TargetAttributes = {
 					4BEC170617FD63E40070E209 = {
-						TestTargetID = 4B5CE9AE16233B9700053151 /* TBCacao */;
+						TestTargetID = 4B5CE9AE16233B9700053151;
 					};
 				};
 			};
