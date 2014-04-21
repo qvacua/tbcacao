@@ -14,11 +14,11 @@
 
 #define TB_BEAN     + (BOOL)isBean { return YES; }
 
-#define TB_AUTOWIRE_WITH_INSTANCE_VAR(propertyName, instanceName)       @synthesize propertyName = instanceName; \
-                                                                        +(NSString *)TB_autowire_ ## propertyName { return  @#propertyName; }
+#define TB_AUTOWIRE_WITH_INSTANCE_VAR(propertyName, instanceName)   @synthesize propertyName = instanceName; \
+                                                                    +(NSString *)TB_autowire_ ## propertyName { return  @#propertyName; }
 
-#define TB_MANUALWIRE_WITH_INSTANCE_VAR(propertyName, instanceName)       @synthesize propertyName = instanceName; \
-                                                                          +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
+#define TB_MANUALWIRE_WITH_INSTANCE_VAR(propertyName, instanceName) @synthesize propertyName = instanceName; \
+                                                                    +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
 
 #define TB_AUTOWIRE(propertyName)       @synthesize propertyName = _ ## propertyName ; \
                                         +(NSString *)TB_autowire_ ## propertyName { return  @#propertyName; }
@@ -28,7 +28,6 @@
 
 #define TB_POSTCONSTRUCT_ORDER(x) - (NSUInteger)TB_postConstructOrder { return (NSUInteger) x; }
 
-#define TB_SCOPE(x)      + (TBBeanScope)TB_scope { return x; }
 
 #ifdef TB_SHORTHAND
 
@@ -40,6 +39,11 @@
 
 #define POSTCONSTRUCT_ORDER(x) - (NSUInteger)postConstructOrder { return (NSUInteger) x; }
 
-#define SCOPE(x)      + (TBBeanScope)TB_scope { return x; }
-
 #endif
+
+#define autowire(propertyName)   synthesize propertyName = _ ## propertyName ; \
+                                 +(NSString *)TB_autowire_ ## propertyName { return  @#propertyName; }
+
+#define manualwire(propertyName) synthesize propertyName = _ ## propertyName ; \
+                                 +(NSString *)TB_manualwire_ ## propertyName { return  @#propertyName; }
+
