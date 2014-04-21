@@ -13,17 +13,11 @@
 
 @property (readonly) NSString *identifier;
 @property (readonly) id targetSource;
-@property (readonly) TBBeanScope scope;
 
 /**
 * Initializes the bean container with the scope TBBeanScopeSingleton
 */
 - (id)initWithIdentifier:(NSString *)anIdentifier bean:(id)aBean;
-
-/**
-* Designated initializer
-*/
-- (id)initWithIdentifier:(NSString *)anIdentifier bean:(id)aBean scope:(TBBeanScope)aScope;
 
 /**
 * The identifier will be bean's class name and the scope TBBeanScopeSingleton
@@ -40,11 +34,12 @@
 */
 + (id)beanContainerWithIdentifier:(NSString *)anIdentifier bean:(id)aBean;
 
-/**
-* Designated initializer
-*/
-+ (id)beanContainerWithIdentifier:(NSString *)anIdentifier bean:(id)aBean scope:(TBBeanScope)aScope;
-
+- (BOOL)isEqual:(TBBeanContainer *)other;
+- (BOOL)isEqualToContainer:(TBBeanContainer *)container;
+- (NSUInteger)hash;
+- (BOOL)isEqual:(TBBeanContainer *)other;
+- (BOOL)isEqualToContainer:(TBBeanContainer *)container;
+- (NSUInteger)hash;
 - (BOOL)isEqual:(TBBeanContainer *)other;
 - (BOOL)isEqualToContainer:(TBBeanContainer *)container;
 - (NSUInteger)hash;

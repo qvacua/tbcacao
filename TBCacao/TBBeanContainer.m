@@ -18,15 +18,10 @@
 }
 
 - (id)initWithIdentifier:(NSString *)anIdentifier bean:(id)aBean {
-    return [self initWithIdentifier:anIdentifier bean:aBean scope:TBBeanScopeSingleton];
-}
-
-- (id)initWithIdentifier:(NSString *)anIdentifier bean:(id)aBean scope:(TBBeanScope)aScope {
     self = [super init];
     if (self) {
         _identifier = anIdentifier;
         _targetSource = aBean;
-        _scope = aScope;
     }
 
     return self;
@@ -38,10 +33,6 @@
 
 + (id)beanContainerWithIdentifier:(NSString *)anIdentifier bean:(id)aBean {
     return [[TBBeanContainer alloc] initWithIdentifier:anIdentifier bean:aBean];
-}
-
-+ (id)beanContainerWithIdentifier:(NSString *)anIdentifier bean:(id)aBean scope:(TBBeanScope)aScope {
-    return [[TBBeanContainer alloc] initWithIdentifier:anIdentifier bean:aBean scope:aScope];
 }
 
 #pragma mark NSObject
@@ -65,20 +56,17 @@
 }
 
 - (NSUInteger)hash {
-    NSUInteger hash = [self.identifier hash];
-    hash = hash * 31u + [self.targetSource hash];
-    hash = hash * 31u + (NSUInteger) self.scope;
-    return hash;
+  NSUInteger hash = [self.identifier hash];
+  hash = hash * 31u + [self.targetSource hash];
+  return hash;
 }
 
 - (NSString *)description {
-    NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
-    [description appendFormat:@"self.identifier=%@", self.identifier];
-    [description appendFormat:@", self.targetSource=%@", self.targetSource];
-    [description appendFormat:@", self.scope=%d", self.scope];
-    [description appendString:@">"];
-
-    return description;
+  NSMutableString *description = [NSMutableString stringWithFormat:@"<%@: ", NSStringFromClass([self class])];
+  [description appendFormat:@"self.identifier=%@", self.identifier];
+  [description appendFormat:@", self.targetSource=%@", self.targetSource];
+  [description appendString:@">"];
+  return description;
 }
 
 @end
