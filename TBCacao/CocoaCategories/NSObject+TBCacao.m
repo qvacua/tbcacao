@@ -36,7 +36,7 @@
 
   NSMutableArray *result = [NSMutableArray arrayWithCapacity:nrOfProps];
   for (int i = 0; i < nrOfProps; i++) {
-    TBObjcProperty *property = [[TBObjcProperty allocWithZone:nil] initWithProperty:properties[i]];
+    TBObjcProperty *property = [[TBObjcProperty alloc] initWithProperty:properties[i]];
     [result addObject:property];
   }
 
