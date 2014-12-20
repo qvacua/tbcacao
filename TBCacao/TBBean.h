@@ -1,10 +1,10 @@
 /**
- * Tae Won Ha
- * http://qvacua.com
- * https://github.com/qvacua
- *
- * See LICENSE
- */
+* Tae Won Ha
+* http://qvacua.com
+* https://github.com/qvacua
+*
+* See LICENSE
+*/
 
 
 /**

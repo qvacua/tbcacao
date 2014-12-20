@@ -1,13 +1,14 @@
 /**
- * Tae Won Ha
- * http://qvacua.com
- * https://github.com/qvacua
- *
- * See LICENSE
- */
+* Tae Won Ha
+* http://qvacua.com
+* https://github.com/qvacua
+*
+* See LICENSE
+*/
 
 #import <Foundation/Foundation.h>
 #import "TBBean.h"
+
 
 @interface TBBeanContainer : NSObject
 
