@@ -38,12 +38,6 @@
 - (BOOL)isEqual:(TBBeanContainer *)other;
 - (BOOL)isEqualToContainer:(TBBeanContainer *)container;
 - (NSUInteger)hash;
-- (BOOL)isEqual:(TBBeanContainer *)other;
-- (BOOL)isEqualToContainer:(TBBeanContainer *)container;
-- (NSUInteger)hash;
-- (BOOL)isEqual:(TBBeanContainer *)other;
-- (BOOL)isEqualToContainer:(TBBeanContainer *)container;
-- (NSUInteger)hash;
 - (NSString *)description;
 
 @end
