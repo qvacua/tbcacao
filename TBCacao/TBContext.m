@@ -258,7 +258,7 @@ BOOL class_is_bean(Class cls) {
       continue;
     }
 
-    id propertyKey = objc_msgSend(cls, sel);
+    id propertyKey = ((id (*)(id, SEL))objc_msgSend)(cls, sel);
     NSString *nameOfBeanClass = [self classNameOfProperty:propertyKey andClass:cls];
 
     id beanToBeAutowired = [self beanContainerWithIdentifier:nameOfBeanClass].targetSource;
