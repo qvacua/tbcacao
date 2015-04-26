@@ -71,7 +71,7 @@ BOOL class_is_bean(Class cls) {
 
   BOOL result = NO;
   for (int i = 0; i < methodCount; i++) {
-    if (@selector(isBean) == method_getName(methods[i])) {
+    if (NSSelectorFromString(@"isBean") == method_getName(methods[i])) {
       result = YES;
       break;
     }
